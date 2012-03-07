@@ -1,0 +1,13 @@
+XDC_open() {
+    GEL_ProjectLoad("C:/dev/example_apps/vlfft/vlfft/evmc6678l/Debug/configPkg/package/configPkg.pjt");
+    GEL_ProjectLoad("C:/dev/example_apps/vlfft/vlfft/evmc6678l/Debug/configPkg/package/cfg/vlfft_evmc6678l_xe66.pjt");
+    GEL_ProjectSetActive("C:/dev/example_apps/vlfft/vlfft/evmc6678l/Debug/configPkg/package/cfg/vlfft_evmc6678l_xe66.pjt");
+}
+XDC_close() {
+    GEL_ProjectClose("C:/dev/example_apps/vlfft/vlfft/evmc6678l/Debug/configPkg/package/configPkg.pjt");
+    GEL_ProjectClose("C:/dev/example_apps/vlfft/vlfft/evmc6678l/Debug/configPkg/package/cfg/vlfft_evmc6678l_xe66.pjt");
+}
+menuitem "XDC Package"
+hotmenu load_executable () { GEL_Load("C:/dev/example_apps/vlfft/vlfft/evmc6678l/Debug/configPkg/vlfft_evmc6678l.xe66"); }
+hotmenu open_project () { XDC_open(); }
+hotmenu close_project () { XDC_close(); }
