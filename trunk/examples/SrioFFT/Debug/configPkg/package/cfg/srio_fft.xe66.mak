@@ -3,7 +3,7 @@
 #  package.bld.  Any modifications to this file will be 
 #  overwritten whenever makefiles are re-generated.
 #
-#  target compatibility key = ti.targets.elf.C66{1,0,7.3,1
+#  target compatibility key = ti.targets.elf.C66{1,0,7.3,0
 #
 srio_fft.xe66: package/cfg/srio_fft.xe66.mak
 

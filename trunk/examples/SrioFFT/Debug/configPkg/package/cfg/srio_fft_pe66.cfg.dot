@@ -5,7 +5,7 @@ digraph configuration {
     concentrate=true;
     compound=true;
     label="\nConfiguration for configPkg/srio_fft.xe66"
-  node [font=Helvetica, fontsize=14, fontcolor=black];  subgraph cluster0 {label=""; __cfg [label="C:/KeystoneTraining/examples/SrioFFT/srio_fft.cfg", color=white, fontcolor=blue];
+  node [font=Helvetica, fontsize=14, fontcolor=black];  subgraph cluster0 {label=""; __cfg [label="C:/dev/keystone-workshop/examples/SrioFFT/srio_fft.cfg", color=white, fontcolor=blue];
     node [font=Helvetica, fontsize=10];    subgraph cluster1 {
         label="";
         xdc_services_global__top [shape=box,label="xdc.services.global\n1, 0, 0", color=white];
@@ -596,6 +596,6 @@ digraph configuration {
     ti_sdo_ipc_transports__bot -> ti_targets_elf_C66__1_0_7__2_0 [ltail=cluster49];
     ti_targets_elf_C66__1_0_7__2_0 [shape=record,label="ti.targets.elf.C66|1,0,7.2,0",style=filled, fillcolor=lightgrey];
     ti_sdo_ipc_gates__bot -> ti_targets_elf_C66__1_0_7__2_0 [ltail=cluster50];
-    ti_targets_elf_C66__1_0_7__3_1 [shape=record,label="ti.targets.elf.C66|1,0,7.3,1",style=filled, fillcolor=lightgrey];
-    configPkg__top -> ti_targets_elf_C66__1_0_7__3_1 [ltail=cluster51];
+    ti_targets_elf_C66__1_0_7__3_0 [shape=record,label="ti.targets.elf.C66|1,0,7.3,0",style=filled, fillcolor=lightgrey];
+    configPkg__top -> ti_targets_elf_C66__1_0_7__3_0 [ltail=cluster51];
 }

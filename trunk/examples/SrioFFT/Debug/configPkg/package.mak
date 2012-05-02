@@ -66,8 +66,8 @@ package.mak: C:/ti/xdctools_3_22_04_46/packages/xdc/bld/ITargetFilter.xs
 C:/ti/xdctools_3_22_04_46/packages/xdc/bld/package.xs:
 package.mak: C:/ti/xdctools_3_22_04_46/packages/xdc/bld/package.xs
 package.mak: config.bld
-C:/KeystoneTraining/examples/SrioFFT/.config/xconfig_SRIOMulticore6/config.bld:
-package.mak: C:/KeystoneTraining/examples/SrioFFT/.config/xconfig_SRIOMulticore6/config.bld
+C:/dev/keystone-workshop/examples/SrioFFT/.config/xconfig_SRIOMulticore6/config.bld:
+package.mak: C:/dev/keystone-workshop/examples/SrioFFT/.config/xconfig_SRIOMulticore6/config.bld
 C:/ti/xdctools_3_22_04_46/packages/ti/targets/ITarget.xs:
 package.mak: C:/ti/xdctools_3_22_04_46/packages/ti/targets/ITarget.xs
 C:/ti/xdctools_3_22_04_46/packages/ti/targets/C28_large.xs:
@@ -82,20 +82,20 @@ C:/ti/xdctools_3_22_04_46/packages/ti/targets/elf/TMS470.xs:
 package.mak: C:/ti/xdctools_3_22_04_46/packages/ti/targets/elf/TMS470.xs
 C:/ti/xdctools_3_22_04_46/packages/ti/targets/elf/package.xs:
 package.mak: C:/ti/xdctools_3_22_04_46/packages/ti/targets/elf/package.xs
-package.mak: package.bld
-C:/ti/xdctools_3_22_04_46/packages/xdc/tools/configuro/template/compiler.opt.xdt:
-package.mak: C:/ti/xdctools_3_22_04_46/packages/xdc/tools/configuro/template/compiler.opt.xdt
 C:/ti/xdctools_3_22_04_46/packages/xdc/services/io/File.xs:
 package.mak: C:/ti/xdctools_3_22_04_46/packages/xdc/services/io/File.xs
 C:/ti/xdctools_3_22_04_46/packages/xdc/services/io/package.xs:
 package.mak: C:/ti/xdctools_3_22_04_46/packages/xdc/services/io/package.xs
+package.mak: package.bld
+C:/ti/xdctools_3_22_04_46/packages/xdc/tools/configuro/template/compiler.opt.xdt:
+package.mak: C:/ti/xdctools_3_22_04_46/packages/xdc/tools/configuro/template/compiler.opt.xdt
 C:/ti/xdctools_3_22_04_46/packages/xdc/tools/configuro/template/custom.mak.exe.xdt:
 package.mak: C:/ti/xdctools_3_22_04_46/packages/xdc/tools/configuro/template/custom.mak.exe.xdt
 C:/ti/xdctools_3_22_04_46/packages/xdc/tools/configuro/template/package.xs.xdt:
 package.mak: C:/ti/xdctools_3_22_04_46/packages/xdc/tools/configuro/template/package.xs.xdt
 endif
 
-ti.targets.elf.C66.rootDir ?= C:/ti/ccsv5/tools/compiler/c6000
+ti.targets.elf.C66.rootDir ?= C:/ti/C6000C~1.0
 ti.targets.elf.packageBase ?= C:/ti/xdctools_3_22_04_46/packages/ti/targets/elf/
 .PRECIOUS: $(XDCCFGDIR)/%.oe66
 .PHONY: all,e66 .dlls,e66 .executables,e66 test,e66

@@ -11,7 +11,7 @@ var makeAssembly = false;
 var Executable = xdc.module('xdc.bld.Executable');
 
 var exeOpts = new Executable.Attrs({
-        cfgScript: 'C:/KeystoneTraining/examples/SrioFFT/srio_fft.cfg',
+        cfgScript: 'C:/dev/keystone-workshop/examples/SrioFFT/srio_fft.cfg',
         profile: 'debug',
         cfgHome: 'configPkg',
 });
@@ -47,7 +47,7 @@ else {
 }
 var thisObj = {
     cfg:        '../srio_fft.cfg',
-    outputPath: 'C:/KeystoneTraining/examples/SrioFFT/Debug/configPkg',
+    outputPath: 'C:/dev/keystone-workshop/examples/SrioFFT/Debug/configPkg',
     exeName:    'srio_fft' + suffix,
     exeIntName: 'srio_fft' + suffix.replace('.', '_'),
     targ:       targ,

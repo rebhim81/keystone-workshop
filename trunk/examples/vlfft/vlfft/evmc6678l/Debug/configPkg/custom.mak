@@ -3,4 +3,4 @@
   package/cfg/vlfft_evmc6678l_pe66.oe66 \
 
 linker.cmd: package/cfg/vlfft_evmc6678l_pe66.xdl
-	$(SED) 's"^\"\(package/cfg/vlfft_evmc6678l_pe66cfg.cmd\)\"$""\"C:/dev/example_apps/vlfft/vlfft/evmc6678l/Debug/configPkg/\1\""' package/cfg/vlfft_evmc6678l_pe66.xdl > $@
+	$(SED) 's"^\"\(package/cfg/vlfft_evmc6678l_pe66cfg.cmd\)\"$""\"C:/dev/keystone-workshop/examples/vlfft/vlfft/evmc6678l/Debug/configPkg/\1\""' package/cfg/vlfft_evmc6678l_pe66.xdl > $@
