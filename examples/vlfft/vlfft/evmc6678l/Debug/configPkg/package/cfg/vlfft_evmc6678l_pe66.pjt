@@ -8,9 +8,9 @@ Tool="CustomBuilder"
 Config="Executable"
 
 [Project Dependencies]
-Source="C:/dev/example_apps/vlfft/vlfft/evmc6678l/Debug/configPkg/package/configPkg.pjt"
+Source="C:/dev/keystone-workshop/examples/vlfft/vlfft/evmc6678l/Debug/configPkg/package/configPkg.pjt"
 
-["C:/dev/example_apps/vlfft/vlfft/evmc6678l/Debug/configPkg/package/configPkg.pjt" Settings]
+["C:/dev/keystone-workshop/examples/vlfft/vlfft/evmc6678l/Debug/configPkg/package/configPkg.pjt" Settings]
 ExcludeFromBuild=true
 
 
@@ -20,7 +20,7 @@ ExcludeFromBuild=true
 ;  directories.
 ;
 ["Compiler" Settings: "Executable"]
-Options=-i"C:/ti/ipc_1_24_00_16/packages" -i"C:/dev/example_apps/vlfft/vlfft" -i"C:/ti/bios_6_32_05_54/packages" -i"C:/ti/edma3_lld_02_11_02_04/packages" -i"C:/ti/mcsdk_2_00_05_17/demos" -i"C:/ti/xdctools_3_22_04_46/packages" -i"C:\dev\example_apps\vlfft\vlfft\evmc6678l\Debug" 
+Options=-i"C:/ti/ipc_1_24_02_27/packages" -i"C:/dev/keystone-workshop/examples/vlfft/vlfft" -i"C:/ti/bios_6_33_02_31/packages" -i"C:/ti/edma3_lld_02_11_02_04/packages" -i"C:/ti/mcsdk_2_00_07_19/demos" -i"C:/ti/xdctools_3_23_01_43/packages" -i"C:\dev\keystone-workshop\examples\vlfft\vlfft\evmc6678l\Debug" 
 
 [External Makefile]
 ExtMakefile=../../package.bld
@@ -32,11 +32,11 @@ ExtMakefile=../../package.bld
 [Source Files]
 Source="../../package.bld"
 Source="vlfft_evmc6678l_xe66.c"
-Source="../../C:/dev/example_apps/vlfft/vlfft/evmc6678l/vlfft_evmc6678l.cfg"
+Source="../../C:/dev/keystone-workshop/examples/vlfft/vlfft/evmc6678l/vlfft_evmc6678l.cfg"
 
 ["../../package.bld" Settings: "Executable"]
 UseCustomBuild=true
-CustomBuildCmd=C:\ti\xdctools_3_22_04_46\xdc.exe vlfft_evmc6678l.xe66
+CustomBuildCmd=C:\ti\xdctools_3_23_01_43\xdc.exe vlfft_evmc6678l.xe66
 
 ; if no custom "clean" command is specified, rebuild all deletes the
 ; following files before running the build command above.  
@@ -50,7 +50,7 @@ CustomBuildOutput="vlfft_evmc6678l.xe66"
 ;  Instead we only clean out those files associated with the target used to
 ;  build the executable.
 ;
-CustomCleanCmd=C:\ti\xdctools_3_22_04_46\xdc.exe clean,e66
+CustomCleanCmd=C:\ti\xdctools_3_23_01_43\xdc.exe clean,e66
 ;
 ;  Always run the xdc command since this command is the one that tracks
 ;  dependencies
@@ -66,5 +66,5 @@ Run=Always
 ["vlfft_evmc6678l_xe66.c" Settings: "Executable"]
 ExcludeFromBuild=true
 
-["../../C:/dev/example_apps/vlfft/vlfft/evmc6678l/vlfft_evmc6678l.cfg" Settings: "Executable"]
+["../../C:/dev/keystone-workshop/examples/vlfft/vlfft/evmc6678l/vlfft_evmc6678l.cfg" Settings: "Executable"]
 ExcludeFromBuild=true

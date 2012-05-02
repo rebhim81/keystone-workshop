@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/ccsv5/tools/compiler/c6000
+CG_TOOL_ROOT := C:/ti/C6000 Code Generation Tools 7.3.0
 
 ORDERED_OBJS += \
 $(GEN_CMDS__FLAG) \
@@ -132,7 +132,7 @@ all: SrioFFT.out
 SrioFFT.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: C6000 Linker'
-	"C:/ti/ccsv5/tools/compiler/c6000/bin/cl6x" -mv6600 -g --define=_LITTLE_ENDIAN --define=DISABLE_DELAY --define=_TMS320C6600 --define=TMS320C6600 --define=VERBOSE_LEVEL=0 --display_error_number --diag_warning=225 --abi=eabi -z -m"SrioFFT.map" --warn_sections -i"C:/ti/ccsv5/tools/compiler/c6000/lib" -i"C:/development_tools/libraries/STMLib/lib" -i"C:/ti/ccsv5/tools/compiler/c6000/include" -i"C:/ti/dsplib_c66x_3_0_0_8/lib" --reread_libs --rom_model -o "SrioFFT.out" $(ORDERED_OBJS)
+	"C:/ti/C6000 Code Generation Tools 7.3.0/bin/cl6x" -mv6600 -g --define=_LITTLE_ENDIAN --define=DISABLE_DELAY --define=_TMS320C6600 --define=TMS320C6600 --define=VERBOSE_LEVEL=0 --display_error_number --diag_warning=225 --abi=eabi -z -m"SrioFFT.map" --warn_sections -i"C:/ti/C6000 Code Generation Tools 7.3.0/lib" -i"C:/development_tools/libraries/STMLib/lib" -i"C:/ti/C6000 Code Generation Tools 7.3.0/include" -i"C:/ti/dsplib_c66x_3_0_0_8/lib" --reread_libs --rom_model -o "SrioFFT.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

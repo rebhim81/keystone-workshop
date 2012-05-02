@@ -9,7 +9,7 @@
  */
 
 
--l"C:\KeystoneTraining\examples\SrioFFT\Debug\configPkg\package\cfg\srio_fft_pe66.oe66"
+-l"C:\dev\keystone-workshop\examples\SrioFFT\Debug\configPkg\package\cfg\srio_fft_pe66.oe66"
 -l"C:\ti\ipc_1_23_01_26\packages\ti\sdo\ipc\lib\instrumented_e66\ipc\ipc.lib"
 -l"C:\ti\pdk_C6678_1_0_0_15\packages\ti\drv\srio\lib\ti.drv.srio.ae66"
 -l"C:\ti\pdk_C6678_1_0_0_15\packages\ti\drv\cppi\lib\ti.drv.cppi.ae66"

@@ -2,7 +2,7 @@
  *  Do not modify this file; it is automatically 
  *  generated and any modifications will be overwritten.
  *
- * @(#) xdc-x20
+ * @(#) xdc-y21
  */
 import java.util.*;
 import org.mozilla.javascript.*;
@@ -11,7 +11,7 @@ import xdc.services.spec.Session;
 
 public class configPkg
 {
-    static final String VERS = "@(#) xdc-x20\n";
+    static final String VERS = "@(#) xdc-y21\n";
 
     static final Proto.Elm $$T_Bool = Proto.Elm.newBool();
     static final Proto.Elm $$T_Num = Proto.Elm.newNum();
@@ -51,6 +51,7 @@ public class configPkg
     ArrayList<Object> loggables = new ArrayList<Object>();
     ArrayList<Object> mcfgs = new ArrayList<Object>();
     ArrayList<Object> icfgs = new ArrayList<Object>();
+    ArrayList<String> inherits = new ArrayList<String>();
     ArrayList<Object> proxies = new ArrayList<Object>();
     ArrayList<Object> sizes = new ArrayList<Object>();
     ArrayList<Object> tdefs = new ArrayList<Object>();
