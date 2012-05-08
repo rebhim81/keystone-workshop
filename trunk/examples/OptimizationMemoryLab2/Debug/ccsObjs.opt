@@ -1,1 +1,0 @@
-"./utilities.obj" "./naturalCFilters.obj" "./intrinsicCFilters.obj" "./firMain.obj" -l"libc.a" "../LinkerNoRTSC_L2.cmd" 
