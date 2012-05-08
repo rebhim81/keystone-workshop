@@ -37,7 +37,7 @@
  	 x[0] =  _ftof2(0.5, -0.5) ;
  	 x[1] =  _ftof2(-0.5, 0.5) ;
 
-#pragma MUST_ITERATE (128)
+//#pragma MUST_ITERATE (128)
  	 for (i=0; i < N_E; i = i + 2*filter_size)
  	 {
  		 sum =_ftof2(0.0, 0.0) ;
@@ -67,7 +67,7 @@
  	 	 x[1] =  _ftof2(0.5, -0.5) ;
 	 	 x[2] =  _ftof2(-0.25, 0.25) ;
  	 	 x[3] =  _ftof2(-0.5, 0.5) ;
-#pragma MUST_ITERATE (64)
+//#pragma MUST_ITERATE (64)
  	 	 for (i=0; i < N_E; i = i + 2*filter_size)
  	 	 {
  	 		 sum =_ftof2(0.0, 0.0) ;
@@ -114,7 +114,7 @@
 
 
 
-#pragma MUST_ITERATE (32)
+//#pragma MUST_ITERATE (32)
  	 	 	 for (i=0; i < N_E; i = i + 2*filter_size)
  	 	 	 {
  	 	 		 sum =_ftof2(0.0, 0.0) ;
@@ -169,7 +169,7 @@
 
 
 
-#pragma MUST_ITERATE (16)
+//#pragma MUST_ITERATE (16)
  	 	 	 for (i=0; i < N_E; i = i + 2*filter_size)
  	 	 	 {
  	 	 		 sum =_ftof2(0.0, 0.0) ;
