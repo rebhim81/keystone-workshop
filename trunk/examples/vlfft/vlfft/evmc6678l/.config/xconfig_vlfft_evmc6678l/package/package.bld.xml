@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="windows-1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--  This file conforms to the DTD xdc/bld/build.dtd -->
 <package name="xconfig_vlfft_evmc6678l" version="" producerId="undefined">
     <units>
     </units>
     <sources>
-        <srcFile name="package/cfg/vlfft_evmc6678l_pe66.c"/>
+        <srcFile name="package/cfg/vlfft_evmc6678l_xe66.c"/>
     </sources>
-    <configscripts>
-        <srcFile name="C:/dev/example_apps/vlfft/evmc6678l/vlfft_evmc6678l.cfg"/>
-    </configscripts>
+    <configurations>
+        <srcFile name="C:/dev/vlfft/vlfft/vlfft/evmc6678l/vlfft_evmc6678l.cfg"/>
+    </configurations>
     <makefiles>
         <srcFile name="package.mak" src="package.bld"/>
         <srcFile name="package/package.xdc.dep" src="package.xdc"/>
-        <srcFile name="package/cfg/vlfft_evmc6678l_pe66.mak" src="package.bld"/>
-        <srcFile name="package/cfg/vlfft_evmc6678l_pe66.oe66.dep" src="package/cfg/vlfft_evmc6678l_pe66.c"/>
-        <srcFile name="package/cfg/vlfft_evmc6678l_pe66.dep" src="package/cfg/vlfft_evmc6678l_pe66.cfg"/>
-        <srcFile name="package/cfg/vlfft_evmc6678l.xe66.mak" src="package.bld"/>
+        <srcFile name="package/cfg/vlfft_evmc6678l_xe66.mak" src="package.bld"/>
+        <srcFile name="package/cfg/vlfft_evmc6678l_xe66.oe66.dep" src="package/cfg/vlfft_evmc6678l_xe66.c"/>
+        <srcFile name="package/cfg/vlfft_evmc6678l_xe66.dep" src="package/cfg/vlfft_evmc6678l_xe66.cfg"/>
         <srcFile name="package/rel/xconfig_vlfft_evmc6678l.tar.dep" src="package/rel/xconfig_vlfft_evmc6678l.xdc.inc"/>
     </makefiles>
     <targets>
@@ -34,28 +33,15 @@
     </targets>
     <libraries>
     </libraries>
-    <configurations>
-    <configuration name="vlfft_evmc6678l"
-        pname="vlfft_evmc6678l.pe66"
-        target="ti.targets.elf.C66"
-        platform="ti.platforms.evm6678"
-        profile="release"
-        isPartial="false"
-        xCfgScript="package/cfg/vlfft_evmc6678l_pe66.cfg"
-        xCfgPrefix="package/cfg/vlfft_evmc6678l_pe66"
-        cfgScript="C:/dev/example_apps/vlfft/evmc6678l/vlfft_evmc6678l.cfg"
-        cfgArgs="null"
-        />
-    </configurations>
     <executables>
     <executable name="vlfft_evmc6678l"
         pname="vlfft_evmc6678l.xe66"
         target="ti.targets.elf.C66"
-        platform="ti.platforms.evm6678"
+        platform="custom.vlfft.evmc6678l.core0"
         profile="release"
-        xCfgScript="package/cfg/vlfft_evmc6678l_pe66.cfg"
-        xCfgPrefix="package/cfg/vlfft_evmc6678l_pe66"
-        cfgScript="C:/dev/example_apps/vlfft/evmc6678l/vlfft_evmc6678l.cfg"
+        xCfgScript="package/cfg/vlfft_evmc6678l_xe66.cfg"
+        xCfgPrefix="package/cfg/vlfft_evmc6678l_xe66"
+        cfgScript="C:/dev/vlfft/vlfft/vlfft/evmc6678l/vlfft_evmc6678l.cfg"
         cfgArgs="null"
         />
     </executables>
@@ -73,11 +59,11 @@
         pname="xconfig_vlfft_evmc6678l.tar"
         label="default"
     >
-        <file name="package/package.bld.xml"/>
-        <file name="package/package.ext.xml"/>
-        <file name="package/package.rel.dot"/>
         <file name="package/build.cfg"/>
+        <file name="package/package.ext.xml"/>
         <file name="package/package.xdc.inc"/>
+        <file name="package/package.bld.xml"/>
+        <file name="package/package.rel.dot"/>
     </release>
     </releases>
     <repositories>

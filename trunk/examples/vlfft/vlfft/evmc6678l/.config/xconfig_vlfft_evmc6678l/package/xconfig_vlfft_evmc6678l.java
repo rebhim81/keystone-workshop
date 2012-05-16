@@ -2,16 +2,16 @@
  *  Do not modify this file; it is automatically 
  *  generated and any modifications will be overwritten.
  *
- * @(#) xdc-x20
+ * @(#) xdc-v56
  */
 import java.util.*;
 import org.mozilla.javascript.*;
 import xdc.services.intern.xsr.*;
-import xdc.services.spec.Session;
+import xdc.services.spec.*;
 
 public class xconfig_vlfft_evmc6678l
 {
-    static final String VERS = "@(#) xdc-x20\n";
+    static final String VERS = "@(#) xdc-v56\n";
 
     static final Proto.Elm $$T_Bool = Proto.Elm.newBool();
     static final Proto.Elm $$T_Num = Proto.Elm.newNum();
@@ -50,7 +50,6 @@ public class xconfig_vlfft_evmc6678l
     ArrayList<Object> imports = new ArrayList<Object>();
     ArrayList<Object> loggables = new ArrayList<Object>();
     ArrayList<Object> mcfgs = new ArrayList<Object>();
-    ArrayList<Object> icfgs = new ArrayList<Object>();
     ArrayList<Object> proxies = new ArrayList<Object>();
     ArrayList<Object> sizes = new ArrayList<Object>();
     ArrayList<Object> tdefs = new ArrayList<Object>();
@@ -104,6 +103,8 @@ public class xconfig_vlfft_evmc6678l
         sb.append("];\n");
         sb.append("pkg.build.libDesc = [\n");
         sb.append("];\n");
+        sb.append("if('suffix' in xdc.om['xdc.IPackage$$LibDesc']) {\n");
+        sb.append("}\n");
         Global.eval(sb.toString());
     }
 
