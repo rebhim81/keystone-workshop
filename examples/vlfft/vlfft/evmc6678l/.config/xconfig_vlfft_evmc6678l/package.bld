@@ -2,7 +2,7 @@
 
 var targ = xdc.module('ti.targets.elf.C66');
 /* configuro was told the platform explicitly */
-var platform = 'ti.platforms.evm6678';
+var platform = 'custom.vlfft.evmc6678l.core0';
 
 /* decide whether to make an assembly or an executable */
 var makeAssembly = false;
@@ -11,7 +11,7 @@ var makeAssembly = false;
 var Executable = xdc.module('xdc.bld.Executable');
 
 var exeOpts = new Executable.Attrs({
-        cfgScript: 'C:/dev/example_apps/vlfft/evmc6678l/vlfft_evmc6678l.cfg',
+        cfgScript: 'C:/dev/vlfft/vlfft/vlfft/evmc6678l/vlfft_evmc6678l.cfg',
         profile: 'release',
         cfgHome: 'xconfig_vlfft_evmc6678l',
 });
@@ -43,11 +43,11 @@ if (makeAssembly) {
     var suffix  = targ.dllExt || '.p' + targ.suffix;
 }
 else {
-    var suffix  = '.p' + targ.suffix;
+    var suffix  = targ.execExt || '.x' + targ.suffix;
 }
 var thisObj = {
-    cfg:        'C:/dev/example_apps/vlfft/evmc6678l/vlfft_evmc6678l.cfg',
-    outputPath: 'C:/dev/example_apps/vlfft/evmc6678l/.config/xconfig_vlfft_evmc6678l',
+    cfg:        'C:/dev/vlfft/vlfft/vlfft/evmc6678l/vlfft_evmc6678l.cfg',
+    outputPath: 'C:/dev/vlfft/vlfft/vlfft/evmc6678l/.config/xconfig_vlfft_evmc6678l',
     exeName:    'vlfft_evmc6678l' + suffix,
     exeIntName: 'vlfft_evmc6678l' + suffix.replace('.', '_'),
     targ:       targ,

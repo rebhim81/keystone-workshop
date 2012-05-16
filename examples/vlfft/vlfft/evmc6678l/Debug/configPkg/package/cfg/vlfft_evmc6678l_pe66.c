@@ -4619,7 +4619,7 @@ __FAR__ const xdc_SizeT ti_sysbios_xdcruntime_GateThreadSupport_Instance_State_g
  *  Define absolute path prefix for this executable's
  *  configuration generated files.
  */
-xdc__META(__ASM__, "@(#)__ASM__ = C:/dev/keystone-workshop/examples/vlfft/vlfft/evmc6678l/Debug/configPkg/package/cfg/vlfft_evmc6678l_pe66");
+xdc__META(__ASM__, "@(#)__ASM__ = C:/dev/keystone-workshop/examples/vlfft/evmc6678l/Debug/configPkg/package/cfg/vlfft_evmc6678l_pe66");
 
 /*
  *  ======== __ISA__ ========
