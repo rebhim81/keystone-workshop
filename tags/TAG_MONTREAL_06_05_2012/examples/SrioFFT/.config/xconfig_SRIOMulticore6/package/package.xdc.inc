@@ -1,0 +1,12 @@
+package.xdc
+package.xs
+package/xconfig_SRIOMulticore6.sch
+package/.vers_g180
+package/.vers_r170
+package/.vers_b150
+package/.xdc-x14
+package/xconfig_SRIOMulticore6.java
+package/xconfig_SRIOMulticore6.class
+package/package_xconfig_SRIOMulticore6.c
+package/package.defs.h
+package/xconfig_SRIOMulticore6.ccs
