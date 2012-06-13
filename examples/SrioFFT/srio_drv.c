@@ -1851,7 +1851,7 @@ Srio_SockHandle Srio_sockOpen
 
             /* Initialize the SRIO socket. */
             ptr_srioSocket->ptr_SrioDrvInst   = ptr_SrioDrvInst;
-            ptr_srioSocket->maxPendingPackets = 16;
+            ptr_srioSocket->maxPendingPackets = DEFAULT_SRIO_MAX_PENDING_PACKETS;
 
             /* Remember the allocated index. */
             ptr_srioSocket->sockIndex       = idx;
