@@ -41,6 +41,8 @@
 									<listOptionValue builtIn="false" value="&quot;${PDK_ROOT}/packages&quot;"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.C6000_7.3.compilerID.ABI.1180365459" name="Application binary interface (coffabi, eabi) (--abi)" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.3.compilerID.ABI" value="com.ti.ccstudio.buildDefinitions.C6000_7.3.compilerID.ABI.eabi" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_7.3.compilerID.OPT_LEVEL.2114361538" name="Optimization level (--opt_level, -O)" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.3.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.C6000_7.3.compilerID.OPT_LEVEL.3" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_7.3.compilerID.KEEP_ASM.369884920" name="Keep the generated assembly language (.asm) file (--keep_asm, -k)" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.3.compilerID.KEEP_ASM" value="true" valueType="boolean"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_7.3.compiler.inputType__C_SRCS.1584073727" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.3.compiler.inputType__C_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_7.3.compiler.inputType__CPP_SRCS.1187272761" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.3.compiler.inputType__CPP_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_7.3.compiler.inputType__ASM_SRCS.362182681" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.3.compiler.inputType__ASM_SRCS"/>
