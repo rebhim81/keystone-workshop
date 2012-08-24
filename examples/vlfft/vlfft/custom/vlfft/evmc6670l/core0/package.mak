@@ -5,6 +5,7 @@
 #
 
 unexport MAKEFILE_LIST
+MK_NOGENDEPS := $(filter clean,$(MAKECMDGOALS))
 override PKGDIR = custom/vlfft/evmc6670l/core0
 XDCINCS = -I. -I$(strip $(subst ;, -I,$(subst $(space),\$(space),$(XPKGPATH))))
 XDCCFGDIR = package/cfg/
@@ -14,54 +15,58 @@ XDCCFGDIR = package/cfg/
 # in the event that some included BOM script changes.
 #
 ifneq (clean,$(MAKECMDGOALS))
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/PackageContents.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/PackageContents.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/xmlgen.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/xmlgen.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/BuildEnvironment.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/BuildEnvironment.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/Repository.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/Repository.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/package.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/package.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/services/global/Clock.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/services/global/Clock.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/services/global/Trace.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/services/global/Trace.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/_gen.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/_gen.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/Library.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/Library.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/Executable.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/Executable.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/Utils.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/Utils.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/Script.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/Script.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/ITarget.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/ITarget.xs
-package.mak: package.bld
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/ITargetFilter.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/ITargetFilter.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/xmlgen2.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/xmlgen2.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/Manifest.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/Manifest.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/package.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/package.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/template.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/template.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/om2.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/om2.xs
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/include/utils.tci:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/include/utils.tci
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/xdc.tci:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/xdc.tci
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/IPackage.xs:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/IPackage.xs
+C:/ti/xdctools_3_23_03_53/include/utils.tci:
+package.mak: C:/ti/xdctools_3_23_03_53/include/utils.tci
+C:/ti/xdctools_3_23_03_53/packages/xdc/xdc.tci:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/xdc.tci
+C:/ti/xdctools_3_23_03_53/packages/xdc/template.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/template.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/om2.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/om2.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/xmlgen.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/xmlgen.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/xmlgen2.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/xmlgen2.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/IPackage.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/IPackage.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/package.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/package.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/services/global/Clock.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/services/global/Clock.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/services/global/Trace.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/services/global/Trace.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/bld/bld.js:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/bld/bld.js
+C:/ti/xdctools_3_23_03_53/packages/xdc/bld/BuildEnvironment.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/bld/BuildEnvironment.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/bld/PackageContents.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/bld/PackageContents.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/bld/_gen.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/bld/_gen.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/bld/Library.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/bld/Library.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/bld/Executable.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/bld/Executable.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/bld/Repository.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/bld/Repository.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/bld/Configuration.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/bld/Configuration.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/bld/Script.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/bld/Script.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/bld/Manifest.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/bld/Manifest.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/bld/Utils.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/bld/Utils.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/bld/ITarget.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/bld/ITarget.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/bld/ITarget2.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/bld/ITarget2.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/bld/ITargetFilter.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/bld/ITargetFilter.xs
+C:/ti/xdctools_3_23_03_53/packages/xdc/bld/package.xs:
+package.mak: C:/ti/xdctools_3_23_03_53/packages/xdc/bld/package.xs
 package.mak: config.bld
-C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/bld.js:
-package.mak: C:/Program\ Files/Texas\ Instruments/ccsv5/xdctools_3_20_08_88/packages/xdc/bld/bld.js
+package.mak: package.bld
 endif
 
 
@@ -77,7 +82,7 @@ package/%.xdc.inc package/%_custom.vlfft.evmc6670l.core0.c package/%.defs.h: %.x
 	@$(MSG) generating interfaces for package custom.vlfft.evmc6670l.core0" (because $@ is older than $(firstword $?))" ...
 	$(XSRUN) -f xdc/services/intern/cmd/build.xs $(MK_IDLOPTS) -m package/package.xdc.dep -i package/package.xdc.inc package.xdc
 
-ifneq (clean,$(MAKECMDGOALS))
+ifeq (,$(MK_NOGENDEPS))
 -include package/package.cfg.dep
 endif
 
@@ -98,13 +103,13 @@ $(XDCCFGDIR)%.c $(XDCCFGDIR)%.h $(XDCCFGDIR)%.xdl: $(XDCCFGDIR)%.cfg .interfaces
 	$(CONFIG) $(_PROG_XSOPTS) xdc.cfg $(_PROG_NAME) $(XDCCFGDIR)$*.cfg $(XDCCFGDIR)$*
 
 .PHONY: release,custom_vlfft_evmc6670l_core0
-custom_vlfft_evmc6670l_core0.zip: package/build.cfg
-custom_vlfft_evmc6670l_core0.zip: package/package.cfg.xdc.inc
-custom_vlfft_evmc6670l_core0.zip: package/package.ext.xml
-custom_vlfft_evmc6670l_core0.zip: package/package.xdc.inc
 custom_vlfft_evmc6670l_core0.zip: package/package.bld.xml
+custom_vlfft_evmc6670l_core0.zip: package/package.ext.xml
 custom_vlfft_evmc6670l_core0.zip: package/package.rel.dot
-ifneq (clean,$(MAKECMDGOALS))
+custom_vlfft_evmc6670l_core0.zip: package/build.cfg
+custom_vlfft_evmc6670l_core0.zip: package/package.xdc.inc
+custom_vlfft_evmc6670l_core0.zip: package/package.cfg.xdc.inc
+ifeq (,$(MK_NOGENDEPS))
 -include package/rel/custom_vlfft_evmc6670l_core0.zip.dep
 endif
 package/rel/custom_vlfft_evmc6670l_core0/custom/vlfft/evmc6670l/core0/package/package.rel.xml:
@@ -134,8 +139,8 @@ ifneq (clean,$(MAKECMDGOALS))
 ifeq (,$(wildcard package))
     $(shell $(MKDIR) package)
 endif
-ifeq (,$(wildcard package/external))
-    $(shell $(MKDIR) package/external)
+ifeq (,$(wildcard package/cfg))
+    $(shell $(MKDIR) package/cfg)
 endif
 ifeq (,$(wildcard package/lib))
     $(shell $(MKDIR) package/lib)
@@ -143,11 +148,11 @@ endif
 ifeq (,$(wildcard package/rel))
     $(shell $(MKDIR) package/rel)
 endif
-ifeq (,$(wildcard package/cfg))
-    $(shell $(MKDIR) package/cfg)
-endif
 ifeq (,$(wildcard package/internal))
     $(shell $(MKDIR) package/internal)
+endif
+ifeq (,$(wildcard package/external))
+    $(shell $(MKDIR) package/external)
 endif
 endif
 clean::

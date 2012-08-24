@@ -61,15 +61,19 @@
 
 /*  ----------------------------------- To get globals from .cfg Header */
 #include <xdc/cfg/global.h>
-
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 #include <system_trace.h>
+#endif
+
 /* vlfft.h */
 #include "../vlfftInc/vlfftDebug.h"
 #include "../vlfftInc/vlfftMessgQ.h"
 #include "../vlfftInc/vlfft.h"
 #include "../vlfftInc/vlfftconfig.h"
 
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 extern STMHandle *pSTMHandle;
+#endif
 
 #define NUM_FFT_TO_COMPUTE    10
 
@@ -275,11 +279,13 @@ Void vlfft_master(UArg arg0, UArg arg1)
 	System_printf("2nd iter FFT: %d\n", VLFFTparams.N2);
 #endif
 
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 	STMXport_logMsg1(pSTMHandle, STM_CHAN_DEFAULT, "Maximum number of cores: %d\0", VLFFTparams.maxNumCores);
 	STMXport_logMsg1(pSTMHandle, STM_CHAN_DEFAULT, "Number of cores used: %d\0", VLFFTparams.numCoresForFftCompute);
 	STMXport_logMsg1(pSTMHandle, STM_CHAN_DEFAULT, "FFT Size: %d\0", VLFFTparams.N);
 	STMXport_logMsg1(pSTMHandle, STM_CHAN_DEFAULT, "First Pass Size: %d\0", VLFFTparams.N1);
 	STMXport_logMsg1(pSTMHandle, STM_CHAN_DEFAULT, "Second Pass Size: %d\0", VLFFTparams.N2);
+#endif
 
     /******************************************************/
     /*         init message Q                             */
@@ -300,9 +306,13 @@ Void vlfft_master(UArg arg0, UArg arg1)
 #ifdef ENABLE_PRINTF
     System_printf("Core0 start initializing data array\n");
 #endif
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 	STMXport_logMsg(pSTMHandle, STM_CHAN_STATUS, "Begin Initializing Data Array\0");
+#endif
     genFFTTestData( inData );
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 	STMXport_logMsg(pSTMHandle, STM_CHAN_STATUS, "Finish Initializing Data Array\0");
+#endif
 #ifdef ENABLE_PRINTF
     System_printf("Core0 finish initializing data array\n");
 #endif
@@ -340,7 +350,10 @@ for(fftLoop=0; fftLoop<1; fftLoop++)
     /***********************************/
     /*    VLFFT computation start      */
     /***********************************/
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 		STMXport_logMsg(pSTMHandle, STM_CHAN_BENCHMARK, "Start Processing FFT\0");
+#endif
+
 #if ENABLE_BENCHMARKING
     TSC_enable();
     timer0 = TSC_read();
@@ -392,7 +405,9 @@ for(fftLoop=0; fftLoop<1; fftLoop++)
 
 #if ENABLE_BENCHMARKING
     timer1 = TSC_read();
-		STMXport_logMsg(pSTMHandle, STM_CHAN_BENCHMARK, "End Processing FFT\0");
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
+	STMXport_logMsg(pSTMHandle, STM_CHAN_BENCHMARK, "End Processing FFT\0");
+#endif
 #endif
 
 
@@ -418,9 +433,13 @@ for(fftLoop=0; fftLoop<1; fftLoop++)
 
 
     // compare vlfft result
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 	STMXport_logMsg(pSTMHandle, STM_CHAN_BENCHMARK, "Begin Library FFT for Comparison\0");
+#endif
     dft(VLFFT_SIZE, inData, testData, 20);
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 	STMXport_logMsg(pSTMHandle, STM_CHAN_BENCHMARK, "End Library FFT for Comparison\0");
+#endif
     if( compare_float( 20*2, outData, testData) == 0 ){
 #ifdef ENABLE_PRINTF
          System_printf("   Success!!!   \n\n\n"  );
@@ -550,9 +569,11 @@ while(1)
 
     // idle mode
     if(mode == VLFFT_DO_NOTHING)
-      {
+    {
          msg->mode = VLFFT_PROCESS_1stITER;//VLFFT_OK;
-				STMXport_logMsg(pSTMHandle, STM_CHAN_STATUS, "Initial Sync\0");
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
+         STMXport_logMsg(pSTMHandle, STM_CHAN_STATUS, "Initial Sync\0");
+#endif
 #ifdef ENABLE_PRINTF
          System_printf("vlfft initial sync\n"  );
 #endif
@@ -597,7 +618,9 @@ while(1)
             System_printf("The test is complete!\n");
 //          System_printf("\n\n");
 #endif
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
     	STMXport_logMsg(pSTMHandle, STM_CHAN_STATUS, "Test Complete\0");
+#endif
             System_exit(0);
       }
     /*********************************************/
@@ -649,8 +672,9 @@ Int main(Int argc, Char* argv[])
     */
     /* Clear interrupt enable register at startup */
 //  IER = 0;
-
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 		initializeSTM();
+#endif
     /*  
      *  Ipc_start() calls Ipc_attach() to synchronize all remote processors
      *  because 'Ipc.procSync' is set to 'Ipc.ProcSync_ALL' in *.cfg
@@ -658,9 +682,11 @@ Int main(Int argc, Char* argv[])
     Ipc_start();
 
     if (MultiProc_self() == 0) {
-			STMXport_logMsg(pSTMHandle, STM_CHAN_DEFAULT, "BackToBackMsg\0");
-			STMXport_logMsg(pSTMHandle, STM_CHAN_DEFAULT, "BackToBackMsg\0");
-			STMXport_logMsg(pSTMHandle, STM_CHAN_DEFAULT, "BackToBackMsg\0");
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
+    	STMXport_logMsg(pSTMHandle, STM_CHAN_DEFAULT, "BackToBackMsg\0");
+		STMXport_logMsg(pSTMHandle, STM_CHAN_DEFAULT, "BackToBackMsg\0");
+		STMXport_logMsg(pSTMHandle, STM_CHAN_DEFAULT, "BackToBackMsg\0");
+#endif
 
 #if !FUNCTIONAL_SIMULATOR
         clearRegisters(0);

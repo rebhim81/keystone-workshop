@@ -1,20 +1,20 @@
 # FIXED
 
-vlfftApps/vlfftApps.obj: C:/dev/keystone-workshop/examples/vlfft/vlfftApps/vlfftApps.c
-vlfftApps/vlfftApps.obj: C:/ti/ccsv5/tools/compiler/c6000/include/c6x.h
-vlfftApps/vlfftApps.obj: C:/ti/ccsv5/tools/compiler/c6000/include/vect.h
-vlfftApps/vlfftApps.obj: C:/ti/ccsv5/tools/compiler/c6000/include/stdint.h
-vlfftApps/vlfftApps.obj: C:/ti/ccsv5/tools/compiler/c6000/include/stdio.h
-vlfftApps/vlfftApps.obj: C:/ti/ccsv5/tools/compiler/c6000/include/linkage.h
-vlfftApps/vlfftApps.obj: C:/ti/ccsv5/tools/compiler/c6000/include/stdarg.h
-vlfftApps/vlfftApps.obj: C:/ti/ccsv5/tools/compiler/c6000/include/stdlib.h
+vlfftApps/vlfftApps.obj: C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftApps/vlfftApps.c
+vlfftApps/vlfftApps.obj: C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/c6x.h
+vlfftApps/vlfftApps.obj: C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/vect.h
+vlfftApps/vlfftApps.obj: C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/stdint.h
+vlfftApps/vlfftApps.obj: C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/stdio.h
+vlfftApps/vlfftApps.obj: C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/linkage.h
+vlfftApps/vlfftApps.obj: C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/stdarg.h
+vlfftApps/vlfftApps.obj: C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/stdlib.h
 vlfftApps/vlfftApps.obj: C:/ti/xdctools_3_23_01_43/packages/xdc/std.h
-vlfftApps/vlfftApps.obj: C:/ti/ccsv5/tools/compiler/c6000/include/stdarg.h
-vlfftApps/vlfftApps.obj: C:/ti/ccsv5/tools/compiler/c6000/include/stddef.h
+vlfftApps/vlfftApps.obj: C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/stdarg.h
+vlfftApps/vlfftApps.obj: C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/stddef.h
 vlfftApps/vlfftApps.obj: C:/ti/xdctools_3_23_01_43/packages/ti/targets/elf/std.h
 vlfftApps/vlfftApps.obj: C:/ti/xdctools_3_23_01_43/packages/ti/targets/elf/C66.h
 vlfftApps/vlfftApps.obj: C:/ti/xdctools_3_23_01_43/packages/ti/targets/std.h
-vlfftApps/vlfftApps.obj: C:/ti/ccsv5/tools/compiler/c6000/include/string.h
+vlfftApps/vlfftApps.obj: C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/string.h
 vlfftApps/vlfftApps.obj: C:/ti/xdctools_3_23_01_43/packages/xdc/runtime/System.h
 vlfftApps/vlfftApps.obj: C:/ti/xdctools_3_23_01_43/packages/xdc/runtime/xdc.h
 vlfftApps/vlfftApps.obj: C:/ti/xdctools_3_23_01_43/packages/xdc/runtime/Types.h
@@ -174,17 +174,12 @@ vlfftApps/vlfftApps.obj: C:/ti/bios_6_33_02_31/packages/ti/sysbios/interfaces/IT
 vlfftApps/vlfftApps.obj: C:/ti/bios_6_33_02_31/packages/ti/sysbios/knl/Task__epilogue.h
 vlfftApps/vlfftApps.obj: C:/ti/bios_6_33_02_31/packages/ti/sysbios/knl/package/Task_SupportProxy.h
 vlfftApps/vlfftApps.obj: C:/ti/xdctools_3_23_01_43/packages/xdc/cfg/global.h
-vlfftApps/vlfftApps.obj: C:/dev/keystone-workshop/examples/vlfft/evmc6678l/Debug/configPkg/package/cfg/vlfft_evmc6678l_pe66.h
-vlfftApps/vlfftApps.obj: C:/dev/vlfft/vlfft/vlfft/vlfftInc/system_trace.h
-vlfftApps/vlfftApps.obj: C:/development_tools/libraries/STMLib/include/StmLibrary.h
-vlfftApps/vlfftApps.obj: C:/ti/ccsv5/tools/compiler/c6000/include/stdarg.h
-vlfftApps/vlfftApps.obj: C:/development_tools/libraries/STMLib/src/StmHelper.h
-vlfftApps/vlfftApps.obj: C:/ti/ccsv5/tools/compiler/c6000/include/stdlib.h
-vlfftApps/vlfftApps.obj: C:/dev/keystone-workshop/examples/vlfft/vlfftApps/../vlfftInc/vlfftDebug.h
-vlfftApps/vlfftApps.obj: C:/dev/keystone-workshop/examples/vlfft/vlfftApps/../vlfftInc/vlfftMessgQ.h
-vlfftApps/vlfftApps.obj: C:/dev/keystone-workshop/examples/vlfft/vlfftApps/../vlfftInc/vlfft.h
+vlfftApps/vlfftApps.obj: C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/evmc6678l/Debug/configPkg/package/cfg/vlfft_evmc6678l_pe66.h
+vlfftApps/vlfftApps.obj: C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftApps/../vlfftInc/vlfftDebug.h
+vlfftApps/vlfftApps.obj: C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftApps/../vlfftInc/vlfftMessgQ.h
+vlfftApps/vlfftApps.obj: C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftApps/../vlfftInc/vlfft.h
 vlfftApps/vlfftApps.obj: C:/ti/edma3_lld_02_11_02_04/packages/ti/sdo/edma3/drv/sample/bios6_edma3_drv_sample.h
-vlfftApps/vlfftApps.obj: C:/ti/ccsv5/tools/compiler/c6000/include/stdio.h
+vlfftApps/vlfftApps.obj: C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/stdio.h
 vlfftApps/vlfftApps.obj: C:/ti/bios_6_33_02_31/packages/ti/sysbios/knl/Semaphore.h
 vlfftApps/vlfftApps.obj: C:/ti/xdctools_3_23_01_43/packages/xdc/runtime/Types.h
 vlfftApps/vlfftApps.obj: C:/ti/xdctools_3_23_01_43/packages/xdc/runtime/IInstance.h
@@ -210,23 +205,23 @@ vlfftApps/vlfftApps.obj: C:/ti/xdctools_3_23_01_43/packages/xdc/runtime/Log.h
 vlfftApps/vlfftApps.obj: C:/ti/edma3_lld_02_11_02_04/packages/ti/sdo/edma3/drv/edma3_drv.h
 vlfftApps/vlfftApps.obj: C:/ti/edma3_lld_02_11_02_04/packages/ti/sdo/edma3/rm/edma3_rm.h
 vlfftApps/vlfftApps.obj: C:/ti/edma3_lld_02_11_02_04/packages/ti/sdo/edma3/rm/edma3_common.h
-vlfftApps/vlfftApps.obj: C:/dev/keystone-workshop/examples/vlfft/vlfftApps/../vlfftInc/vlfftconfig.h
+vlfftApps/vlfftApps.obj: C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftApps/../vlfftInc/vlfftconfig.h
 
-C:/dev/keystone-workshop/examples/vlfft/vlfftApps/vlfftApps.c: 
-C:/ti/ccsv5/tools/compiler/c6000/include/c6x.h: 
-C:/ti/ccsv5/tools/compiler/c6000/include/vect.h: 
-C:/ti/ccsv5/tools/compiler/c6000/include/stdint.h: 
-C:/ti/ccsv5/tools/compiler/c6000/include/stdio.h: 
-C:/ti/ccsv5/tools/compiler/c6000/include/linkage.h: 
-C:/ti/ccsv5/tools/compiler/c6000/include/stdarg.h: 
-C:/ti/ccsv5/tools/compiler/c6000/include/stdlib.h: 
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftApps/vlfftApps.c: 
+C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/c6x.h: 
+C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/vect.h: 
+C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/stdint.h: 
+C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/stdio.h: 
+C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/linkage.h: 
+C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/stdarg.h: 
+C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/stdlib.h: 
 C:/ti/xdctools_3_23_01_43/packages/xdc/std.h: 
-C:/ti/ccsv5/tools/compiler/c6000/include/stdarg.h: 
-C:/ti/ccsv5/tools/compiler/c6000/include/stddef.h: 
+C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/stdarg.h: 
+C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/stddef.h: 
 C:/ti/xdctools_3_23_01_43/packages/ti/targets/elf/std.h: 
 C:/ti/xdctools_3_23_01_43/packages/ti/targets/elf/C66.h: 
 C:/ti/xdctools_3_23_01_43/packages/ti/targets/std.h: 
-C:/ti/ccsv5/tools/compiler/c6000/include/string.h: 
+C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/string.h: 
 C:/ti/xdctools_3_23_01_43/packages/xdc/runtime/System.h: 
 C:/ti/xdctools_3_23_01_43/packages/xdc/runtime/xdc.h: 
 C:/ti/xdctools_3_23_01_43/packages/xdc/runtime/Types.h: 
@@ -386,17 +381,12 @@ C:/ti/bios_6_33_02_31/packages/ti/sysbios/interfaces/ITaskSupport.h:
 C:/ti/bios_6_33_02_31/packages/ti/sysbios/knl/Task__epilogue.h: 
 C:/ti/bios_6_33_02_31/packages/ti/sysbios/knl/package/Task_SupportProxy.h: 
 C:/ti/xdctools_3_23_01_43/packages/xdc/cfg/global.h: 
-C:/dev/keystone-workshop/examples/vlfft/evmc6678l/Debug/configPkg/package/cfg/vlfft_evmc6678l_pe66.h: 
-C:/dev/vlfft/vlfft/vlfft/vlfftInc/system_trace.h: 
-C:/development_tools/libraries/STMLib/include/StmLibrary.h: 
-C:/ti/ccsv5/tools/compiler/c6000/include/stdarg.h: 
-C:/development_tools/libraries/STMLib/src/StmHelper.h: 
-C:/ti/ccsv5/tools/compiler/c6000/include/stdlib.h: 
-C:/dev/keystone-workshop/examples/vlfft/vlfftApps/../vlfftInc/vlfftDebug.h: 
-C:/dev/keystone-workshop/examples/vlfft/vlfftApps/../vlfftInc/vlfftMessgQ.h: 
-C:/dev/keystone-workshop/examples/vlfft/vlfftApps/../vlfftInc/vlfft.h: 
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/evmc6678l/Debug/configPkg/package/cfg/vlfft_evmc6678l_pe66.h: 
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftApps/../vlfftInc/vlfftDebug.h: 
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftApps/../vlfftInc/vlfftMessgQ.h: 
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftApps/../vlfftInc/vlfft.h: 
 C:/ti/edma3_lld_02_11_02_04/packages/ti/sdo/edma3/drv/sample/bios6_edma3_drv_sample.h: 
-C:/ti/ccsv5/tools/compiler/c6000/include/stdio.h: 
+C:/ti/C6000\ Code\ Generation\ Tools\ 7.3.5/include/stdio.h: 
 C:/ti/bios_6_33_02_31/packages/ti/sysbios/knl/Semaphore.h: 
 C:/ti/xdctools_3_23_01_43/packages/xdc/runtime/Types.h: 
 C:/ti/xdctools_3_23_01_43/packages/xdc/runtime/IInstance.h: 
@@ -422,4 +412,4 @@ C:/ti/xdctools_3_23_01_43/packages/xdc/runtime/Log.h:
 C:/ti/edma3_lld_02_11_02_04/packages/ti/sdo/edma3/drv/edma3_drv.h: 
 C:/ti/edma3_lld_02_11_02_04/packages/ti/sdo/edma3/rm/edma3_rm.h: 
 C:/ti/edma3_lld_02_11_02_04/packages/ti/sdo/edma3/rm/edma3_common.h: 
-C:/dev/keystone-workshop/examples/vlfft/vlfftApps/../vlfftInc/vlfftconfig.h: 
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftApps/../vlfftInc/vlfftconfig.h: 

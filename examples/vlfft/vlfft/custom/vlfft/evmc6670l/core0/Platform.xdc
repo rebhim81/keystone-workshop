@@ -14,71 +14,71 @@ metaonly module Platform inherits xdc.platform.IPlatform {
            [          
                 ["L2SRAM", 
                      {
-                        base: 0x00800000,                    
-                        space: "code/data",
                         name: "L2SRAM",
-                        len: 0x00024000,                    
+                        base: 0x00800000,                    
+                        len: 0x00026000,                    
+                        space: "code/data",
                         access: "RWX",
                      }
                 ],
                 ["MSMCSRAM", 
                      {
-                        base: 0x0c000000,                    
-                        space: "code/data",
                         name: "MSMCSRAM",
+                        base: 0x0c000000,                    
                         len: 0x00200000,                    
+                        space: "code/data",
                         access: "RWX",
                      }
                 ],
                 ["DDR", 
                      {
-                        base: 0x80000000,                    
-                        space: "code/data",
                         name: "DDR",
+                        base: 0x80000000,                    
                         len: 0x00200000,                    
+                        space: "code/data",
                         access: "RWX",
                      }
                 ],
                 ["DDR_1", 
                      {
-                        base: 0x80200000,                    
-                        space: "code/data",
                         name: "DDR_1",
+                        base: 0x80200000,                    
                         len: 0x04000000,                    
+                        space: "code/data",
                         access: "RWX",
                      }
                 ],
                 ["MSMCSRAM_1", 
                      {
-                        base: 0x0c200000,                    
-                        space: "code/data",
                         name: "MSMCSRAM_1",
+                        base: 0x0c200000,                    
                         len: 0x00100000,                    
+                        space: "code/data",
                         access: "RWX",
                      }
                 ],
                 ["MSMCSRAM_2", 
                      {
-                        base: 0x0c300000,                    
-                        space: "code/data",
                         name: "MSMCSRAM_2",
+                        base: 0x0c300000,                    
                         len: 0x00100000,                    
+                        space: "code/data",
                         access: "RWX",
                      }
                 ],
                 ["L2SRAM_1", 
                      {
-                        base: 0x00824000,                    
-                        space: "code/data",
                         name: "L2SRAM_1",
-                        len: 0x0005c000,                    
+                        base: 0x00826000,                    
+                        len: 0x0005a000,                    
+                        space: "code/data",
                         access: "RWX",
                      }
                 ],
            ],
-          l1DMode:"32k",
-          l1PMode:"32k",
           l2Mode:"0k",
+          l1PMode:"32k",
+          l1DMode:"32k",
 
     });
     

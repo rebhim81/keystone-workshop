@@ -9,7 +9,7 @@
  */
 
 
--l"C:\dev\keystone-workshop\examples\vlfft\evmc6678l\Debug\configPkg\package\cfg\vlfft_evmc6678l_pe66.oe66"
+-l"C:\dev\keystone-workshop\trunk\examples\vlfft\vlfft\evmc6678l\Debug\configPkg\package\cfg\vlfft_evmc6678l_pe66.oe66"
 -l"C:\ti\ipc_1_24_02_27\packages\ti\sdo\ipc\lib\instrumented_e66\ipc\ipc.lib"
 -l"C:\ti\bios_6_33_02_31\packages\ti\sysbios\lib\instrumented_e66\sysbios\sysbios.lib"
 -l"C:\ti\xdctools_3_23_01_43\packages\ti\targets\rts6000\lib\ti.targets.rts6000.ae66"

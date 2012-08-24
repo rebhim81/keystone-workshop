@@ -1,8 +1,8 @@
 #
-_XDCBUILDCOUNT = 1
+_XDCBUILDCOUNT = 2
 ifneq (,$(findstring path,$(_USEXDCENV_)))
 override XDCPATH = 
-override XDCROOT = C:/PROGRA~1/TEXASI~1/ccsv5/xdctools_3_20_08_88
+override XDCROOT = C:/ti/xdctools_3_23_03_53
 override XDCBUILDCFG = ./config.bld
 endif
 ifneq (,$(findstring args,$(_USEXDCENV_)))
@@ -11,6 +11,6 @@ override XDCTARGETS =
 endif
 #
 ifeq (0,1)
-PKGPATH = C:/PROGRA~1/TEXASI~1/ccsv5/xdctools_3_20_08_88/packages;../../../..
+PKGPATH = C:/ti/xdctools_3_23_03_53/packages;../../../..
 HOSTOS = Windows
 endif

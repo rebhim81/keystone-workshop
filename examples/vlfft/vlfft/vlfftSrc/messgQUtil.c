@@ -65,7 +65,9 @@
 /*  ----------------------------------- To get globals from .cfg Header */
 #include <xdc/cfg/global.h>
 
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 #include <system_trace.h>
+#endif
 
 /* vlfft.h */
 #include "../vlfftInc/vlfftMessgQ.h"
@@ -84,7 +86,9 @@ extern Char core7QueueName[];
 #define DEBUG_DISPLAY  0
 #define USE_BDTI_FFT   1
 
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 extern STMHandle *pSTMHandle;
+#endif
 
 /****************************************************************/
 /*    broadcast messages to core 1 - core numCoresToCompute-1   */
@@ -104,8 +108,9 @@ void broadcastMessages(  vlfftMessageQParams_t *messageQParams, const UInt32 max
 
 		/* send the message to the remote processor */
 		MessageQ_put(messageQParams->remoteQueueIdCore[indexCore], (MessageQ_Msg)messageQParams->msg[indexCore] );
-
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 		STMXport_logMsg1(pSTMHandle, STM_CHAN_MSG_SEND, "Message sent to core %d\0", indexCore);
+#endif
 	}
 }
 
@@ -128,7 +133,9 @@ void broadcastMessagesToActiveCores(  vlfftMessageQParams_t *messageQParams, con
 
 		/* send the message to the remote processor */
 		MessageQ_put(messageQParams->remoteQueueIdCore[indexCore], (MessageQ_Msg)messageQParams->msg[indexCore] );
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 		STMXport_logMsg1(pSTMHandle, STM_CHAN_MSG_SEND, "Message sent to core %d\0", indexCore);
+#endif
 	}
 }
 
@@ -147,8 +154,9 @@ void broadcastMessagesToAllCores(  vlfftMessageQParams_t *messageQParams, const 
 
 		/* send the message to the remote processor */
 		MessageQ_put(messageQParams->remoteQueueIdCore[indexCore], (MessageQ_Msg)messageQParams->msg[indexCore] );
-
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 		STMXport_logMsg1(pSTMHandle, STM_CHAN_MSG_SEND, "Message sent to core %d\0", indexCore);
+#endif
 	}
 }
 
@@ -165,7 +173,9 @@ Int32 getAllMessages( vlfftMessageQParams_t *messageQParams, const UInt32 maxNum
 		/* Get a message */
 		MessageQ_get( messageQParams->messageQ, (MessageQ_Msg *)&messageQParams->msg[indexCore], MessageQ_FOREVER);
 		msgId = MessageQ_getMsgId( (MessageQ_Msg *)messageQParams->msg[indexCore] );
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 		STMXport_logMsg1(pSTMHandle, STM_CHAN_MSG_RCV, "Message received from core %d\0", msgId);
+#endif
 		if( msgId==1 ) receiveFlag |= 0x1;
 		if( msgId==2 ) receiveFlag |= 0x2;
 		if( msgId==3 ) receiveFlag |= 0x4;
@@ -189,15 +199,21 @@ void initMessageQueues( vlfftMessageQParams_t *messageQParams, const UInt32 maxN
 	do {
 		status = MessageQ_open(core1QueueName, &messageQParams->remoteQueueIdCore[1]);
 	} while (status < 0);
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 	STMXport_logMsg1(pSTMHandle, STM_CHAN_STATUS, "Message Queue opened for core %d\0", 1);
+#endif
 	do {
 		status = MessageQ_open(core2QueueName, &messageQParams->remoteQueueIdCore[2]);
 	} while (status < 0);
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 	STMXport_logMsg1(pSTMHandle, STM_CHAN_STATUS, "Message Queue opened for core %d\0", 2);
+#endif
 	do {
 		status = MessageQ_open(core3QueueName, &messageQParams->remoteQueueIdCore[3]);
 	} while (status < 0);
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 	STMXport_logMsg1(pSTMHandle, STM_CHAN_STATUS, "Message Queue opened for core %d\0", 3);
+#endif
 #ifdef ENABLE_PRINTF
 	System_printf("maxNumCores: %d\n", maxNumCores);
 	System_printf("MessageQ opened\n" );
@@ -206,19 +222,27 @@ void initMessageQueues( vlfftMessageQParams_t *messageQParams, const UInt32 maxN
 		do {
 			status = MessageQ_open(core4QueueName, &messageQParams->remoteQueueIdCore[4]);
 		} while (status < 0);
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 		STMXport_logMsg1(pSTMHandle, STM_CHAN_STATUS, "Message Queue opened for core %d\0", 4);
+#endif
 		do {
 			status = MessageQ_open(core5QueueName, &messageQParams->remoteQueueIdCore[5]);
 		} while (status < 0);
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 		STMXport_logMsg1(pSTMHandle, STM_CHAN_STATUS, "Message Queue opened for core %d\0", 5);
+#endif
 		do {
 			status = MessageQ_open(core6QueueName, &messageQParams->remoteQueueIdCore[6]);
 		} while (status < 0);
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 		STMXport_logMsg1(pSTMHandle, STM_CHAN_STATUS, "Message Queue opened for core %d\0", 6);
+#endif
 		do {
 			status = MessageQ_open(core7QueueName, &messageQParams->remoteQueueIdCore[7]);
 		} while (status < 0);
+#ifdef ENABLE_SYSTEM_TRACE_LOGS
 		STMXport_logMsg1(pSTMHandle, STM_CHAN_STATUS, "Message Queue opened for core %d\0", 7);
+#endif
 	}
 
 	for( indexCore=1; indexCore<maxNumCores; indexCore++ ) {

@@ -26,11 +26,11 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.buildCommand</key>
-					<value>${CCS_INSTALL_ROOT}/utils/gmake/gmake</value>
+					<value>${CCS_UTILS_DIR}/bin/gmake</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.buildLocation</key>
-					<value>${workspace_loc:/vlfft_evmc6670l/Release}</value>
+					<value>${BuildDirectory}</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.cleanBuildTarget</key>
@@ -58,7 +58,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.stopOnError</key>
-					<value>true</value>
+					<value>false</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.useDefaultBuildCmd</key>
@@ -75,13 +75,18 @@
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.rtsc.xdctools.buildDefinitions.XDC.xdcNature</nature>
-		<nature>com.ti.ccstudio.managedbuild.core.ccsNature</nature>
+		<nature>com.ti.ccstudio.core.ccsNature</nature>
 		<nature>org.eclipse.cdt.core.cnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
 	<linkedResources>
+		<link>
+			<name>STMHelper.c</name>
+			<type>1</type>
+			<locationURI>STM_LIBRARY_ROOT/src/STMHelper.c</locationURI>
+		</link>
 		<link>
 			<name>vlfftApps</name>
 			<type>2</type>
@@ -103,4 +108,10 @@
 			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/vlfft/vlfftSrc</locationURI>
 		</link>
 	</linkedResources>
+	<variableList>
+		<variable>
+			<name>STM_LIBRARY_ROOT</name>
+			<value>file:/C:/development_tools/libraries/STMLib</value>
+		</variable>
+	</variableList>
 </projectDescription>

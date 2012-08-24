@@ -695,6 +695,27 @@ typedef struct ti_sdo_ipc_nsremote_NameServerRemoteNotify_Module__ {
 /* Module__root__V */
 extern ti_sdo_ipc_nsremote_NameServerRemoteNotify_Module__ ti_sdo_ipc_nsremote_NameServerRemoteNotify_Module__root__V;
 
+/* @@@ ti_sysbios_knl_Swi_Object__ */
+typedef struct ti_sysbios_knl_Swi_Object__ {
+    ti_sysbios_knl_Queue_Elem qElem;
+    ti_sysbios_knl_Swi_FuncPtr fxn;
+    xdc_UArg arg0;
+    xdc_UArg arg1;
+    xdc_UInt priority;
+    xdc_UInt mask;
+    xdc_Bool posted;
+    xdc_UInt initTrigger;
+    xdc_UInt trigger;
+    ti_sysbios_knl_Queue_Handle readyQ;
+    __TA_ti_sysbios_knl_Swi_Instance_State__hookEnv hookEnv;
+} ti_sysbios_knl_Swi_Object__;
+
+/* @@@ ti_sysbios_knl_Swi_Object2__ */
+typedef struct {
+    xdc_runtime_Types_InstHdr hdr;
+    ti_sysbios_knl_Swi_Object__ obj;
+} ti_sysbios_knl_Swi_Object2__;
+
 /* @@@ ti_sysbios_knl_Queue_Object__ */
 typedef struct ti_sysbios_knl_Queue_Object__ {
     ti_sysbios_knl_Queue_Elem elem;
@@ -720,27 +741,6 @@ typedef struct {
     xdc_runtime_Types_InstHdr hdr;
     ti_sysbios_knl_Semaphore_Object__ obj;
 } ti_sysbios_knl_Semaphore_Object2__;
-
-/* @@@ ti_sysbios_knl_Swi_Object__ */
-typedef struct ti_sysbios_knl_Swi_Object__ {
-    ti_sysbios_knl_Queue_Elem qElem;
-    ti_sysbios_knl_Swi_FuncPtr fxn;
-    xdc_UArg arg0;
-    xdc_UArg arg1;
-    xdc_UInt priority;
-    xdc_UInt mask;
-    xdc_Bool posted;
-    xdc_UInt initTrigger;
-    xdc_UInt trigger;
-    ti_sysbios_knl_Queue_Handle readyQ;
-    __TA_ti_sysbios_knl_Swi_Instance_State__hookEnv hookEnv;
-} ti_sysbios_knl_Swi_Object__;
-
-/* @@@ ti_sysbios_knl_Swi_Object2__ */
-typedef struct {
-    xdc_runtime_Types_InstHdr hdr;
-    ti_sysbios_knl_Swi_Object__ obj;
-} ti_sysbios_knl_Swi_Object2__;
 
 /* Object__ */
 typedef struct ti_sdo_ipc_nsremote_NameServerRemoteNotify_Object__ {
@@ -4619,7 +4619,7 @@ __FAR__ const xdc_SizeT ti_sysbios_xdcruntime_GateThreadSupport_Instance_State_g
  *  Define absolute path prefix for this executable's
  *  configuration generated files.
  */
-xdc__META(__ASM__, "@(#)__ASM__ = C:/dev/keystone-workshop/examples/vlfft/evmc6678l/Debug/configPkg/package/cfg/vlfft_evmc6678l_pe66");
+xdc__META(__ASM__, "@(#)__ASM__ = C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/evmc6678l/Debug/configPkg/package/cfg/vlfft_evmc6678l_pe66");
 
 /*
  *  ======== __ISA__ ========

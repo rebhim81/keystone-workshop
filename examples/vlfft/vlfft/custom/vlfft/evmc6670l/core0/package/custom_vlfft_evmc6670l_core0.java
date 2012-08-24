@@ -2,16 +2,16 @@
  *  Do not modify this file; it is automatically 
  *  generated and any modifications will be overwritten.
  *
- * @(#) xdc-v56
+ * @(#) xdc-y25
  */
 import java.util.*;
 import org.mozilla.javascript.*;
 import xdc.services.intern.xsr.*;
-import xdc.services.spec.*;
+import xdc.services.spec.Session;
 
 public class custom_vlfft_evmc6670l_core0
 {
-    static final String VERS = "@(#) xdc-v56\n";
+    static final String VERS = "@(#) xdc-y25\n";
 
     static final Proto.Elm $$T_Bool = Proto.Elm.newBool();
     static final Proto.Elm $$T_Num = Proto.Elm.newNum();
@@ -50,6 +50,8 @@ public class custom_vlfft_evmc6670l_core0
     ArrayList<Object> imports = new ArrayList<Object>();
     ArrayList<Object> loggables = new ArrayList<Object>();
     ArrayList<Object> mcfgs = new ArrayList<Object>();
+    ArrayList<Object> icfgs = new ArrayList<Object>();
+    ArrayList<String> inherits = new ArrayList<String>();
     ArrayList<Object> proxies = new ArrayList<Object>();
     ArrayList<Object> sizes = new ArrayList<Object>();
     ArrayList<Object> tdefs = new ArrayList<Object>();
@@ -118,7 +120,7 @@ public class custom_vlfft_evmc6670l_core0
             sb.append("__inst.codeMemory = __mod.PARAMS.codeMemory;\n");
             sb.append("__inst.stackMemory = __mod.PARAMS.stackMemory;\n");
             sb.append("__inst.sectMap = __mod.PARAMS.sectMap;\n");
-            sb.append("for (__p in __params) __inst[__p] = __params[__p];\n");
+            sb.append("for (var __p in __params) __inst[__p] = __params[__p];\n");
             sb.append("var save = xdc.om.$curpkg;\n");
             sb.append("xdc.om.$$bind('$curpkg', __mod.$package.$name);\n");
             sb.append("__mod.instance$meta$init.$fxn.apply(__inst, [name, args]);\n");
@@ -146,7 +148,7 @@ public class custom_vlfft_evmc6670l_core0
             sb.append("__inst.codeMemory = __mod.PARAMS.codeMemory;\n");
             sb.append("__inst.stackMemory = __mod.PARAMS.stackMemory;\n");
             sb.append("__inst.sectMap = __mod.PARAMS.sectMap;\n");
-            sb.append("for (__p in __params) __inst[__p] = __params[__p];\n");
+            sb.append("for (var __p in __params) __inst[__p] = __params[__p];\n");
             sb.append("__inst.$$bless();\n");
             sb.append("return null;\n");
         sb.append("}\n");
@@ -253,8 +255,6 @@ public class custom_vlfft_evmc6670l_core0
         sb.append("];\n");
         sb.append("pkg.build.libDesc = [\n");
         sb.append("];\n");
-        sb.append("if('suffix' in xdc.om['xdc.IPackage$$LibDesc']) {\n");
-        sb.append("}\n");
         Global.eval(sb.toString());
     }
 
@@ -276,6 +276,8 @@ public class custom_vlfft_evmc6670l_core0
         tdefs.clear();
         proxies.clear();
         mcfgs.clear();
+        icfgs.clear();
+        inherits.clear();
         vo.bind("Board", om.findStrict("xdc.platform.IPlatform.Board", "custom.vlfft.evmc6670l.core0"));
         tdefs.add(om.findStrict("xdc.platform.IPlatform.Board", "custom.vlfft.evmc6670l.core0"));
         vo.bind("Memory", om.findStrict("xdc.platform.IPlatform.Memory", "custom.vlfft.evmc6670l.core0"));
@@ -284,6 +286,9 @@ public class custom_vlfft_evmc6670l_core0
         vo.bind("$$tdefs", Global.newArray(tdefs.toArray()));
         vo.bind("$$proxies", Global.newArray(proxies.toArray()));
         vo.bind("$$mcfgs", Global.newArray(mcfgs.toArray()));
+        vo.bind("$$icfgs", Global.newArray(icfgs.toArray()));
+        inherits.add("xdc.platform");
+        vo.bind("$$inherits", Global.newArray(inherits.toArray()));
         ((Value.Arr)pkgV.getv("$modules")).add(vo);
         ((Value.Arr)om.findStrict("$modules", "custom.vlfft.evmc6670l.core0")).add(vo);
         vo.bind("$$instflag", 1);
@@ -292,6 +297,7 @@ public class custom_vlfft_evmc6670l_core0
         vo.bind("$$dlgflag", 0);
         vo.bind("$$iflag", 1);
         vo.bind("$$romcfgs", "|");
+        vo.bind("$$nortsflag", 0);
         Proto.Str ps = (Proto.Str)vo.find("Module_State");
         if (ps != null) vo.bind("$object", ps.newInstance());
         vo.bind("$$meta_iobj", om.has("custom.vlfft.evmc6670l.core0.Platform$$instance$static$init", null) ? 1 : 0);
@@ -314,7 +320,7 @@ public class custom_vlfft_evmc6670l_core0
         }//isCFG
         Global.callFxn("module$meta$init", (Scriptable)om.findStrict("custom.vlfft.evmc6670l.core0.Platform", "custom.vlfft.evmc6670l.core0"));
         vo = (Value.Obj)om.findStrict("custom.vlfft.evmc6670l.core0.Platform", "custom.vlfft.evmc6670l.core0");
-        Global.put(vo, "CPU", Global.callFxn("create", (Scriptable)om.find("ti.platforms.generic.Platform"), "CPU", Global.newObject("clockRate", 1000L, "catalogName", "ti.catalog.c6000", "deviceName", "TMS320C6670", "customMemoryMap", Global.newArray(new Object[]{Global.newArray(new Object[]{"L2SRAM", Global.newObject("base", 0x00800000L, "space", "code/data", "name", "L2SRAM", "len", 0x00024000L, "access", "RWX")}), Global.newArray(new Object[]{"MSMCSRAM", Global.newObject("base", 0x0c000000L, "space", "code/data", "name", "MSMCSRAM", "len", 0x00200000L, "access", "RWX")}), Global.newArray(new Object[]{"DDR", Global.newObject("base", 0x80000000L, "space", "code/data", "name", "DDR", "len", 0x00200000L, "access", "RWX")}), Global.newArray(new Object[]{"DDR_1", Global.newObject("base", 0x80200000L, "space", "code/data", "name", "DDR_1", "len", 0x04000000L, "access", "RWX")}), Global.newArray(new Object[]{"MSMCSRAM_1", Global.newObject("base", 0x0c200000L, "space", "code/data", "name", "MSMCSRAM_1", "len", 0x00100000L, "access", "RWX")}), Global.newArray(new Object[]{"MSMCSRAM_2", Global.newObject("base", 0x0c300000L, "space", "code/data", "name", "MSMCSRAM_2", "len", 0x00100000L, "access", "RWX")}), Global.newArray(new Object[]{"L2SRAM_1", Global.newObject("base", 0x00824000L, "space", "code/data", "name", "L2SRAM_1", "len", 0x0005c000L, "access", "RWX")})}), "l1DMode", "32k", "l1PMode", "32k", "l2Mode", "0k")));
+        Global.put(vo, "CPU", Global.callFxn("create", (Scriptable)om.find("ti.platforms.generic.Platform"), "CPU", Global.newObject("clockRate", 1000L, "catalogName", "ti.catalog.c6000", "deviceName", "TMS320C6670", "customMemoryMap", Global.newArray(new Object[]{Global.newArray(new Object[]{"L2SRAM", Global.newObject("name", "L2SRAM", "base", 0x00800000L, "len", 0x00026000L, "space", "code/data", "access", "RWX")}), Global.newArray(new Object[]{"MSMCSRAM", Global.newObject("name", "MSMCSRAM", "base", 0x0c000000L, "len", 0x00200000L, "space", "code/data", "access", "RWX")}), Global.newArray(new Object[]{"DDR", Global.newObject("name", "DDR", "base", 0x80000000L, "len", 0x00200000L, "space", "code/data", "access", "RWX")}), Global.newArray(new Object[]{"DDR_1", Global.newObject("name", "DDR_1", "base", 0x80200000L, "len", 0x04000000L, "space", "code/data", "access", "RWX")}), Global.newArray(new Object[]{"MSMCSRAM_1", Global.newObject("name", "MSMCSRAM_1", "base", 0x0c200000L, "len", 0x00100000L, "space", "code/data", "access", "RWX")}), Global.newArray(new Object[]{"MSMCSRAM_2", Global.newObject("name", "MSMCSRAM_2", "base", 0x0c300000L, "len", 0x00100000L, "space", "code/data", "access", "RWX")}), Global.newArray(new Object[]{"L2SRAM_1", Global.newObject("name", "L2SRAM_1", "base", 0x00826000L, "len", 0x0005a000L, "space", "code/data", "access", "RWX")})}), "l2Mode", "0k", "l1PMode", "32k", "l1DMode", "32k")));
         Global.callFxn("init", pkgV);
         ((Value.Obj)om.getv("custom.vlfft.evmc6670l.core0.Platform")).bless();
         ((Value.Arr)om.findStrict("$packages", "custom.vlfft.evmc6670l.core0")).add(pkgV);
