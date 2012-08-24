@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="windows-1252"?>
 <!--  This file conforms to the DTD xdc/bld/build.dtd -->
 <package name="custom.vlfft.evmc6670l.core0" version="" producerId="undefined">
     <units>
@@ -6,8 +6,8 @@
     </units>
     <sources>
     </sources>
-    <configurations>
-    </configurations>
+    <configscripts>
+    </configscripts>
     <makefiles>
         <srcFile name="package.mak" src="package.bld"/>
         <srcFile name="package/package.xdc.dep" src="package.xdc"/>
@@ -18,6 +18,8 @@
     </targets>
     <libraries>
     </libraries>
+    <configurations>
+    </configurations>
     <executables>
     </executables>
     <tests>
@@ -27,12 +29,12 @@
         pname="custom_vlfft_evmc6670l_core0.zip"
         label="default"
     >
-        <file name="package/build.cfg"/>
-        <file name="package/package.cfg.xdc.inc"/>
-        <file name="package/package.ext.xml"/>
-        <file name="package/package.xdc.inc"/>
         <file name="package/package.bld.xml"/>
+        <file name="package/package.ext.xml"/>
         <file name="package/package.rel.dot"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+        <file name="package/package.cfg.xdc.inc"/>
     </release>
     </releases>
     <repositories>

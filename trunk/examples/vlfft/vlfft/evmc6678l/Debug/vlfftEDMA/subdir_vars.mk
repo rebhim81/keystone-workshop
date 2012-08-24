@@ -4,8 +4,8 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/dev/keystone-workshop/examples/vlfft/vlfftEDMA/vlfftEdmaConfig.c \
-C:/dev/keystone-workshop/examples/vlfft/vlfftEDMA/vlfftEdmaInit.c 
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftEDMA/vlfftEdmaConfig.c \
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftEDMA/vlfftEdmaInit.c 
 
 OBJS += \
 ./vlfftEDMA/vlfftEdmaConfig.obj \
@@ -24,7 +24,7 @@ OBJS__QUOTED += \
 "vlfftEDMA\vlfftEdmaInit.obj" 
 
 C_SRCS__QUOTED += \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftEDMA/vlfftEdmaConfig.c" \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftEDMA/vlfftEdmaInit.c" 
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftEDMA/vlfftEdmaConfig.c" \
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftEDMA/vlfftEdmaInit.c" 
 
 

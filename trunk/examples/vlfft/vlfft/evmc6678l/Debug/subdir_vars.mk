@@ -6,18 +6,9 @@
 CFG_SRCS += \
 ../vlfft_evmc6678l.cfg 
 
-C_SRCS += \
-C:/development_tools/libraries/STMLib/src/STMHelper.c 
-
-OBJS += \
-./STMHelper.obj 
-
 GEN_SRCS += \
 ./configPkg/compiler.opt \
 ./configPkg/linker.cmd 
-
-C_DEPS += \
-./STMHelper.pp 
 
 GEN_MISC_DIRS += \
 ./configPkg/ 
@@ -34,15 +25,6 @@ GEN_SRCS__QUOTED += \
 
 GEN_MISC_DIRS__QUOTED += \
 "configPkg\" 
-
-C_DEPS__QUOTED += \
-"STMHelper.pp" 
-
-OBJS__QUOTED += \
-"STMHelper.obj" 
-
-C_SRCS__QUOTED += \
-"C:/development_tools/libraries/STMLib/src/STMHelper.c" 
 
 CFG_SRCS__QUOTED += \
 "../vlfft_evmc6678l.cfg" 

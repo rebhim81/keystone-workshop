@@ -1,8 +1,8 @@
 /*
- *  Do not modify this file; it is automatically
+ *  Do not modify this file; it is automatically 
  *  generated and any modifications will be overwritten.
  *
- * @(#) xdc-v56
+ * @(#) xdc-y25
  */
 
 #include <xdc/std.h>

@@ -4,25 +4,25 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 SA_SRCS += \
-C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/DSPF_sp_mixedRadix_fftSPXSP.sa \
-C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/multiTwiddle_1_sa.sa \
-C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/transpose_2Cols_rowsX8_cplxMatrix_sa.sa \
-C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/transpose_2Rows_8XCols_cplxMatrix_sa.sa 
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/DSPF_sp_mixedRadix_fftSPXSP.sa \
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/multiTwiddle_1_sa.sa \
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/transpose_2Cols_rowsX8_cplxMatrix_sa.sa \
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/transpose_2Rows_8XCols_cplxMatrix_sa.sa 
 
 ASM_SRCS += \
-C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/DSPF_sp_radix4_fftSPxSP.asm \
-C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/tsc_h.asm 
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/DSPF_sp_radix4_fftSPxSP.asm \
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/tsc_h.asm 
 
 C_SRCS += \
-C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/dft.c \
-C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/dmaParamInit.c \
-C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/genTwiddle.c \
-C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/messgQUtil.c \
-C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/multTwiddle.c \
-C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/vlfftParamsInit.c \
-C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/vlfftUtil.c \
-C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/vlfft_1stIter.c \
-C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/vlfft_2ndIter.c 
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/dft.c \
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/dmaParamInit.c \
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/genTwiddle.c \
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/messgQUtil.c \
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/multTwiddle.c \
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/vlfftParamsInit.c \
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/vlfftUtil.c \
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/vlfft_1stIter.c \
+C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/vlfft_2ndIter.c 
 
 OBJS += \
 ./vlfftSrc/DSPF_sp_mixedRadix_fftSPXSP.obj \
@@ -101,24 +101,24 @@ ASM_DEPS__QUOTED += \
 "vlfftSrc\tsc_h.pp" 
 
 SA_SRCS__QUOTED += \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/DSPF_sp_mixedRadix_fftSPXSP.sa" \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/multiTwiddle_1_sa.sa" \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/transpose_2Cols_rowsX8_cplxMatrix_sa.sa" \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/transpose_2Rows_8XCols_cplxMatrix_sa.sa" 
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/DSPF_sp_mixedRadix_fftSPXSP.sa" \
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/multiTwiddle_1_sa.sa" \
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/transpose_2Cols_rowsX8_cplxMatrix_sa.sa" \
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/transpose_2Rows_8XCols_cplxMatrix_sa.sa" 
 
 ASM_SRCS__QUOTED += \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/DSPF_sp_radix4_fftSPxSP.asm" \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/tsc_h.asm" 
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/DSPF_sp_radix4_fftSPxSP.asm" \
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/tsc_h.asm" 
 
 C_SRCS__QUOTED += \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/dft.c" \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/dmaParamInit.c" \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/genTwiddle.c" \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/messgQUtil.c" \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/multTwiddle.c" \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/vlfftParamsInit.c" \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/vlfftUtil.c" \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/vlfft_1stIter.c" \
-"C:/dev/keystone-workshop/examples/vlfft/vlfftSrc/vlfft_2ndIter.c" 
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/dft.c" \
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/dmaParamInit.c" \
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/genTwiddle.c" \
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/messgQUtil.c" \
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/multTwiddle.c" \
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/vlfftParamsInit.c" \
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/vlfftUtil.c" \
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/vlfft_1stIter.c" \
+"C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/vlfftSrc/vlfft_2ndIter.c" 
 
 

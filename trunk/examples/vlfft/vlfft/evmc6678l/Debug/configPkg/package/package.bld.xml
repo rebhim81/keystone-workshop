@@ -7,7 +7,7 @@
         <srcFile name="package/cfg/vlfft_evmc6678l_pe66.c"/>
     </sources>
     <configscripts>
-        <srcFile name="C:/dev/keystone-workshop/examples/vlfft/evmc6678l/vlfft_evmc6678l.cfg"/>
+        <srcFile name="C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/evmc6678l/vlfft_evmc6678l.cfg"/>
     </configscripts>
     <makefiles>
         <srcFile name="package.mak" src="package.bld"/>
@@ -20,11 +20,11 @@
     </makefiles>
     <targets>
         <target name="ti.targets.elf.C66"
-            version="ti.targets.elf.C66{1,0,7.3,1"
+            version="ti.targets.elf.C66{1,0,7.3,5"
             platform="ti.platforms.simTCI6616"
             isa="66"
             suffix="e66"
-            rootDir="C:/ti/ccsv5/tools/compiler/c6000"
+            rootDir="C:/ti/C6000C~1.5"
             os="undefined"
             rts="ti.targets.rts6000">
             <model endian="little"
@@ -43,7 +43,7 @@
         isPartial="false"
         xCfgScript="package/cfg/vlfft_evmc6678l_pe66.cfg"
         xCfgPrefix="package/cfg/vlfft_evmc6678l_pe66"
-        cfgScript="C:/dev/keystone-workshop/examples/vlfft/evmc6678l/vlfft_evmc6678l.cfg"
+        cfgScript="C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/evmc6678l/vlfft_evmc6678l.cfg"
         cfgArgs="null"
         />
     </configurations>
@@ -55,7 +55,7 @@
         profile="debug"
         xCfgScript="package/cfg/vlfft_evmc6678l_pe66.cfg"
         xCfgPrefix="package/cfg/vlfft_evmc6678l_pe66"
-        cfgScript="C:/dev/keystone-workshop/examples/vlfft/evmc6678l/vlfft_evmc6678l.cfg"
+        cfgScript="C:/dev/keystone-workshop/trunk/examples/vlfft/vlfft/evmc6678l/vlfft_evmc6678l.cfg"
         cfgArgs="null"
         />
     </executables>

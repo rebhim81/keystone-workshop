@@ -80,20 +80,20 @@ C:/ti/xdctools_3_23_01_43/packages/ti/targets/elf/TMS470.xs:
 package.mak: C:/ti/xdctools_3_23_01_43/packages/ti/targets/elf/TMS470.xs
 C:/ti/xdctools_3_23_01_43/packages/ti/targets/elf/package.xs:
 package.mak: C:/ti/xdctools_3_23_01_43/packages/ti/targets/elf/package.xs
-package.mak: package.bld
-C:/ti/xdctools_3_23_01_43/packages/xdc/tools/configuro/template/compiler.opt.xdt:
-package.mak: C:/ti/xdctools_3_23_01_43/packages/xdc/tools/configuro/template/compiler.opt.xdt
 C:/ti/xdctools_3_23_01_43/packages/xdc/services/io/File.xs:
 package.mak: C:/ti/xdctools_3_23_01_43/packages/xdc/services/io/File.xs
 C:/ti/xdctools_3_23_01_43/packages/xdc/services/io/package.xs:
 package.mak: C:/ti/xdctools_3_23_01_43/packages/xdc/services/io/package.xs
+package.mak: package.bld
+C:/ti/xdctools_3_23_01_43/packages/xdc/tools/configuro/template/compiler.opt.xdt:
+package.mak: C:/ti/xdctools_3_23_01_43/packages/xdc/tools/configuro/template/compiler.opt.xdt
 C:/ti/xdctools_3_23_01_43/packages/xdc/tools/configuro/template/custom.mak.exe.xdt:
 package.mak: C:/ti/xdctools_3_23_01_43/packages/xdc/tools/configuro/template/custom.mak.exe.xdt
 C:/ti/xdctools_3_23_01_43/packages/xdc/tools/configuro/template/package.xs.xdt:
 package.mak: C:/ti/xdctools_3_23_01_43/packages/xdc/tools/configuro/template/package.xs.xdt
 endif
 
-ti.targets.elf.C66.rootDir ?= C:/ti/ccsv5/tools/compiler/c6000
+ti.targets.elf.C66.rootDir ?= C:/ti/C6000C~1.5
 ti.targets.elf.packageBase ?= C:/ti/xdctools_3_23_01_43/packages/ti/targets/elf/
 .PRECIOUS: $(XDCCFGDIR)/%.oe66
 .PHONY: all,e66 .dlls,e66 .executables,e66 test,e66
