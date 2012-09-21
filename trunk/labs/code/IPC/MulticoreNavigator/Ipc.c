@@ -32,26 +32,19 @@
 #include <ti/platform/platform.h>
 
 #include <ti/sysbios/Bios.h>
-#include <ti/sysbios/family/c66/Cache.h>
 
 #include <ti/csl/csl_chip.h>
 #include <stdlib.h>
 #include <time.h>
 
-/* Project Level Includes */
 #include "include/Ipc.h"
 #include "../common/include/Ipc_common.h"
-#include "../common/include/IpcMulticoreNavigatorInit.h"
-
 
 #define MAX_NUM_CORES			8
 #define NUM_MESSAGES			100
 #define MASTER_CORE				0
 #define TOKEN_START_CORE		0
 #define HEAP_ID					0
-
-
-
 
 /* Global Variables */
 Char localQueueName[10];
@@ -64,15 +57,10 @@ Uint16 selfId;
 MessageQ_Handle messageQ = NULL;
 
 
-
-
-
 /******************************************************************************
  * MAIN FUNCTION
  *****************************************************************************/
 Int main(Int argc, Char* argv[]){
-
-	Int32 result = 0;
 
 	srand(time(NULL));
 
@@ -80,13 +68,6 @@ Int main(Int argc, Char* argv[]){
 
 	if (numCores == 0){
 		numCores = MultiProc_getNumProcessors();
-	}
-
-	if (selfId == 0){
-		result = systemInit();
-		if (result != 0){
-			System_printf("Error (%d) while initializing QMSS\n", result);
-		}
 	}
 
 	/* Attach All Cores */
