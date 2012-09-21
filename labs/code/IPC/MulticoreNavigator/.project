@@ -83,19 +83,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>IpcMulticoreNavigatorInit.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/common/src/IpcMulticoreNavigatorInit.c</locationURI>
-		</link>
-		<link>
 			<name>Ipc_common.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/common/src/Ipc_common.c</locationURI>
-		</link>
-		<link>
-			<name>Ipc_osal.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/common/src/Ipc_osal.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

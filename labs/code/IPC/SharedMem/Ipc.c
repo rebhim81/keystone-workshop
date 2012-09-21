@@ -40,7 +40,7 @@
 #include "include/Ipc.h"
 #include "../common/include/Ipc_common.h"
 
-#define MAX_NUM_CORES			8
+#define MAX_NUM_CORES			maxNumCores
 #define NUM_MESSAGES			100
 #define MASTER_CORE				0
 #define TOKEN_START_CORE		0

@@ -115,8 +115,8 @@ inline UInt32 l2_global_address (UInt32 addr)
 int32_t Osal_dataBufferInitMemory(uint32_t dataBufferSize);
 
 Void getStats(UInt32 *values, UInt numVals, Statistics *stats);
-Void attachAll(UInt numCores);
-Void detachAll(UInt numCores);
+Void attachAll(UInt);
+Void detachAll(UInt);
 
 /* Common benchmark functions */
 Void setLocalId (Void);
