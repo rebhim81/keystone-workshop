@@ -135,7 +135,7 @@ void task_fxn(UArg arg0, UArg arg1){
 		 * this message.  The code to check if the pointer is NULL is
 		 * already included.
 		 */
-		msg = MessageQ_alloc(HEAP_ID, sizeof(myMsg));
+
 
 		if (msg == NULL){
 			System_abort("MessageQ_alloc failed\n");
@@ -172,7 +172,7 @@ void task_fxn(UArg arg0, UArg arg1){
 		 * element "nextCore" in the array msgQueueIds, and is NOT the same
 		 * as the core number.
 		 */
-		status = MessageQ_put(msgQueueIds[nextCore], msg);
+
 
 	}
 
@@ -189,7 +189,7 @@ void task_fxn(UArg arg0, UArg arg1){
 		 * specify a time out size.  We want to configure this call to
 		 * never time out, and block eternally until a message is received.
 		 */
-		status = MessageQ_get(messageQ, &msg, MessageQ_FOREVER);
+
 
 		if (status < 0){
 			System_abort("This should not occur since the timeout is forever\n");
@@ -235,14 +235,14 @@ void task_fxn(UArg arg0, UArg arg1){
 			 * message was sent.  This data is stored in the MessageQ_MsgHeader
 			 * element that's included with the message
 			 */
-			ackQueueId = MessageQ_getReplyQueue(msg);
+
 
 			/*
 			 * TODO: IPC #5 - Allocate the acknowledge message
 			 * Allocate the acknowledge message and store the pointer to it
 			 * in the variable ack.
 			 */
-			ack = MessageQ_alloc(HEAP_ID, sizeof(myMsg));
+
 
 			// Set the Message Type of the new Message to MSG_ACK
 			if (ack==NULL){
@@ -257,7 +257,7 @@ void task_fxn(UArg arg0, UArg arg1){
 			 * Don't forget that we've already stored the reply queue ID in
 			 * ackQueueId above.
 			 */
-			status = MessageQ_put(ackQueueId, ack);
+
 
 			/*
 			 * Now handle the actions required by the status of the message. First
@@ -276,7 +276,7 @@ void task_fxn(UArg arg0, UArg arg1){
 				 * Don't forget that the pointer to this memory is in the
 				 * variable msg.
 				 */
-				MessageQ_free(msg);
+
 
 				/*
 				 * Now allocate and send ALL cores a DONE message.  We don't need to
@@ -319,7 +319,7 @@ void task_fxn(UArg arg0, UArg arg1){
 			 * We need to be sure to set the reply queue each time.
 			 * Otherwise, the wrong core will receive the acknowledge.
 			 */
-			MessageQ_setReplyQueue(messageQ, msg);
+
 
 			// Put the message on the proper queue
 			status = MessageQ_put(msgQueueIds[nextCore], msg);
