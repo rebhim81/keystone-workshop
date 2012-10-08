@@ -36,6 +36,7 @@
 
 #include <ti/csl/csl_chip.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
 
 /* Project Level Includes */
@@ -44,7 +45,7 @@
 #include "../common/include/IpcMulticoreNavigatorInit.h"
 
 
-#define MAX_NUM_CORES			maxNumCores
+#define MAX_NUM_CORES			 4   //   Ran  Katzur  change maxNumCores
 #define NUM_MESSAGES			100
 #define MASTER_CORE				0
 #define TOKEN_START_CORE		0
@@ -81,7 +82,7 @@ Int main(Int argc, Char* argv[]){
 	if (numCores == 0){
 		numCores = MultiProc_getNumProcessors();
 	}
-
+    numCores = 4   ;  //  Ran Katzur
 	if (selfId == 0){
 		result = systemInit();
 		if (result != 0){
@@ -191,8 +192,10 @@ void task_fxn(UArg arg0, UArg arg1){
 		 * element "nextCore" in the array msgQueueIds, and is NOT the same
 		 * as the core number.
 		 */
-		status = MessageQ_put(msgQueueIds[nextCore], msg);
 
+//		System_printf("Ran Katzur -> about to put message to core %d \n", nextCore)  ;
+		status = MessageQ_put(msgQueueIds[nextCore], msg);
+//		System_printf("Ran Katzur -> Just put message to core %d \n", nextCore)  ;
 	}
 
 	while (TRUE){
@@ -208,8 +211,11 @@ void task_fxn(UArg arg0, UArg arg1){
 		 * specify a time out size.  We want to configure this call to
 		 * never time out, and block eternally until a message is received.
 		 */
-		status = MessageQ_get(messageQ, &msg, MessageQ_FOREVER);
 
+
+//		System_printf("Ran Katzur -> About to get message from  Message get   \n")  ;
+		status = MessageQ_get(messageQ, &msg, MessageQ_FOREVER);
+//		System_printf("Ran Katzur -> got message from  Message get   \n")  ;
 		if (status < 0){
 			System_abort("This should not occur since the timeout is forever\n");
 		}
@@ -254,8 +260,10 @@ void task_fxn(UArg arg0, UArg arg1){
 			 * message was sent.  This data is stored in the MessageQ_MsgHeader
 			 * element that's included with the message
 			 */
-			ackQueueId = MessageQ_getReplyQueue(msg);
 
+//			System_printf("Ran Katzur -> About to get message from ReplyQueue\n");
+			ackQueueId = MessageQ_getReplyQueue(msg);
+//			System_printf("Ran Katzur -> got message from ReplyQueue\n");
 			/*
 			 * TODO: IPC #5 - Allocate the acknowledge message
 			 * Allocate the acknowledge message and store the pointer to it
@@ -276,8 +284,10 @@ void task_fxn(UArg arg0, UArg arg1){
 			 * Don't forget that we've already stored the reply queue ID in
 			 * ackQueueId above.
 			 */
-			status = MessageQ_put(ackQueueId, ack);
 
+//			System_printf("Ran Katzur -> about to put Ack message to queue %d \n", ackQueueId)  ;
+			status = MessageQ_put(ackQueueId, ack);
+//			System_printf("Ran Katzur -> Just put Ack message to queue %d \n", ackQueueId)  ;
 			/*
 			 * Now handle the actions required by the status of the message. First
 			 * we must check to see if we're at the Token Passing limit.  So we'll
@@ -320,7 +330,9 @@ void task_fxn(UArg arg0, UArg arg1){
 					((myMsg*)msg)->messageType = MSG_DONE;
 
 					// Now send it to the selected core
+//					System_printf("Ran Katzur -> about to put message  done  to core  %d \n", coreCount)  ;
 					status = MessageQ_put(msgQueueIds[coreCount], msg);
+//					System_printf("Ran Katzur -> Just put message  done  to core  %d \n", coreCount)  ;
 				}
 				break;
 			}
@@ -341,7 +353,10 @@ void task_fxn(UArg arg0, UArg arg1){
 			MessageQ_setReplyQueue(messageQ, msg);
 
 			// Put the message on the proper queue
+
+//			System_printf("Ran Katzur -> about to put message 2  to core  %d \n", nextCore)  ;
 			status = MessageQ_put(msgQueueIds[nextCore], msg);
+//			System_printf("Ran Katzur -> abJust put message 2  to core  %d \n", nextCore)  ;
 
 			break;
 		case MSG_ACK:
