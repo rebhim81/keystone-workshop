@@ -79,7 +79,6 @@ Void attachAll(UInt numCores)
         do {
             status = Ipc_attach(entry.ownerProcId);
         } while (status < 0);
-//        System_printf("ran Katuzur -> attach Myself \n") ;
     }
 
     /* Loop to attach to all other processors */
@@ -97,9 +96,7 @@ Void attachAll(UInt numCores)
 
         /* call Ipc_attach for every remote processor */
         do {
-//        	System_printf("ran Katuzur -> Before attach core %d \n", i ) ;
             status = Ipc_attach(i);
-//            System_printf("ran Katuzur -> attach core %d \n", i ) ;
         } while (status < 0);
     }
 }

@@ -97,6 +97,7 @@ Int32 systemInit (Void)
   return 0;
 }
 
+#if 0
 void initPlatform(void)
 {
   platform_init_flags  pFormFlags;
@@ -132,3 +133,4 @@ void initPlatform(void)
     }
   }
 }
+#endif
