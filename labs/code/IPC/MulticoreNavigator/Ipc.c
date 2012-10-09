@@ -32,13 +32,17 @@
 #include <ti/platform/platform.h>
 
 #include <ti/sysbios/Bios.h>
+#include <ti/sysbios/family/c66/Cache.h>
 
 #include <ti/csl/csl_chip.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
 
+/* Project Level Includes */
 #include "include/Ipc.h"
 #include "../common/include/Ipc_common.h"
+#include "../common/include/IpcMulticoreNavigatorInit.h"
 
 #define MAX_NUM_CORES			maxNumCores
 #define NUM_MESSAGES			100
