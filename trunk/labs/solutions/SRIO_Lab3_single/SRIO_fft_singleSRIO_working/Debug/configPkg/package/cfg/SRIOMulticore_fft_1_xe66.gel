@@ -1,0 +1,13 @@
+XDC_open() {
+    GEL_ProjectLoad("C:/Users/a0270985/Documents/a_training/customer/keystone-workshop/labs/solutions/SRIO_Lab3_single/SRIO_fft_singleSRIO_working/Debug/configPkg/package/configPkg.pjt");
+    GEL_ProjectLoad("C:/Users/a0270985/Documents/a_training/customer/keystone-workshop/labs/solutions/SRIO_Lab3_single/SRIO_fft_singleSRIO_working/Debug/configPkg/package/cfg/SRIOMulticore_fft_1_xe66.pjt");
+    GEL_ProjectSetActive("C:/Users/a0270985/Documents/a_training/customer/keystone-workshop/labs/solutions/SRIO_Lab3_single/SRIO_fft_singleSRIO_working/Debug/configPkg/package/cfg/SRIOMulticore_fft_1_xe66.pjt");
+}
+XDC_close() {
+    GEL_ProjectClose("C:/Users/a0270985/Documents/a_training/customer/keystone-workshop/labs/solutions/SRIO_Lab3_single/SRIO_fft_singleSRIO_working/Debug/configPkg/package/configPkg.pjt");
+    GEL_ProjectClose("C:/Users/a0270985/Documents/a_training/customer/keystone-workshop/labs/solutions/SRIO_Lab3_single/SRIO_fft_singleSRIO_working/Debug/configPkg/package/cfg/SRIOMulticore_fft_1_xe66.pjt");
+}
+menuitem "XDC Package"
+hotmenu load_executable () { GEL_Load("C:/Users/a0270985/Documents/a_training/customer/keystone-workshop/labs/solutions/SRIO_Lab3_single/SRIO_fft_singleSRIO_working/Debug/configPkg/SRIOMulticore_fft_1.xe66"); }
+hotmenu open_project () { XDC_open(); }
+hotmenu close_project () { XDC_close(); }
