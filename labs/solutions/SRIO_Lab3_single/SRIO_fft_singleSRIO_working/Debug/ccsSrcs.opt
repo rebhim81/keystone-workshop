@@ -1,0 +1,1 @@
+"../SRIOMulticore_fft_1.cfg" "../bioMain.c" "../bioUtilityAndGlobals.c" "../device_srio_loopback.c" "../fftRoutines.c" "../gen_twiddle_fft16x16.c" "../initialization.c" "../masterTask.c" "../multicoreLoopback_osal.c" "../requestProcessingData.c" "../slaveTask.c" "../srio_drv.c" 

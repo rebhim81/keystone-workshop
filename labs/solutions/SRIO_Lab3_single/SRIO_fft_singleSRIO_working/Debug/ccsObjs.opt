@@ -1,0 +1,1 @@
+-l"./configPkg/linker.cmd" "./srio_drv.obj" "./slaveTask.obj" "./requestProcessingData.obj" "./multicoreLoopback_osal.obj" "./masterTask.obj" "./initialization.obj" "./gen_twiddle_fft16x16.obj" "./fftRoutines.obj" "./device_srio_loopback.obj" "./bioUtilityAndGlobals.obj" "./bioMain.obj" -l"libc.a" -ldsplib.ae66 "../ExampleSRIO.cmd" 

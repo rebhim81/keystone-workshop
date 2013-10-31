@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="xconfig_SRIOMulticore_fft_1" version="" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/SRIOMulticore_fft_1_pe66.c"/>
+    </sources>
+    <configscripts>
+        <srcFile name="C:/projects/SRIOExample/SRIO_fft_singleSRIO_working/SRIOMulticore_fft_1.cfg"/>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/SRIOMulticore_fft_1_pe66.mak" src="package.bld"/>
+        <srcFile name="package/cfg/SRIOMulticore_fft_1_pe66.oe66.dep" src="package/cfg/SRIOMulticore_fft_1_pe66.c"/>
+        <srcFile name="package/cfg/SRIOMulticore_fft_1_pe66.dep" src="package/cfg/SRIOMulticore_fft_1_pe66.cfg"/>
+        <srcFile name="package/cfg/SRIOMulticore_fft_1.xe66.mak" src="package.bld"/>
+        <srcFile name="package/rel/xconfig_SRIOMulticore_fft_1.tar.dep" src="package/rel/xconfig_SRIOMulticore_fft_1.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="ti.targets.elf.C66"
+            version="ti.targets.elf.C66{1,0,7.4,0,1"
+            platform="ti.platforms.simTCI6616"
+            isa="66"
+            suffix="e66"
+            rootDir="C:/ti/CodeGenerationTools_7.4.0B1"
+            os="undefined"
+            rts="ti.targets.rts6000">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <configurations>
+    <configuration name="SRIOMulticore_fft_1"
+        pname="SRIOMulticore_fft_1.pe66"
+        target="ti.targets.elf.C66"
+        platform="ti.platforms.evm6678"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/SRIOMulticore_fft_1_pe66.cfg"
+        xCfgPrefix="package/cfg/SRIOMulticore_fft_1_pe66"
+        cfgScript="C:/projects/SRIOExample/SRIO_fft_singleSRIO_working/SRIOMulticore_fft_1.cfg"
+        cfgArgs="null"
+        />
+    </configurations>
+    <executables>
+    <executable name="SRIOMulticore_fft_1"
+        pname="SRIOMulticore_fft_1.xe66"
+        target="ti.targets.elf.C66"
+        platform="ti.platforms.evm6678"
+        profile="release"
+        xCfgScript="package/cfg/SRIOMulticore_fft_1_pe66.cfg"
+        xCfgPrefix="package/cfg/SRIOMulticore_fft_1_pe66"
+        cfgScript="C:/projects/SRIOExample/SRIO_fft_singleSRIO_working/SRIOMulticore_fft_1.cfg"
+        cfgArgs="null"
+        />
+    </executables>
+    <tests>
+    <test exeName="SRIOMulticore_fft_1.xe66"
+        args=""
+        groupName="SRIOMulticore_fft_1.xe66"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="xconfig_SRIOMulticore_fft_1"
+        pname="xconfig_SRIOMulticore_fft_1.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/package.ext.xml"/>
+        <file name="package/package.rel.dot"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>
