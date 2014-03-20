@@ -1,0 +1,16 @@
+/*
+ * Do not modify this file; it is automatically generated from the template
+ * linkcmd.xdt in the ti.targets.elf package and will be overwritten.
+ */
+
+/*
+ * put '"'s around paths because, without this, the linker
+ * considers '-' as minus operator, not a file name character.
+ */
+
+
+-l"C:\ti\xdctools_3_24_05_48\packages\ti\targets\rts6000\lib\ti.targets.rts6000.ae66"
+-l"C:\ti\xdctools_3_24_05_48\packages\ti\targets\rts6000\lib\boot.ae66"
+
+--retain="*(xdc.meta)"
+

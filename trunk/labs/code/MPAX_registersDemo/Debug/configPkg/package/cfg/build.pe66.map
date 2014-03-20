@@ -1,0 +1,52 @@
+******************************************************************************
+               TMS320C6x Linker PC v7.4.0                      
+******************************************************************************
+>> Linked Wed Feb 20 09:53:40 2013
+
+OUTPUT FILE NAME:   <build.pe66>
+ENTRY POINT SYMBOL: 0
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  NEARRAM               00000001   00007fff  00000000  00007fff  RWIX
+  RAM                   00008000   fffffffe  00000000  fffffffe  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.text:043962 
+*          0    00000000    00000000     
+
+xdc.meta:build_pe66.oe66 
+*          0    00000000    000000e8     
+                  00000000    000000e8     build_pe66.oe66 (xdc.meta)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+00000000   __ASM__
+00000060   __ISA__
+00000078   __PLAT__
+00000098   __TARG__
+000000c0   __TRDR__
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000000   __ASM__
+00000060   __ISA__
+00000078   __PLAT__
+00000098   __TARG__
+000000c0   __TRDR__
+
+[6 symbols]

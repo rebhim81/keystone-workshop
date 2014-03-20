@@ -1,0 +1,34 @@
+ExampleMPAX.zip: Platform.xdc
+Platform.xdc:
+ExampleMPAX.zip: Platform.xs
+Platform.xs:
+ExampleMPAX.zip: config.bld
+config.bld:
+ExampleMPAX.zip: package/.vers_b150
+package/.vers_b150:
+ExampleMPAX.zip: package/.vers_g180
+package/.vers_g180:
+ExampleMPAX.zip: package/.vers_r170
+package/.vers_r170:
+ExampleMPAX.zip: package/.xdc-y44
+package/.xdc-y44:
+ExampleMPAX.zip: package/ExampleMPAX.ccs
+package/ExampleMPAX.ccs:
+ExampleMPAX.zip: package/ExampleMPAX.class
+package/ExampleMPAX.class:
+ExampleMPAX.zip: package/ExampleMPAX.java
+package/ExampleMPAX.java:
+ExampleMPAX.zip: package/ExampleMPAX.sch
+package/ExampleMPAX.sch:
+ExampleMPAX.zip: package/build.cfg
+package/build.cfg:
+ExampleMPAX.zip: package/package.bld.xml
+package/package.bld.xml:
+ExampleMPAX.zip: package/package.defs.h
+package/package.defs.h:
+ExampleMPAX.zip: package/package_ExampleMPAX.c
+package/package_ExampleMPAX.c:
+ExampleMPAX.zip: package.bld
+package.bld:
+ExampleMPAX.zip: package.xdc
+package.xdc:

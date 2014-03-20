@@ -1,0 +1,9 @@
+package/cfg/build_pe66.oe66: package/cfg/build_pe66.c C:/ti/xdctools_3_24_05_48/packages/xdc/std.h C:/ti/code_generation_7_4_0/include/stdarg.h C:/ti/code_generation_7_4_0/include/stddef.h C:/ti/xdctools_3_24_05_48/packages/ti/targets/elf/std.h C:/ti/xdctools_3_24_05_48/packages/ti/targets/select.h C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h C:/ti/code_generation_7_4_0/include/stdint.h 
+package/cfg/build_pe66.c:
+C:/ti/xdctools_3_24_05_48/packages/xdc/std.h:
+C:/ti/code_generation_7_4_0/include/stdarg.h:
+C:/ti/code_generation_7_4_0/include/stddef.h:
+C:/ti/xdctools_3_24_05_48/packages/ti/targets/elf/std.h:
+C:/ti/xdctools_3_24_05_48/packages/ti/targets/select.h:
+C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h:
+C:/ti/code_generation_7_4_0/include/stdint.h:
