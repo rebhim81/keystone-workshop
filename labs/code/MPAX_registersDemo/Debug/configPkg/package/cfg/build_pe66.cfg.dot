@@ -1,0 +1,136 @@
+digraph configuration {
+    size="7.5,10";
+    rankdir=LR;
+    ranksep=".50 equally";
+    concentrate=true;
+    compound=true;
+    label="\nConfiguration for configPkg/build.pe66"
+  node [font=Helvetica, fontsize=14, fontcolor=black];  subgraph cluster0 {label=""; __cfg [label="C:/projects/developNew/MPAX_registersDemo/ExampleMPAX/custom/vlfft/evmc6670l/core0/package/build.cfg", color=white, fontcolor=blue];
+    node [font=Helvetica, fontsize=10];    subgraph cluster1 {
+        label="";
+        xdc_services_global__top [shape=box,label="xdc.services.global\n1, 0, 0", color=white];
+        xdc_services_global__bot [shape=point,label="", style=invis];
+        xdc_services_global_Clock [style=filled,fillcolor=lightgray, label="Clock"];
+        xdc_services_global__top -> xdc_services_global_Clock[style=invis];
+        xdc_services_global_Clock -> xdc_services_global__bot[style=invis];
+    }
+    subgraph cluster2 {
+        label="";
+        xdc__top [shape=box,label="xdc\n1, 1, 1", color=white];
+    }
+    subgraph cluster3 {
+        label="";
+        xdc_corevers__top [shape=box,label="xdc.corevers\n16, 0, 2, 0", color=white];
+    }
+    subgraph cluster4 {
+        label="";
+        xdc_shelf__top [shape=box,label="xdc.shelf\n1, 0, 0", color=white];
+    }
+    subgraph cluster5 {
+        label="";
+        xdc_services_spec__top [shape=box,label="xdc.services.spec\n1, 0, 0, 0", color=white];
+    }
+    subgraph cluster6 {
+        label="";
+        xdc_services_intern_xsr__top [shape=box,label="xdc.services.intern.xsr\n1, 0, 0", color=white];
+    }
+    subgraph cluster7 {
+        label="";
+        xdc_services_intern_gen__top [shape=box,label="xdc.services.intern.gen\n1, 0, 0, 0", color=white];
+    }
+    subgraph cluster8 {
+        label="";
+        xdc_services_intern_cmd__top [shape=box,label="xdc.services.intern.cmd\n1, 0, 0, 0", color=white];
+    }
+    subgraph cluster9 {
+        label="";
+        xdc_bld__top [shape=box,label="xdc.bld\n1, 0, 2", color=white];
+        xdc_bld__bot [shape=point,label="", style=invis];
+    }
+    subgraph cluster10 {
+        label="";
+        ti_targets__top [shape=box,label="ti.targets\n1, 0, 3", color=white];
+        ti_targets__bot [shape=point,label="", style=invis];
+    }
+    subgraph cluster11 {
+        label="";
+        ti_targets_elf__top [shape=box,label="ti.targets.elf\n1, 0, 0", color=white];
+        ti_targets_elf__bot [shape=point,label="", style=invis];
+    }
+    subgraph cluster12 {
+        label="";
+        xdc_rov__top [shape=box,label="xdc.rov\n1, 0, 0", color=white];
+        xdc_rov__bot [shape=point,label="", style=invis];
+    }
+    subgraph cluster13 {
+        label="";
+        xdc_runtime__top [shape=box,label="xdc.runtime\n2, 1, 0", color=white];
+        xdc_runtime__bot [shape=point,label="", style=invis];
+    }
+    subgraph cluster14 {
+        label="";
+        ti_targets_rts6000__top [shape=box,label="ti.targets.rts6000\n1, 0, 0, 0", color=white];
+    }
+    subgraph cluster15 {
+        label="";
+        ti_catalog_c6000__top [shape=box,label="ti.catalog.c6000\n1, 0, 0, 0", color=white];
+        ti_catalog_c6000__bot [shape=point,label="", style=invis];
+        ti_catalog_c6000_TMS320C6678 [style=filled,fillcolor=lightgray, label="TMS320C6678"];
+        ti_catalog_c6000__top -> ti_catalog_c6000_TMS320C6678[style=invis];
+        ti_catalog_c6000_TMS320C6678 -> ti_catalog_c6000__bot[style=invis];
+    }
+    subgraph cluster16 {
+        label="";
+        ti_catalog__top [shape=box,label="ti.catalog\n1, 0, 0", color=white];
+    }
+    subgraph cluster17 {
+        label="";
+        ti_catalog_peripherals_hdvicp2__top [shape=box,label="ti.catalog.peripherals.hdvicp2\n", color=white];
+        ti_catalog_peripherals_hdvicp2__bot [shape=point,label="", style=invis];
+    }
+    subgraph cluster18 {
+        label="";
+        xdc_platform__top [shape=box,label="xdc.platform\n1, 0, 1, 0", color=white];
+        xdc_platform__bot [shape=point,label="", style=invis];
+        xdc_platform_ExeContext [style=filled,fillcolor=lightgray, label="ExeContext"];
+        xdc_platform__top -> xdc_platform_ExeContext[style=invis];
+        xdc_platform_ExeContext -> xdc_platform__bot[style=invis];
+        xdc_platform_Utils [style=filled,fillcolor=lightgray, label="Utils"];
+        xdc_platform__top -> xdc_platform_Utils[style=invis];
+        xdc_platform_Utils -> xdc_platform__bot[style=invis];
+    }
+    subgraph cluster19 {
+        label="";
+        xdc_cfg__top [shape=box,label="xdc.cfg\n1, 0, 2, 0", color=white];
+        xdc_cfg__bot [shape=point,label="", style=invis];
+        xdc_cfg_Program [style=filled,fillcolor=lightgray, label="Program"];
+        xdc_cfg__top -> xdc_cfg_Program[style=invis];
+        xdc_cfg_Program -> xdc_cfg__bot[style=invis];
+        xdc_cfg_Main [style=filled,fillcolor=lightgray, label="Main"];
+        xdc_cfg__top -> xdc_cfg_Main[style=invis];
+        xdc_cfg_Main -> xdc_cfg__bot[style=invis];
+    }
+    subgraph cluster20 {
+        label="";
+        ti_platforms_generic__top [shape=box,label="ti.platforms.generic\n1, 0, 0, 1", color=white];
+        ti_platforms_generic__bot [shape=point,label="", style=invis];
+    }
+    subgraph cluster21 {
+        label="";
+        ExampleMPAX__top [shape=box,label="ExampleMPAX\n", color=white];
+        ExampleMPAX__bot [shape=point,label="", style=invis];
+        ExampleMPAX_Platform [style=filled,fillcolor=lightgray, label="Platform"];
+        ExampleMPAX__top -> ExampleMPAX_Platform[style=invis];
+        ExampleMPAX_Platform -> ExampleMPAX__bot[style=invis];
+    }
+    subgraph cluster22 {
+        label="";
+        configPkg__top [shape=box,label="configPkg\n", color=white];
+    }
+  }
+  node [font=Helvetica, fontsize=10];
+    ti_targets_elf_C66__1_0_7__2_0 [shape=record,label="ti.targets.elf.C66|1,0,7.2,0",style=filled, fillcolor=lightgrey];
+    ti_targets_rts6000__top -> ti_targets_elf_C66__1_0_7__2_0 [ltail=cluster14];
+    ti_targets_elf_C66__1_0_7__4_0 [shape=record,label="ti.targets.elf.C66|1,0,7.4,0",style=filled, fillcolor=lightgrey];
+    configPkg__top -> ti_targets_elf_C66__1_0_7__4_0 [ltail=cluster22];
+}

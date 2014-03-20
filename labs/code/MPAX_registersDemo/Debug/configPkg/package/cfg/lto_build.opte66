@@ -1,0 +1,1187 @@
+;******************************************************************************
+;* TMS320C6x C/C++ Codegen                                          PC v7.4.0 *
+;* Date/Time created: Wed Feb 20 09:53:40 2013                                *
+;******************************************************************************
+	.compiler_opts --abi=eabi --c64p_l1d_workaround=off --endian=little --hll_source=on --long_precision_bits=32 --mem_model:code=near --mem_model:const=data --mem_model:data=far_aggregates --object_format=elf --silicon_version=6600 --symdebug:dwarf_version=3 --symdebug:skeletal 
+
+;******************************************************************************
+;* GLOBAL FILE PARAMETERS                                                     *
+;*                                                                            *
+;*   Architecture      : TMS320C66xx                                          *
+;*   Optimization      : Enabled at level 3                                   *
+;*   Optimizing for    : Speed                                                *
+;*                       Based on options: -o3, no -ms                        *
+;*   Endian            : Little                                               *
+;*   Interrupt Thrshld : Disabled                                             *
+;*   Data Access Model : Far Aggregate Data                                   *
+;*   Pipelining        : Enabled                                              *
+;*   Speculate Loads   : Enabled with threshold = 0                           *
+;*   Memory Aliases    : Presume are aliases (pessimistic)                    *
+;*   Debug Info        : DWARF Debug for Program Analysis w/Optimization      *
+;*                                                                            *
+;******************************************************************************
+
+	.asg	A15, FP
+	.asg	B14, DP
+	.asg	B15, SP
+	.global	$bss
+
+
+$C$DW$CU	.dwtag  DW_TAG_compile_unit
+	.dwattr $C$DW$CU, DW_AT_producer("TI TMS320C6x C/C++ Codegen PC v7.4.0 Copyright (c) 1996-2012 Texas Instruments Incorporated")
+	.dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+	.dwattr $C$DW$CU, DW_AT_comp_dir("C:\projects\developNew\MPAX_registersDemo\Debug\configPkg")
+	.global	__ASM__
+	.sect	"[0]xdc.meta"
+	.align	8
+	.elfsym	__ASM__,SYM_SIZE(95)
+__ASM__:
+	.field	64,8			; __ASM__[0] @ 0
+	.field	40,8			; __ASM__[1] @ 8
+	.field	35,8			; __ASM__[2] @ 16
+	.field	41,8			; __ASM__[3] @ 24
+	.field	95,8			; __ASM__[4] @ 32
+	.field	95,8			; __ASM__[5] @ 40
+	.field	65,8			; __ASM__[6] @ 48
+	.field	83,8			; __ASM__[7] @ 56
+	.field	77,8			; __ASM__[8] @ 64
+	.field	95,8			; __ASM__[9] @ 72
+	.field	95,8			; __ASM__[10] @ 80
+	.field	32,8			; __ASM__[11] @ 88
+	.field	61,8			; __ASM__[12] @ 96
+	.field	32,8			; __ASM__[13] @ 104
+	.field	67,8			; __ASM__[14] @ 112
+	.field	58,8			; __ASM__[15] @ 120
+	.field	47,8			; __ASM__[16] @ 128
+	.field	112,8			; __ASM__[17] @ 136
+	.field	114,8			; __ASM__[18] @ 144
+	.field	111,8			; __ASM__[19] @ 152
+	.field	106,8			; __ASM__[20] @ 160
+	.field	101,8			; __ASM__[21] @ 168
+	.field	99,8			; __ASM__[22] @ 176
+	.field	116,8			; __ASM__[23] @ 184
+	.field	115,8			; __ASM__[24] @ 192
+	.field	47,8			; __ASM__[25] @ 200
+	.field	100,8			; __ASM__[26] @ 208
+	.field	101,8			; __ASM__[27] @ 216
+	.field	118,8			; __ASM__[28] @ 224
+	.field	101,8			; __ASM__[29] @ 232
+	.field	108,8			; __ASM__[30] @ 240
+	.field	111,8			; __ASM__[31] @ 248
+	.field	112,8			; __ASM__[32] @ 256
+	.field	78,8			; __ASM__[33] @ 264
+	.field	101,8			; __ASM__[34] @ 272
+	.field	119,8			; __ASM__[35] @ 280
+	.field	47,8			; __ASM__[36] @ 288
+	.field	77,8			; __ASM__[37] @ 296
+	.field	80,8			; __ASM__[38] @ 304
+	.field	65,8			; __ASM__[39] @ 312
+	.field	88,8			; __ASM__[40] @ 320
+	.field	95,8			; __ASM__[41] @ 328
+	.field	114,8			; __ASM__[42] @ 336
+	.field	101,8			; __ASM__[43] @ 344
+	.field	103,8			; __ASM__[44] @ 352
+	.field	105,8			; __ASM__[45] @ 360
+	.field	115,8			; __ASM__[46] @ 368
+	.field	116,8			; __ASM__[47] @ 376
+	.field	101,8			; __ASM__[48] @ 384
+	.field	114,8			; __ASM__[49] @ 392
+	.field	115,8			; __ASM__[50] @ 400
+	.field	68,8			; __ASM__[51] @ 408
+	.field	101,8			; __ASM__[52] @ 416
+	.field	109,8			; __ASM__[53] @ 424
+	.field	111,8			; __ASM__[54] @ 432
+	.field	47,8			; __ASM__[55] @ 440
+	.field	68,8			; __ASM__[56] @ 448
+	.field	101,8			; __ASM__[57] @ 456
+	.field	98,8			; __ASM__[58] @ 464
+	.field	117,8			; __ASM__[59] @ 472
+	.field	103,8			; __ASM__[60] @ 480
+	.field	47,8			; __ASM__[61] @ 488
+	.field	99,8			; __ASM__[62] @ 496
+	.field	111,8			; __ASM__[63] @ 504
+	.field	110,8			; __ASM__[64] @ 512
+	.field	102,8			; __ASM__[65] @ 520
+	.field	105,8			; __ASM__[66] @ 528
+	.field	103,8			; __ASM__[67] @ 536
+	.field	80,8			; __ASM__[68] @ 544
+	.field	107,8			; __ASM__[69] @ 552
+	.field	103,8			; __ASM__[70] @ 560
+	.field	47,8			; __ASM__[71] @ 568
+	.field	112,8			; __ASM__[72] @ 576
+	.field	97,8			; __ASM__[73] @ 584
+	.field	99,8			; __ASM__[74] @ 592
+	.field	107,8			; __ASM__[75] @ 600
+	.field	97,8			; __ASM__[76] @ 608
+	.field	103,8			; __ASM__[77] @ 616
+	.field	101,8			; __ASM__[78] @ 624
+	.field	47,8			; __ASM__[79] @ 632
+	.field	99,8			; __ASM__[80] @ 640
+	.field	102,8			; __ASM__[81] @ 648
+	.field	103,8			; __ASM__[82] @ 656
+	.field	47,8			; __ASM__[83] @ 664
+	.field	98,8			; __ASM__[84] @ 672
+	.field	117,8			; __ASM__[85] @ 680
+	.field	105,8			; __ASM__[86] @ 688
+	.field	108,8			; __ASM__[87] @ 696
+	.field	100,8			; __ASM__[88] @ 704
+	.field	95,8			; __ASM__[89] @ 712
+	.field	112,8			; __ASM__[90] @ 720
+	.field	101,8			; __ASM__[91] @ 728
+	.field	54,8			; __ASM__[92] @ 736
+	.field	54,8			; __ASM__[93] @ 744
+	.field	0,8			; __ASM__[94] @ 752
+
+$C$DW$1	.dwtag  DW_TAG_variable, DW_AT_name("__ASM__")
+	.dwattr $C$DW$1, DW_AT_TI_symbol_name("__ASM__")
+	.dwattr $C$DW$1, DW_AT_location[DW_OP_addr __ASM__]
+	.dwattr $C$DW$1, DW_AT_type(*$C$DW$T$131)
+	.dwattr $C$DW$1, DW_AT_external
+	.dwattr $C$DW$1, DW_AT_decl_file("package/cfg/build_pe66.c")
+	.dwattr $C$DW$1, DW_AT_decl_line(0x35)
+	.dwattr $C$DW$1, DW_AT_decl_column(0x01)
+	.global	__ISA__
+	.sect	"[0]xdc.meta"
+	.align	8
+	.elfsym	__ISA__,SYM_SIZE(17)
+__ISA__:
+	.field	64,8			; __ISA__[0] @ 0
+	.field	40,8			; __ISA__[1] @ 8
+	.field	35,8			; __ISA__[2] @ 16
+	.field	41,8			; __ISA__[3] @ 24
+	.field	95,8			; __ISA__[4] @ 32
+	.field	95,8			; __ISA__[5] @ 40
+	.field	73,8			; __ISA__[6] @ 48
+	.field	83,8			; __ISA__[7] @ 56
+	.field	65,8			; __ISA__[8] @ 64
+	.field	95,8			; __ISA__[9] @ 72
+	.field	95,8			; __ISA__[10] @ 80
+	.field	32,8			; __ISA__[11] @ 88
+	.field	61,8			; __ISA__[12] @ 96
+	.field	32,8			; __ISA__[13] @ 104
+	.field	54,8			; __ISA__[14] @ 112
+	.field	54,8			; __ISA__[15] @ 120
+	.field	0,8			; __ISA__[16] @ 128
+
+$C$DW$2	.dwtag  DW_TAG_variable, DW_AT_name("__ISA__")
+	.dwattr $C$DW$2, DW_AT_TI_symbol_name("__ISA__")
+	.dwattr $C$DW$2, DW_AT_location[DW_OP_addr __ISA__]
+	.dwattr $C$DW$2, DW_AT_type(*$C$DW$T$132)
+	.dwattr $C$DW$2, DW_AT_external
+	.dwattr $C$DW$2, DW_AT_decl_file("package/cfg/build_pe66.c")
+	.dwattr $C$DW$2, DW_AT_decl_line(0x3c)
+	.dwattr $C$DW$2, DW_AT_decl_column(0x01)
+	.global	__PLAT__
+	.sect	"[0]xdc.meta"
+	.align	8
+	.elfsym	__PLAT__,SYM_SIZE(27)
+__PLAT__:
+	.field	64,8			; __PLAT__[0] @ 0
+	.field	40,8			; __PLAT__[1] @ 8
+	.field	35,8			; __PLAT__[2] @ 16
+	.field	41,8			; __PLAT__[3] @ 24
+	.field	95,8			; __PLAT__[4] @ 32
+	.field	95,8			; __PLAT__[5] @ 40
+	.field	80,8			; __PLAT__[6] @ 48
+	.field	76,8			; __PLAT__[7] @ 56
+	.field	65,8			; __PLAT__[8] @ 64
+	.field	84,8			; __PLAT__[9] @ 72
+	.field	95,8			; __PLAT__[10] @ 80
+	.field	95,8			; __PLAT__[11] @ 88
+	.field	32,8			; __PLAT__[12] @ 96
+	.field	61,8			; __PLAT__[13] @ 104
+	.field	32,8			; __PLAT__[14] @ 112
+	.field	69,8			; __PLAT__[15] @ 120
+	.field	120,8			; __PLAT__[16] @ 128
+	.field	97,8			; __PLAT__[17] @ 136
+	.field	109,8			; __PLAT__[18] @ 144
+	.field	112,8			; __PLAT__[19] @ 152
+	.field	108,8			; __PLAT__[20] @ 160
+	.field	101,8			; __PLAT__[21] @ 168
+	.field	77,8			; __PLAT__[22] @ 176
+	.field	80,8			; __PLAT__[23] @ 184
+	.field	65,8			; __PLAT__[24] @ 192
+	.field	88,8			; __PLAT__[25] @ 200
+	.field	0,8			; __PLAT__[26] @ 208
+
+$C$DW$3	.dwtag  DW_TAG_variable, DW_AT_name("__PLAT__")
+	.dwattr $C$DW$3, DW_AT_TI_symbol_name("__PLAT__")
+	.dwattr $C$DW$3, DW_AT_location[DW_OP_addr __PLAT__]
+	.dwattr $C$DW$3, DW_AT_type(*$C$DW$T$133)
+	.dwattr $C$DW$3, DW_AT_external
+	.dwattr $C$DW$3, DW_AT_decl_file("package/cfg/build_pe66.c")
+	.dwattr $C$DW$3, DW_AT_decl_line(0x43)
+	.dwattr $C$DW$3, DW_AT_decl_column(0x01)
+	.global	__TARG__
+	.sect	"[0]xdc.meta"
+	.align	8
+	.elfsym	__TARG__,SYM_SIZE(34)
+__TARG__:
+	.field	64,8			; __TARG__[0] @ 0
+	.field	40,8			; __TARG__[1] @ 8
+	.field	35,8			; __TARG__[2] @ 16
+	.field	41,8			; __TARG__[3] @ 24
+	.field	95,8			; __TARG__[4] @ 32
+	.field	95,8			; __TARG__[5] @ 40
+	.field	84,8			; __TARG__[6] @ 48
+	.field	65,8			; __TARG__[7] @ 56
+	.field	82,8			; __TARG__[8] @ 64
+	.field	71,8			; __TARG__[9] @ 72
+	.field	95,8			; __TARG__[10] @ 80
+	.field	95,8			; __TARG__[11] @ 88
+	.field	32,8			; __TARG__[12] @ 96
+	.field	61,8			; __TARG__[13] @ 104
+	.field	32,8			; __TARG__[14] @ 112
+	.field	116,8			; __TARG__[15] @ 120
+	.field	105,8			; __TARG__[16] @ 128
+	.field	46,8			; __TARG__[17] @ 136
+	.field	116,8			; __TARG__[18] @ 144
+	.field	97,8			; __TARG__[19] @ 152
+	.field	114,8			; __TARG__[20] @ 160
+	.field	103,8			; __TARG__[21] @ 168
+	.field	101,8			; __TARG__[22] @ 176
+	.field	116,8			; __TARG__[23] @ 184
+	.field	115,8			; __TARG__[24] @ 192
+	.field	46,8			; __TARG__[25] @ 200
+	.field	101,8			; __TARG__[26] @ 208
+	.field	108,8			; __TARG__[27] @ 216
+	.field	102,8			; __TARG__[28] @ 224
+	.field	46,8			; __TARG__[29] @ 232
+	.field	67,8			; __TARG__[30] @ 240
+	.field	54,8			; __TARG__[31] @ 248
+	.field	54,8			; __TARG__[32] @ 256
+	.field	0,8			; __TARG__[33] @ 264
+
+$C$DW$4	.dwtag  DW_TAG_variable, DW_AT_name("__TARG__")
+	.dwattr $C$DW$4, DW_AT_TI_symbol_name("__TARG__")
+	.dwattr $C$DW$4, DW_AT_location[DW_OP_addr __TARG__]
+	.dwattr $C$DW$4, DW_AT_type(*$C$DW$T$134)
+	.dwattr $C$DW$4, DW_AT_external
+	.dwattr $C$DW$4, DW_AT_decl_file("package/cfg/build_pe66.c")
+	.dwattr $C$DW$4, DW_AT_decl_line(0x49)
+	.dwattr $C$DW$4, DW_AT_decl_column(0x01)
+	.global	__TRDR__
+	.sect	"[0]xdc.meta"
+	.align	8
+	.elfsym	__TRDR__,SYM_SIZE(40)
+__TRDR__:
+	.field	64,8			; __TRDR__[0] @ 0
+	.field	40,8			; __TRDR__[1] @ 8
+	.field	35,8			; __TRDR__[2] @ 16
+	.field	41,8			; __TRDR__[3] @ 24
+	.field	95,8			; __TRDR__[4] @ 32
+	.field	95,8			; __TRDR__[5] @ 40
+	.field	84,8			; __TRDR__[6] @ 48
+	.field	82,8			; __TRDR__[7] @ 56
+	.field	68,8			; __TRDR__[8] @ 64
+	.field	82,8			; __TRDR__[9] @ 72
+	.field	95,8			; __TRDR__[10] @ 80
+	.field	95,8			; __TRDR__[11] @ 88
+	.field	32,8			; __TRDR__[12] @ 96
+	.field	61,8			; __TRDR__[13] @ 104
+	.field	32,8			; __TRDR__[14] @ 112
+	.field	116,8			; __TRDR__[15] @ 120
+	.field	105,8			; __TRDR__[16] @ 128
+	.field	46,8			; __TRDR__[17] @ 136
+	.field	116,8			; __TRDR__[18] @ 144
+	.field	97,8			; __TRDR__[19] @ 152
+	.field	114,8			; __TRDR__[20] @ 160
+	.field	103,8			; __TRDR__[21] @ 168
+	.field	101,8			; __TRDR__[22] @ 176
+	.field	116,8			; __TRDR__[23] @ 184
+	.field	115,8			; __TRDR__[24] @ 192
+	.field	46,8			; __TRDR__[25] @ 200
+	.field	111,8			; __TRDR__[26] @ 208
+	.field	109,8			; __TRDR__[27] @ 216
+	.field	102,8			; __TRDR__[28] @ 224
+	.field	46,8			; __TRDR__[29] @ 232
+	.field	101,8			; __TRDR__[30] @ 240
+	.field	108,8			; __TRDR__[31] @ 248
+	.field	102,8			; __TRDR__[32] @ 256
+	.field	46,8			; __TRDR__[33] @ 264
+	.field	69,8			; __TRDR__[34] @ 272
+	.field	108,8			; __TRDR__[35] @ 280
+	.field	102,8			; __TRDR__[36] @ 288
+	.field	51,8			; __TRDR__[37] @ 296
+	.field	50,8			; __TRDR__[38] @ 304
+	.field	0,8			; __TRDR__[39] @ 312
+
+$C$DW$5	.dwtag  DW_TAG_variable, DW_AT_name("__TRDR__")
+	.dwattr $C$DW$5, DW_AT_TI_symbol_name("__TRDR__")
+	.dwattr $C$DW$5, DW_AT_location[DW_OP_addr __TRDR__]
+	.dwattr $C$DW$5, DW_AT_type(*$C$DW$T$135)
+	.dwattr $C$DW$5, DW_AT_external
+	.dwattr $C$DW$5, DW_AT_decl_file("package/cfg/build_pe66.c")
+	.dwattr $C$DW$5, DW_AT_decl_line(0x4f)
+	.dwattr $C$DW$5, DW_AT_decl_column(0x01)
+;	C:\ti\code_generation_7_4_0\bin\opt6x.exe --call_assumptions=2 C:\\Users\\a0270985\\AppData\\Local\\Temp\\058842 C:\\Users\\a0270985\\AppData\\Local\\Temp\\058844 
+
+;******************************************************************************
+;* BUILD ATTRIBUTES                                                           *
+;******************************************************************************
+	.battr "TI", Tag_File, 1, Tag_Long_Precision_Bits(2)
+	.battr "TI", Tag_File, 1, Tag_Bitfield_layout(2)
+	.battr "TI", Tag_File, 1, Tag_ABI_enum_size(3)
+	.battr "c6xabi", Tag_File, 1, Tag_ABI_wchar_t(1)
+	.battr "c6xabi", Tag_File, 1, Tag_ABI_array_object_alignment(0)
+	.battr "c6xabi", Tag_File, 1, Tag_ABI_array_object_align_expected(0)
+	.battr "c6xabi", Tag_File, 1, Tag_ABI_PIC(0)
+	.battr "c6xabi", Tag_File, 1, Tag_ABI_PID(0)
+	.battr "c6xabi", Tag_File, 1, Tag_ABI_DSBT(0)
+	.battr "c6xabi", Tag_File, 1, Tag_ABI_stack_align_needed(0)
+	.battr "c6xabi", Tag_File, 1, Tag_ABI_stack_align_preserved(0)
+	.battr "TI", Tag_File, 1, Tag_Tramps_Use_SOC(1)
+
+;******************************************************************************
+;* TYPE INFORMATION                                                           *
+;******************************************************************************
+$C$DW$T$2	.dwtag  DW_TAG_unspecified_type
+	.dwattr $C$DW$T$2, DW_AT_name("void")
+$C$DW$T$3	.dwtag  DW_TAG_pointer_type
+	.dwattr $C$DW$T$3, DW_AT_type(*$C$DW$T$2)
+	.dwattr $C$DW$T$3, DW_AT_address_class(0x20)
+$C$DW$T$23	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Ptr")
+	.dwattr $C$DW$T$23, DW_AT_type(*$C$DW$T$3)
+	.dwattr $C$DW$T$23, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$23, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$23, DW_AT_decl_line(0x2e)
+	.dwattr $C$DW$T$23, DW_AT_decl_column(0x1a)
+$C$DW$T$24	.dwtag  DW_TAG_typedef, DW_AT_name("Ptr")
+	.dwattr $C$DW$T$24, DW_AT_type(*$C$DW$T$23)
+	.dwattr $C$DW$T$24, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$24, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$24, DW_AT_decl_line(0xe6)
+	.dwattr $C$DW$T$24, DW_AT_decl_column(0x19)
+$C$DW$T$4	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+	.dwattr $C$DW$T$4, DW_AT_name("bool")
+	.dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+$C$DW$T$5	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+	.dwattr $C$DW$T$5, DW_AT_name("signed char")
+	.dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+$C$DW$T$25	.dwtag  DW_TAG_typedef, DW_AT_name("int8_t")
+	.dwattr $C$DW$T$25, DW_AT_type(*$C$DW$T$5)
+	.dwattr $C$DW$T$25, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$25, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$25, DW_AT_decl_line(0x2a)
+	.dwattr $C$DW$T$25, DW_AT_decl_column(0x1d)
+$C$DW$T$26	.dwtag  DW_TAG_typedef, DW_AT_name("int_least8_t")
+	.dwattr $C$DW$T$26, DW_AT_type(*$C$DW$T$25)
+	.dwattr $C$DW$T$26, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$26, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$26, DW_AT_decl_line(0x39)
+	.dwattr $C$DW$T$26, DW_AT_decl_column(0x17)
+$C$DW$T$27	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Int8")
+	.dwattr $C$DW$T$27, DW_AT_type(*$C$DW$T$26)
+	.dwattr $C$DW$T$27, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$27, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$27, DW_AT_decl_line(0x6d)
+	.dwattr $C$DW$T$27, DW_AT_decl_column(0x19)
+$C$DW$T$28	.dwtag  DW_TAG_typedef, DW_AT_name("Int8")
+	.dwattr $C$DW$T$28, DW_AT_type(*$C$DW$T$27)
+	.dwattr $C$DW$T$28, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$28, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$28, DW_AT_decl_line(0xe2)
+	.dwattr $C$DW$T$28, DW_AT_decl_column(0x19)
+$C$DW$T$6	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+	.dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+	.dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+$C$DW$T$31	.dwtag  DW_TAG_typedef, DW_AT_name("uint8_t")
+	.dwattr $C$DW$T$31, DW_AT_type(*$C$DW$T$6)
+	.dwattr $C$DW$T$31, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$31, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$31, DW_AT_decl_line(0x2b)
+	.dwattr $C$DW$T$31, DW_AT_decl_column(0x1c)
+$C$DW$T$34	.dwtag  DW_TAG_typedef, DW_AT_name("uint_least8_t")
+	.dwattr $C$DW$T$34, DW_AT_type(*$C$DW$T$31)
+	.dwattr $C$DW$T$34, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$34, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$34, DW_AT_decl_line(0x3a)
+	.dwattr $C$DW$T$34, DW_AT_decl_column(0x16)
+$C$DW$T$35	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_UInt8")
+	.dwattr $C$DW$T$35, DW_AT_type(*$C$DW$T$34)
+	.dwattr $C$DW$T$35, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$35, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$35, DW_AT_decl_line(0x6e)
+	.dwattr $C$DW$T$35, DW_AT_decl_column(0x19)
+$C$DW$T$36	.dwtag  DW_TAG_typedef, DW_AT_name("UInt8")
+	.dwattr $C$DW$T$36, DW_AT_type(*$C$DW$T$35)
+	.dwattr $C$DW$T$36, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$36, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$36, DW_AT_decl_line(0xe9)
+	.dwattr $C$DW$T$36, DW_AT_decl_column(0x19)
+$C$DW$T$37	.dwtag  DW_TAG_typedef, DW_AT_name("Uint8")
+	.dwattr $C$DW$T$37, DW_AT_type(*$C$DW$T$35)
+	.dwattr $C$DW$T$37, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$37, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$37, DW_AT_decl_line(0xf6)
+	.dwattr $C$DW$T$37, DW_AT_decl_column(0x19)
+$C$DW$T$32	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Bits8")
+	.dwattr $C$DW$T$32, DW_AT_type(*$C$DW$T$31)
+	.dwattr $C$DW$T$32, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$32, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$32, DW_AT_decl_line(0x8a)
+	.dwattr $C$DW$T$32, DW_AT_decl_column(0x19)
+$C$DW$T$33	.dwtag  DW_TAG_typedef, DW_AT_name("Bits8")
+	.dwattr $C$DW$T$33, DW_AT_type(*$C$DW$T$32)
+	.dwattr $C$DW$T$33, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$33, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$33, DW_AT_decl_line(0x10a)
+	.dwattr $C$DW$T$33, DW_AT_decl_column(0x19)
+$C$DW$T$29	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_UChar")
+	.dwattr $C$DW$T$29, DW_AT_type(*$C$DW$T$6)
+	.dwattr $C$DW$T$29, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$29, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$29, DW_AT_decl_line(0x1e)
+	.dwattr $C$DW$T$29, DW_AT_decl_column(0x19)
+$C$DW$T$30	.dwtag  DW_TAG_typedef, DW_AT_name("UChar")
+	.dwattr $C$DW$T$30, DW_AT_type(*$C$DW$T$29)
+	.dwattr $C$DW$T$30, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$30, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$30, DW_AT_decl_line(0xd0)
+	.dwattr $C$DW$T$30, DW_AT_decl_column(0x19)
+$C$DW$T$7	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+	.dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+	.dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+$C$DW$T$8	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+	.dwattr $C$DW$T$8, DW_AT_name("short")
+	.dwattr $C$DW$T$8, DW_AT_byte_size(0x02)
+$C$DW$T$40	.dwtag  DW_TAG_typedef, DW_AT_name("int16_t")
+	.dwattr $C$DW$T$40, DW_AT_type(*$C$DW$T$8)
+	.dwattr $C$DW$T$40, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$40, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$40, DW_AT_decl_line(0x2c)
+	.dwattr $C$DW$T$40, DW_AT_decl_column(0x1d)
+$C$DW$T$41	.dwtag  DW_TAG_typedef, DW_AT_name("int_least16_t")
+	.dwattr $C$DW$T$41, DW_AT_type(*$C$DW$T$40)
+	.dwattr $C$DW$T$41, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$41, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$41, DW_AT_decl_line(0x3c)
+	.dwattr $C$DW$T$41, DW_AT_decl_column(0x17)
+$C$DW$T$42	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Int16")
+	.dwattr $C$DW$T$42, DW_AT_type(*$C$DW$T$41)
+	.dwattr $C$DW$T$42, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$42, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$42, DW_AT_decl_line(0x6f)
+	.dwattr $C$DW$T$42, DW_AT_decl_column(0x19)
+$C$DW$T$43	.dwtag  DW_TAG_typedef, DW_AT_name("Int16")
+	.dwattr $C$DW$T$43, DW_AT_type(*$C$DW$T$42)
+	.dwattr $C$DW$T$43, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$43, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$43, DW_AT_decl_line(0xe3)
+	.dwattr $C$DW$T$43, DW_AT_decl_column(0x19)
+$C$DW$T$38	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Short")
+	.dwattr $C$DW$T$38, DW_AT_type(*$C$DW$T$8)
+	.dwattr $C$DW$T$38, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$38, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$38, DW_AT_decl_line(0x1f)
+	.dwattr $C$DW$T$38, DW_AT_decl_column(0x19)
+$C$DW$T$39	.dwtag  DW_TAG_typedef, DW_AT_name("Short")
+	.dwattr $C$DW$T$39, DW_AT_type(*$C$DW$T$38)
+	.dwattr $C$DW$T$39, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$39, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$39, DW_AT_decl_line(0xd1)
+	.dwattr $C$DW$T$39, DW_AT_decl_column(0x19)
+$C$DW$T$9	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+	.dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+	.dwattr $C$DW$T$9, DW_AT_byte_size(0x02)
+$C$DW$T$49	.dwtag  DW_TAG_typedef, DW_AT_name("uint16_t")
+	.dwattr $C$DW$T$49, DW_AT_type(*$C$DW$T$9)
+	.dwattr $C$DW$T$49, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$49, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$49, DW_AT_decl_line(0x2d)
+	.dwattr $C$DW$T$49, DW_AT_decl_column(0x1c)
+$C$DW$T$52	.dwtag  DW_TAG_typedef, DW_AT_name("uint_least16_t")
+	.dwattr $C$DW$T$52, DW_AT_type(*$C$DW$T$49)
+	.dwattr $C$DW$T$52, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$52, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$52, DW_AT_decl_line(0x3d)
+	.dwattr $C$DW$T$52, DW_AT_decl_column(0x16)
+$C$DW$T$53	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_UInt16")
+	.dwattr $C$DW$T$53, DW_AT_type(*$C$DW$T$52)
+	.dwattr $C$DW$T$53, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$53, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$53, DW_AT_decl_line(0x70)
+	.dwattr $C$DW$T$53, DW_AT_decl_column(0x19)
+$C$DW$T$54	.dwtag  DW_TAG_typedef, DW_AT_name("UInt16")
+	.dwattr $C$DW$T$54, DW_AT_type(*$C$DW$T$53)
+	.dwattr $C$DW$T$54, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$54, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$54, DW_AT_decl_line(0xea)
+	.dwattr $C$DW$T$54, DW_AT_decl_column(0x19)
+$C$DW$T$55	.dwtag  DW_TAG_typedef, DW_AT_name("Uint16")
+	.dwattr $C$DW$T$55, DW_AT_type(*$C$DW$T$53)
+	.dwattr $C$DW$T$55, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$55, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$55, DW_AT_decl_line(0xf7)
+	.dwattr $C$DW$T$55, DW_AT_decl_column(0x19)
+$C$DW$T$50	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Bits16")
+	.dwattr $C$DW$T$50, DW_AT_type(*$C$DW$T$49)
+	.dwattr $C$DW$T$50, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$50, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$50, DW_AT_decl_line(0x8d)
+	.dwattr $C$DW$T$50, DW_AT_decl_column(0x19)
+$C$DW$T$51	.dwtag  DW_TAG_typedef, DW_AT_name("Bits16")
+	.dwattr $C$DW$T$51, DW_AT_type(*$C$DW$T$50)
+	.dwattr $C$DW$T$51, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$51, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$51, DW_AT_decl_line(0x10e)
+	.dwattr $C$DW$T$51, DW_AT_decl_column(0x19)
+$C$DW$T$44	.dwtag  DW_TAG_typedef, DW_AT_name("wchar_t")
+	.dwattr $C$DW$T$44, DW_AT_type(*$C$DW$T$9)
+	.dwattr $C$DW$T$44, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$44, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stddef.h")
+	.dwattr $C$DW$T$44, DW_AT_decl_line(0x3c)
+	.dwattr $C$DW$T$44, DW_AT_decl_column(0x1a)
+$C$DW$T$45	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Bool")
+	.dwattr $C$DW$T$45, DW_AT_type(*$C$DW$T$9)
+	.dwattr $C$DW$T$45, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$45, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$45, DW_AT_decl_line(0x2d)
+	.dwattr $C$DW$T$45, DW_AT_decl_column(0x19)
+$C$DW$T$46	.dwtag  DW_TAG_typedef, DW_AT_name("Bool")
+	.dwattr $C$DW$T$46, DW_AT_type(*$C$DW$T$45)
+	.dwattr $C$DW$T$46, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$46, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$46, DW_AT_decl_line(0xe1)
+	.dwattr $C$DW$T$46, DW_AT_decl_column(0x19)
+$C$DW$T$47	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_UShort")
+	.dwattr $C$DW$T$47, DW_AT_type(*$C$DW$T$9)
+	.dwattr $C$DW$T$47, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$47, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$47, DW_AT_decl_line(0x20)
+	.dwattr $C$DW$T$47, DW_AT_decl_column(0x19)
+$C$DW$T$48	.dwtag  DW_TAG_typedef, DW_AT_name("UShort")
+	.dwattr $C$DW$T$48, DW_AT_type(*$C$DW$T$47)
+	.dwattr $C$DW$T$48, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$48, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$48, DW_AT_decl_line(0xd2)
+	.dwattr $C$DW$T$48, DW_AT_decl_column(0x19)
+$C$DW$T$10	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+	.dwattr $C$DW$T$10, DW_AT_name("int")
+	.dwattr $C$DW$T$10, DW_AT_byte_size(0x04)
+
+$C$DW$T$56	.dwtag  DW_TAG_subroutine_type
+	.dwattr $C$DW$T$56, DW_AT_type(*$C$DW$T$10)
+	.dwattr $C$DW$T$56, DW_AT_language(DW_LANG_C)
+$C$DW$T$57	.dwtag  DW_TAG_pointer_type
+	.dwattr $C$DW$T$57, DW_AT_type(*$C$DW$T$56)
+	.dwattr $C$DW$T$57, DW_AT_address_class(0x20)
+$C$DW$T$58	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Fxn")
+	.dwattr $C$DW$T$58, DW_AT_type(*$C$DW$T$57)
+	.dwattr $C$DW$T$58, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$58, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$58, DW_AT_decl_line(0x42)
+	.dwattr $C$DW$T$58, DW_AT_decl_column(0x1d)
+$C$DW$T$59	.dwtag  DW_TAG_typedef, DW_AT_name("Fxn")
+	.dwattr $C$DW$T$59, DW_AT_type(*$C$DW$T$58)
+	.dwattr $C$DW$T$59, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$59, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$59, DW_AT_decl_line(0xe5)
+	.dwattr $C$DW$T$59, DW_AT_decl_column(0x19)
+$C$DW$T$66	.dwtag  DW_TAG_typedef, DW_AT_name("int32_t")
+	.dwattr $C$DW$T$66, DW_AT_type(*$C$DW$T$10)
+	.dwattr $C$DW$T$66, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$66, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$66, DW_AT_decl_line(0x2e)
+	.dwattr $C$DW$T$66, DW_AT_decl_column(0x1d)
+$C$DW$T$67	.dwtag  DW_TAG_typedef, DW_AT_name("int_fast16_t")
+	.dwattr $C$DW$T$67, DW_AT_type(*$C$DW$T$66)
+	.dwattr $C$DW$T$67, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$67, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$67, DW_AT_decl_line(0x4b)
+	.dwattr $C$DW$T$67, DW_AT_decl_column(0x17)
+$C$DW$T$68	.dwtag  DW_TAG_typedef, DW_AT_name("int_fast32_t")
+	.dwattr $C$DW$T$68, DW_AT_type(*$C$DW$T$66)
+	.dwattr $C$DW$T$68, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$68, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$68, DW_AT_decl_line(0x4e)
+	.dwattr $C$DW$T$68, DW_AT_decl_column(0x17)
+$C$DW$T$69	.dwtag  DW_TAG_typedef, DW_AT_name("int_fast8_t")
+	.dwattr $C$DW$T$69, DW_AT_type(*$C$DW$T$66)
+	.dwattr $C$DW$T$69, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$69, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$69, DW_AT_decl_line(0x49)
+	.dwattr $C$DW$T$69, DW_AT_decl_column(0x17)
+$C$DW$T$70	.dwtag  DW_TAG_typedef, DW_AT_name("int_least32_t")
+	.dwattr $C$DW$T$70, DW_AT_type(*$C$DW$T$66)
+	.dwattr $C$DW$T$70, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$70, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$70, DW_AT_decl_line(0x3e)
+	.dwattr $C$DW$T$70, DW_AT_decl_column(0x17)
+$C$DW$T$71	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Int32")
+	.dwattr $C$DW$T$71, DW_AT_type(*$C$DW$T$70)
+	.dwattr $C$DW$T$71, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$71, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$71, DW_AT_decl_line(0x71)
+	.dwattr $C$DW$T$71, DW_AT_decl_column(0x19)
+$C$DW$T$72	.dwtag  DW_TAG_typedef, DW_AT_name("Int32")
+	.dwattr $C$DW$T$72, DW_AT_type(*$C$DW$T$71)
+	.dwattr $C$DW$T$72, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$72, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$72, DW_AT_decl_line(0xe4)
+	.dwattr $C$DW$T$72, DW_AT_decl_column(0x19)
+$C$DW$T$20	.dwtag  DW_TAG_typedef, DW_AT_name("intptr_t")
+	.dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$10)
+	.dwattr $C$DW$T$20, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$20, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$20, DW_AT_decl_line(0x58)
+	.dwattr $C$DW$T$20, DW_AT_decl_column(0x1a)
+$C$DW$T$21	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_IArg")
+	.dwattr $C$DW$T$21, DW_AT_type(*$C$DW$T$20)
+	.dwattr $C$DW$T$21, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$21, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$21, DW_AT_decl_line(0x99)
+	.dwattr $C$DW$T$21, DW_AT_decl_column(0x19)
+$C$DW$T$73	.dwtag  DW_TAG_typedef, DW_AT_name("IArg")
+	.dwattr $C$DW$T$73, DW_AT_type(*$C$DW$T$21)
+	.dwattr $C$DW$T$73, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$73, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$73, DW_AT_decl_line(0xdf)
+	.dwattr $C$DW$T$73, DW_AT_decl_column(0x19)
+$C$DW$T$74	.dwtag  DW_TAG_typedef, DW_AT_name("ptrdiff_t")
+	.dwattr $C$DW$T$74, DW_AT_type(*$C$DW$T$10)
+	.dwattr $C$DW$T$74, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$74, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stddef.h")
+	.dwattr $C$DW$T$74, DW_AT_decl_line(0x31)
+	.dwattr $C$DW$T$74, DW_AT_decl_column(0x1c)
+$C$DW$T$60	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Arg")
+	.dwattr $C$DW$T$60, DW_AT_type(*$C$DW$T$10)
+	.dwattr $C$DW$T$60, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$60, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$60, DW_AT_decl_line(0x23)
+	.dwattr $C$DW$T$60, DW_AT_decl_column(0x15)
+$C$DW$T$61	.dwtag  DW_TAG_typedef, DW_AT_name("Arg")
+	.dwattr $C$DW$T$61, DW_AT_type(*$C$DW$T$60)
+	.dwattr $C$DW$T$61, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$61, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$61, DW_AT_decl_line(0xf3)
+	.dwattr $C$DW$T$61, DW_AT_decl_column(0x19)
+$C$DW$T$62	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Int")
+	.dwattr $C$DW$T$62, DW_AT_type(*$C$DW$T$10)
+	.dwattr $C$DW$T$62, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$62, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$62, DW_AT_decl_line(0x21)
+	.dwattr $C$DW$T$62, DW_AT_decl_column(0x19)
+$C$DW$T$63	.dwtag  DW_TAG_typedef, DW_AT_name("Int")
+	.dwattr $C$DW$T$63, DW_AT_type(*$C$DW$T$62)
+	.dwattr $C$DW$T$63, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$63, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$63, DW_AT_decl_line(0xd3)
+	.dwattr $C$DW$T$63, DW_AT_decl_column(0x19)
+$C$DW$T$64	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Long")
+	.dwattr $C$DW$T$64, DW_AT_type(*$C$DW$T$10)
+	.dwattr $C$DW$T$64, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$64, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$64, DW_AT_decl_line(0x23)
+	.dwattr $C$DW$T$64, DW_AT_decl_column(0x19)
+$C$DW$T$65	.dwtag  DW_TAG_typedef, DW_AT_name("Long")
+	.dwattr $C$DW$T$65, DW_AT_type(*$C$DW$T$64)
+	.dwattr $C$DW$T$65, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$65, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$65, DW_AT_decl_line(0xd5)
+	.dwattr $C$DW$T$65, DW_AT_decl_column(0x19)
+$C$DW$T$11	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+	.dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+	.dwattr $C$DW$T$11, DW_AT_byte_size(0x04)
+$C$DW$T$93	.dwtag  DW_TAG_typedef, DW_AT_name("size_t")
+	.dwattr $C$DW$T$93, DW_AT_type(*$C$DW$T$11)
+	.dwattr $C$DW$T$93, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$93, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stddef.h")
+	.dwattr $C$DW$T$93, DW_AT_decl_line(0x35)
+	.dwattr $C$DW$T$93, DW_AT_decl_column(0x19)
+$C$DW$T$94	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_SizeT")
+	.dwattr $C$DW$T$94, DW_AT_type(*$C$DW$T$93)
+	.dwattr $C$DW$T$94, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$94, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$94, DW_AT_decl_line(0x28)
+	.dwattr $C$DW$T$94, DW_AT_decl_column(0x19)
+$C$DW$T$95	.dwtag  DW_TAG_typedef, DW_AT_name("SizeT")
+	.dwattr $C$DW$T$95, DW_AT_type(*$C$DW$T$94)
+	.dwattr $C$DW$T$95, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$95, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$95, DW_AT_decl_line(0xdc)
+	.dwattr $C$DW$T$95, DW_AT_decl_column(0x19)
+$C$DW$T$80	.dwtag  DW_TAG_typedef, DW_AT_name("uint32_t")
+	.dwattr $C$DW$T$80, DW_AT_type(*$C$DW$T$11)
+	.dwattr $C$DW$T$80, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$80, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$80, DW_AT_decl_line(0x2f)
+	.dwattr $C$DW$T$80, DW_AT_decl_column(0x1c)
+$C$DW$T$83	.dwtag  DW_TAG_typedef, DW_AT_name("uint_fast16_t")
+	.dwattr $C$DW$T$83, DW_AT_type(*$C$DW$T$80)
+	.dwattr $C$DW$T$83, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$83, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$83, DW_AT_decl_line(0x4c)
+	.dwattr $C$DW$T$83, DW_AT_decl_column(0x16)
+$C$DW$T$84	.dwtag  DW_TAG_typedef, DW_AT_name("uint_fast32_t")
+	.dwattr $C$DW$T$84, DW_AT_type(*$C$DW$T$80)
+	.dwattr $C$DW$T$84, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$84, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$84, DW_AT_decl_line(0x4f)
+	.dwattr $C$DW$T$84, DW_AT_decl_column(0x16)
+$C$DW$T$85	.dwtag  DW_TAG_typedef, DW_AT_name("uint_fast8_t")
+	.dwattr $C$DW$T$85, DW_AT_type(*$C$DW$T$80)
+	.dwattr $C$DW$T$85, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$85, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$85, DW_AT_decl_line(0x4a)
+	.dwattr $C$DW$T$85, DW_AT_decl_column(0x16)
+$C$DW$T$86	.dwtag  DW_TAG_typedef, DW_AT_name("uint_least32_t")
+	.dwattr $C$DW$T$86, DW_AT_type(*$C$DW$T$80)
+	.dwattr $C$DW$T$86, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$86, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$86, DW_AT_decl_line(0x3f)
+	.dwattr $C$DW$T$86, DW_AT_decl_column(0x16)
+$C$DW$T$87	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_UInt32")
+	.dwattr $C$DW$T$87, DW_AT_type(*$C$DW$T$86)
+	.dwattr $C$DW$T$87, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$87, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$87, DW_AT_decl_line(0x72)
+	.dwattr $C$DW$T$87, DW_AT_decl_column(0x19)
+$C$DW$T$88	.dwtag  DW_TAG_typedef, DW_AT_name("UInt32")
+	.dwattr $C$DW$T$88, DW_AT_type(*$C$DW$T$87)
+	.dwattr $C$DW$T$88, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$88, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$88, DW_AT_decl_line(0xeb)
+	.dwattr $C$DW$T$88, DW_AT_decl_column(0x19)
+$C$DW$T$89	.dwtag  DW_TAG_typedef, DW_AT_name("Uint32")
+	.dwattr $C$DW$T$89, DW_AT_type(*$C$DW$T$87)
+	.dwattr $C$DW$T$89, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$89, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$89, DW_AT_decl_line(0xf8)
+	.dwattr $C$DW$T$89, DW_AT_decl_column(0x19)
+$C$DW$T$81	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Bits32")
+	.dwattr $C$DW$T$81, DW_AT_type(*$C$DW$T$80)
+	.dwattr $C$DW$T$81, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$81, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$81, DW_AT_decl_line(0x90)
+	.dwattr $C$DW$T$81, DW_AT_decl_column(0x19)
+$C$DW$T$82	.dwtag  DW_TAG_typedef, DW_AT_name("Bits32")
+	.dwattr $C$DW$T$82, DW_AT_type(*$C$DW$T$81)
+	.dwattr $C$DW$T$82, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$82, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$82, DW_AT_decl_line(0x112)
+	.dwattr $C$DW$T$82, DW_AT_decl_column(0x19)
+$C$DW$T$90	.dwtag  DW_TAG_typedef, DW_AT_name("uintptr_t")
+	.dwattr $C$DW$T$90, DW_AT_type(*$C$DW$T$11)
+	.dwattr $C$DW$T$90, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$90, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$90, DW_AT_decl_line(0x59)
+	.dwattr $C$DW$T$90, DW_AT_decl_column(0x1a)
+$C$DW$T$91	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_UArg")
+	.dwattr $C$DW$T$91, DW_AT_type(*$C$DW$T$90)
+	.dwattr $C$DW$T$91, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$91, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$91, DW_AT_decl_line(0x9a)
+	.dwattr $C$DW$T$91, DW_AT_decl_column(0x19)
+$C$DW$T$92	.dwtag  DW_TAG_typedef, DW_AT_name("UArg")
+	.dwattr $C$DW$T$92, DW_AT_type(*$C$DW$T$91)
+	.dwattr $C$DW$T$92, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$92, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$92, DW_AT_decl_line(0xe0)
+	.dwattr $C$DW$T$92, DW_AT_decl_column(0x19)
+$C$DW$T$75	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_UInt")
+	.dwattr $C$DW$T$75, DW_AT_type(*$C$DW$T$11)
+	.dwattr $C$DW$T$75, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$75, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$75, DW_AT_decl_line(0x22)
+	.dwattr $C$DW$T$75, DW_AT_decl_column(0x19)
+$C$DW$T$76	.dwtag  DW_TAG_typedef, DW_AT_name("UInt")
+	.dwattr $C$DW$T$76, DW_AT_type(*$C$DW$T$75)
+	.dwattr $C$DW$T$76, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$76, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$76, DW_AT_decl_line(0xd4)
+	.dwattr $C$DW$T$76, DW_AT_decl_column(0x19)
+$C$DW$T$77	.dwtag  DW_TAG_typedef, DW_AT_name("Uns")
+	.dwattr $C$DW$T$77, DW_AT_type(*$C$DW$T$75)
+	.dwattr $C$DW$T$77, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$77, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$77, DW_AT_decl_line(0xf9)
+	.dwattr $C$DW$T$77, DW_AT_decl_column(0x19)
+$C$DW$T$78	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_ULong")
+	.dwattr $C$DW$T$78, DW_AT_type(*$C$DW$T$11)
+	.dwattr $C$DW$T$78, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$78, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$78, DW_AT_decl_line(0x24)
+	.dwattr $C$DW$T$78, DW_AT_decl_column(0x19)
+$C$DW$T$79	.dwtag  DW_TAG_typedef, DW_AT_name("ULong")
+	.dwattr $C$DW$T$79, DW_AT_type(*$C$DW$T$78)
+	.dwattr $C$DW$T$79, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$79, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$79, DW_AT_decl_line(0xd6)
+	.dwattr $C$DW$T$79, DW_AT_decl_column(0x19)
+$C$DW$T$12	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+	.dwattr $C$DW$T$12, DW_AT_name("__int40_t")
+	.dwattr $C$DW$T$12, DW_AT_byte_size(0x08)
+	.dwattr $C$DW$T$12, DW_AT_bit_size(0x28)
+	.dwattr $C$DW$T$12, DW_AT_bit_offset(0x18)
+$C$DW$T$96	.dwtag  DW_TAG_typedef, DW_AT_name("int40_t")
+	.dwattr $C$DW$T$96, DW_AT_type(*$C$DW$T$12)
+	.dwattr $C$DW$T$96, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$96, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$96, DW_AT_decl_line(0x31)
+	.dwattr $C$DW$T$96, DW_AT_decl_column(0x21)
+$C$DW$T$97	.dwtag  DW_TAG_typedef, DW_AT_name("int_fast40_t")
+	.dwattr $C$DW$T$97, DW_AT_type(*$C$DW$T$96)
+	.dwattr $C$DW$T$97, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$97, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$97, DW_AT_decl_line(0x51)
+	.dwattr $C$DW$T$97, DW_AT_decl_column(0x17)
+$C$DW$T$98	.dwtag  DW_TAG_typedef, DW_AT_name("int_least40_t")
+	.dwattr $C$DW$T$98, DW_AT_type(*$C$DW$T$96)
+	.dwattr $C$DW$T$98, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$98, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$98, DW_AT_decl_line(0x41)
+	.dwattr $C$DW$T$98, DW_AT_decl_column(0x17)
+$C$DW$T$99	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Int40")
+	.dwattr $C$DW$T$99, DW_AT_type(*$C$DW$T$98)
+	.dwattr $C$DW$T$99, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$99, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$99, DW_AT_decl_line(0x7a)
+	.dwattr $C$DW$T$99, DW_AT_decl_column(0x1d)
+$C$DW$T$100	.dwtag  DW_TAG_typedef, DW_AT_name("Int40")
+	.dwattr $C$DW$T$100, DW_AT_type(*$C$DW$T$99)
+	.dwattr $C$DW$T$100, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$100, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$100, DW_AT_decl_line(0x81)
+	.dwattr $C$DW$T$100, DW_AT_decl_column(0x1d)
+$C$DW$T$13	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+	.dwattr $C$DW$T$13, DW_AT_name("unsigned __int40_t")
+	.dwattr $C$DW$T$13, DW_AT_byte_size(0x08)
+	.dwattr $C$DW$T$13, DW_AT_bit_size(0x28)
+	.dwattr $C$DW$T$13, DW_AT_bit_offset(0x18)
+$C$DW$T$101	.dwtag  DW_TAG_typedef, DW_AT_name("uint40_t")
+	.dwattr $C$DW$T$101, DW_AT_type(*$C$DW$T$13)
+	.dwattr $C$DW$T$101, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$101, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$101, DW_AT_decl_line(0x32)
+	.dwattr $C$DW$T$101, DW_AT_decl_column(0x20)
+$C$DW$T$102	.dwtag  DW_TAG_typedef, DW_AT_name("uint_fast40_t")
+	.dwattr $C$DW$T$102, DW_AT_type(*$C$DW$T$101)
+	.dwattr $C$DW$T$102, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$102, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$102, DW_AT_decl_line(0x52)
+	.dwattr $C$DW$T$102, DW_AT_decl_column(0x16)
+$C$DW$T$103	.dwtag  DW_TAG_typedef, DW_AT_name("uint_least40_t")
+	.dwattr $C$DW$T$103, DW_AT_type(*$C$DW$T$101)
+	.dwattr $C$DW$T$103, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$103, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$103, DW_AT_decl_line(0x42)
+	.dwattr $C$DW$T$103, DW_AT_decl_column(0x16)
+$C$DW$T$104	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_UInt40")
+	.dwattr $C$DW$T$104, DW_AT_type(*$C$DW$T$103)
+	.dwattr $C$DW$T$104, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$104, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$104, DW_AT_decl_line(0x7b)
+	.dwattr $C$DW$T$104, DW_AT_decl_column(0x1d)
+$C$DW$T$105	.dwtag  DW_TAG_typedef, DW_AT_name("UInt40")
+	.dwattr $C$DW$T$105, DW_AT_type(*$C$DW$T$104)
+	.dwattr $C$DW$T$105, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$105, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$105, DW_AT_decl_line(0x82)
+	.dwattr $C$DW$T$105, DW_AT_decl_column(0x1d)
+$C$DW$T$14	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+	.dwattr $C$DW$T$14, DW_AT_name("long long")
+	.dwattr $C$DW$T$14, DW_AT_byte_size(0x08)
+$C$DW$T$108	.dwtag  DW_TAG_typedef, DW_AT_name("int64_t")
+	.dwattr $C$DW$T$108, DW_AT_type(*$C$DW$T$14)
+	.dwattr $C$DW$T$108, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$108, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$108, DW_AT_decl_line(0x34)
+	.dwattr $C$DW$T$108, DW_AT_decl_column(0x21)
+$C$DW$T$109	.dwtag  DW_TAG_typedef, DW_AT_name("int_fast64_t")
+	.dwattr $C$DW$T$109, DW_AT_type(*$C$DW$T$108)
+	.dwattr $C$DW$T$109, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$109, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$109, DW_AT_decl_line(0x54)
+	.dwattr $C$DW$T$109, DW_AT_decl_column(0x17)
+$C$DW$T$110	.dwtag  DW_TAG_typedef, DW_AT_name("int_least64_t")
+	.dwattr $C$DW$T$110, DW_AT_type(*$C$DW$T$108)
+	.dwattr $C$DW$T$110, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$110, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$110, DW_AT_decl_line(0x44)
+	.dwattr $C$DW$T$110, DW_AT_decl_column(0x17)
+$C$DW$T$111	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Int64")
+	.dwattr $C$DW$T$111, DW_AT_type(*$C$DW$T$110)
+	.dwattr $C$DW$T$111, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$111, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$111, DW_AT_decl_line(0x75)
+	.dwattr $C$DW$T$111, DW_AT_decl_column(0x1d)
+$C$DW$T$112	.dwtag  DW_TAG_typedef, DW_AT_name("Int64")
+	.dwattr $C$DW$T$112, DW_AT_type(*$C$DW$T$111)
+	.dwattr $C$DW$T$112, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$112, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$112, DW_AT_decl_line(0x101)
+	.dwattr $C$DW$T$112, DW_AT_decl_column(0x19)
+$C$DW$T$113	.dwtag  DW_TAG_typedef, DW_AT_name("intmax_t")
+	.dwattr $C$DW$T$113, DW_AT_type(*$C$DW$T$14)
+	.dwattr $C$DW$T$113, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$113, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$113, DW_AT_decl_line(0x5c)
+	.dwattr $C$DW$T$113, DW_AT_decl_column(0x20)
+$C$DW$T$106	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_LLong")
+	.dwattr $C$DW$T$106, DW_AT_type(*$C$DW$T$14)
+	.dwattr $C$DW$T$106, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$106, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$106, DW_AT_decl_line(0x7f)
+	.dwattr $C$DW$T$106, DW_AT_decl_column(0x21)
+$C$DW$T$107	.dwtag  DW_TAG_typedef, DW_AT_name("LLong")
+	.dwattr $C$DW$T$107, DW_AT_type(*$C$DW$T$106)
+	.dwattr $C$DW$T$107, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$107, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$107, DW_AT_decl_line(0xd7)
+	.dwattr $C$DW$T$107, DW_AT_decl_column(0x19)
+$C$DW$T$15	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+	.dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+	.dwattr $C$DW$T$15, DW_AT_byte_size(0x08)
+$C$DW$T$116	.dwtag  DW_TAG_typedef, DW_AT_name("uint64_t")
+	.dwattr $C$DW$T$116, DW_AT_type(*$C$DW$T$15)
+	.dwattr $C$DW$T$116, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$116, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$116, DW_AT_decl_line(0x35)
+	.dwattr $C$DW$T$116, DW_AT_decl_column(0x20)
+$C$DW$T$119	.dwtag  DW_TAG_typedef, DW_AT_name("uint_fast64_t")
+	.dwattr $C$DW$T$119, DW_AT_type(*$C$DW$T$116)
+	.dwattr $C$DW$T$119, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$119, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$119, DW_AT_decl_line(0x55)
+	.dwattr $C$DW$T$119, DW_AT_decl_column(0x16)
+$C$DW$T$120	.dwtag  DW_TAG_typedef, DW_AT_name("uint_least64_t")
+	.dwattr $C$DW$T$120, DW_AT_type(*$C$DW$T$116)
+	.dwattr $C$DW$T$120, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$120, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$120, DW_AT_decl_line(0x45)
+	.dwattr $C$DW$T$120, DW_AT_decl_column(0x16)
+$C$DW$T$121	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_UInt64")
+	.dwattr $C$DW$T$121, DW_AT_type(*$C$DW$T$120)
+	.dwattr $C$DW$T$121, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$121, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$121, DW_AT_decl_line(0x76)
+	.dwattr $C$DW$T$121, DW_AT_decl_column(0x1e)
+$C$DW$T$122	.dwtag  DW_TAG_typedef, DW_AT_name("UInt64")
+	.dwattr $C$DW$T$122, DW_AT_type(*$C$DW$T$121)
+	.dwattr $C$DW$T$122, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$122, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$122, DW_AT_decl_line(0x102)
+	.dwattr $C$DW$T$122, DW_AT_decl_column(0x19)
+$C$DW$T$117	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Bits64")
+	.dwattr $C$DW$T$117, DW_AT_type(*$C$DW$T$116)
+	.dwattr $C$DW$T$117, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$117, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/ti/targets/std.h")
+	.dwattr $C$DW$T$117, DW_AT_decl_line(0x93)
+	.dwattr $C$DW$T$117, DW_AT_decl_column(0x19)
+$C$DW$T$118	.dwtag  DW_TAG_typedef, DW_AT_name("Bits64")
+	.dwattr $C$DW$T$118, DW_AT_type(*$C$DW$T$117)
+	.dwattr $C$DW$T$118, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$118, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$118, DW_AT_decl_line(0x116)
+	.dwattr $C$DW$T$118, DW_AT_decl_column(0x19)
+$C$DW$T$123	.dwtag  DW_TAG_typedef, DW_AT_name("uintmax_t")
+	.dwattr $C$DW$T$123, DW_AT_type(*$C$DW$T$15)
+	.dwattr $C$DW$T$123, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$123, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdint.h")
+	.dwattr $C$DW$T$123, DW_AT_decl_line(0x5d)
+	.dwattr $C$DW$T$123, DW_AT_decl_column(0x20)
+$C$DW$T$114	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_ULLong")
+	.dwattr $C$DW$T$114, DW_AT_type(*$C$DW$T$15)
+	.dwattr $C$DW$T$114, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$114, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$114, DW_AT_decl_line(0x80)
+	.dwattr $C$DW$T$114, DW_AT_decl_column(0x21)
+$C$DW$T$115	.dwtag  DW_TAG_typedef, DW_AT_name("ULLong")
+	.dwattr $C$DW$T$115, DW_AT_type(*$C$DW$T$114)
+	.dwattr $C$DW$T$115, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$115, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$115, DW_AT_decl_line(0xd8)
+	.dwattr $C$DW$T$115, DW_AT_decl_column(0x19)
+$C$DW$T$16	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+	.dwattr $C$DW$T$16, DW_AT_name("float")
+	.dwattr $C$DW$T$16, DW_AT_byte_size(0x04)
+$C$DW$T$19	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Float")
+	.dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$16)
+	.dwattr $C$DW$T$19, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$19, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$19, DW_AT_decl_line(0x25)
+	.dwattr $C$DW$T$19, DW_AT_decl_column(0x19)
+$C$DW$T$124	.dwtag  DW_TAG_typedef, DW_AT_name("Float")
+	.dwattr $C$DW$T$124, DW_AT_type(*$C$DW$T$19)
+	.dwattr $C$DW$T$124, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$124, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$124, DW_AT_decl_line(0xd9)
+	.dwattr $C$DW$T$124, DW_AT_decl_column(0x19)
+$C$DW$T$17	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+	.dwattr $C$DW$T$17, DW_AT_name("double")
+	.dwattr $C$DW$T$17, DW_AT_byte_size(0x08)
+$C$DW$T$125	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Double")
+	.dwattr $C$DW$T$125, DW_AT_type(*$C$DW$T$17)
+	.dwattr $C$DW$T$125, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$125, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$125, DW_AT_decl_line(0x26)
+	.dwattr $C$DW$T$125, DW_AT_decl_column(0x19)
+$C$DW$T$126	.dwtag  DW_TAG_typedef, DW_AT_name("Double")
+	.dwattr $C$DW$T$126, DW_AT_type(*$C$DW$T$125)
+	.dwattr $C$DW$T$126, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$126, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$126, DW_AT_decl_line(0xda)
+	.dwattr $C$DW$T$126, DW_AT_decl_column(0x19)
+$C$DW$T$18	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+	.dwattr $C$DW$T$18, DW_AT_name("long double")
+	.dwattr $C$DW$T$18, DW_AT_byte_size(0x08)
+$C$DW$T$127	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_LDouble")
+	.dwattr $C$DW$T$127, DW_AT_type(*$C$DW$T$18)
+	.dwattr $C$DW$T$127, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$127, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$127, DW_AT_decl_line(0x27)
+	.dwattr $C$DW$T$127, DW_AT_decl_column(0x19)
+$C$DW$T$128	.dwtag  DW_TAG_typedef, DW_AT_name("LDouble")
+	.dwattr $C$DW$T$128, DW_AT_type(*$C$DW$T$127)
+	.dwattr $C$DW$T$128, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$128, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$128, DW_AT_decl_line(0xdb)
+	.dwattr $C$DW$T$128, DW_AT_decl_column(0x19)
+$C$DW$T$129	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$129, DW_AT_encoding(DW_ATE_signed_char)
+	.dwattr $C$DW$T$129, DW_AT_name("signed char")
+	.dwattr $C$DW$T$129, DW_AT_byte_size(0x01)
+$C$DW$T$130	.dwtag  DW_TAG_const_type
+	.dwattr $C$DW$T$130, DW_AT_type(*$C$DW$T$129)
+
+$C$DW$T$131	.dwtag  DW_TAG_array_type
+	.dwattr $C$DW$T$131, DW_AT_type(*$C$DW$T$130)
+	.dwattr $C$DW$T$131, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$131, DW_AT_byte_size(0x5f)
+$C$DW$6	.dwtag  DW_TAG_subrange_type
+	.dwattr $C$DW$6, DW_AT_upper_bound(0x5e)
+	.dwendtag $C$DW$T$131
+
+
+$C$DW$T$132	.dwtag  DW_TAG_array_type
+	.dwattr $C$DW$T$132, DW_AT_type(*$C$DW$T$130)
+	.dwattr $C$DW$T$132, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$132, DW_AT_byte_size(0x11)
+$C$DW$7	.dwtag  DW_TAG_subrange_type
+	.dwattr $C$DW$7, DW_AT_upper_bound(0x10)
+	.dwendtag $C$DW$T$132
+
+
+$C$DW$T$133	.dwtag  DW_TAG_array_type
+	.dwattr $C$DW$T$133, DW_AT_type(*$C$DW$T$130)
+	.dwattr $C$DW$T$133, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$133, DW_AT_byte_size(0x1b)
+$C$DW$8	.dwtag  DW_TAG_subrange_type
+	.dwattr $C$DW$8, DW_AT_upper_bound(0x1a)
+	.dwendtag $C$DW$T$133
+
+
+$C$DW$T$134	.dwtag  DW_TAG_array_type
+	.dwattr $C$DW$T$134, DW_AT_type(*$C$DW$T$130)
+	.dwattr $C$DW$T$134, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$134, DW_AT_byte_size(0x22)
+$C$DW$9	.dwtag  DW_TAG_subrange_type
+	.dwattr $C$DW$9, DW_AT_upper_bound(0x21)
+	.dwendtag $C$DW$T$134
+
+
+$C$DW$T$135	.dwtag  DW_TAG_array_type
+	.dwattr $C$DW$T$135, DW_AT_type(*$C$DW$T$130)
+	.dwattr $C$DW$T$135, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$135, DW_AT_byte_size(0x28)
+$C$DW$10	.dwtag  DW_TAG_subrange_type
+	.dwattr $C$DW$10, DW_AT_upper_bound(0x27)
+	.dwendtag $C$DW$T$135
+
+$C$DW$T$136	.dwtag  DW_TAG_pointer_type
+	.dwattr $C$DW$T$136, DW_AT_type(*$C$DW$T$129)
+	.dwattr $C$DW$T$136, DW_AT_address_class(0x20)
+$C$DW$T$137	.dwtag  DW_TAG_typedef, DW_AT_name("va_list")
+	.dwattr $C$DW$T$137, DW_AT_type(*$C$DW$T$136)
+	.dwattr $C$DW$T$137, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$137, DW_AT_decl_file("C:/ti/code_generation_7_4_0/include/stdarg.h")
+	.dwattr $C$DW$T$137, DW_AT_decl_line(0x2f)
+	.dwattr $C$DW$T$137, DW_AT_decl_column(0x12)
+$C$DW$T$138	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_VaList")
+	.dwattr $C$DW$T$138, DW_AT_type(*$C$DW$T$137)
+	.dwattr $C$DW$T$138, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$138, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$138, DW_AT_decl_line(0x29)
+	.dwattr $C$DW$T$138, DW_AT_decl_column(0x19)
+$C$DW$T$139	.dwtag  DW_TAG_typedef, DW_AT_name("VaList")
+	.dwattr $C$DW$T$139, DW_AT_type(*$C$DW$T$138)
+	.dwattr $C$DW$T$139, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$139, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$139, DW_AT_decl_line(0xdd)
+	.dwattr $C$DW$T$139, DW_AT_decl_column(0x19)
+$C$DW$T$140	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_String")
+	.dwattr $C$DW$T$140, DW_AT_type(*$C$DW$T$136)
+	.dwattr $C$DW$T$140, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$140, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$140, DW_AT_decl_line(0x2f)
+	.dwattr $C$DW$T$140, DW_AT_decl_column(0x1a)
+$C$DW$T$141	.dwtag  DW_TAG_typedef, DW_AT_name("String")
+	.dwattr $C$DW$T$141, DW_AT_type(*$C$DW$T$140)
+	.dwattr $C$DW$T$141, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$141, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$141, DW_AT_decl_line(0xe7)
+	.dwattr $C$DW$T$141, DW_AT_decl_column(0x19)
+$C$DW$T$142	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_Char")
+	.dwattr $C$DW$T$142, DW_AT_type(*$C$DW$T$129)
+	.dwattr $C$DW$T$142, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$142, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$142, DW_AT_decl_line(0x1d)
+	.dwattr $C$DW$T$142, DW_AT_decl_column(0x19)
+$C$DW$T$143	.dwtag  DW_TAG_typedef, DW_AT_name("Char")
+	.dwattr $C$DW$T$143, DW_AT_type(*$C$DW$T$142)
+	.dwattr $C$DW$T$143, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$143, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$143, DW_AT_decl_line(0xcf)
+	.dwattr $C$DW$T$143, DW_AT_decl_column(0x19)
+
+$C$DW$T$22	.dwtag  DW_TAG_union_type
+	.dwattr $C$DW$T$22, DW_AT_name("xdc_FloatData")
+	.dwattr $C$DW$T$22, DW_AT_byte_size(0x04)
+$C$DW$11	.dwtag  DW_TAG_member
+	.dwattr $C$DW$11, DW_AT_type(*$C$DW$T$19)
+	.dwattr $C$DW$11, DW_AT_name("f")
+	.dwattr $C$DW$11, DW_AT_TI_symbol_name("f")
+	.dwattr $C$DW$11, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+	.dwattr $C$DW$11, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$11, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$11, DW_AT_decl_line(0xa8)
+	.dwattr $C$DW$11, DW_AT_decl_column(0x0f)
+$C$DW$12	.dwtag  DW_TAG_member
+	.dwattr $C$DW$12, DW_AT_type(*$C$DW$T$21)
+	.dwattr $C$DW$12, DW_AT_name("a")
+	.dwattr $C$DW$12, DW_AT_TI_symbol_name("a")
+	.dwattr $C$DW$12, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+	.dwattr $C$DW$12, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$12, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$12, DW_AT_decl_line(0xa9)
+	.dwattr $C$DW$12, DW_AT_decl_column(0x0f)
+	.dwendtag $C$DW$T$22
+
+	.dwattr $C$DW$T$22, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$22, DW_AT_decl_line(0xa7)
+	.dwattr $C$DW$T$22, DW_AT_decl_column(0x0f)
+$C$DW$T$144	.dwtag  DW_TAG_typedef, DW_AT_name("xdc_FloatData")
+	.dwattr $C$DW$T$144, DW_AT_type(*$C$DW$T$22)
+	.dwattr $C$DW$T$144, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$144, DW_AT_decl_file("C:/ti/xdctools_3_24_05_48/packages/xdc/std.h")
+	.dwattr $C$DW$T$144, DW_AT_decl_line(0xaa)
+	.dwattr $C$DW$T$144, DW_AT_decl_column(0x03)
+	.dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+	.dwendtag $C$DW$CU
+

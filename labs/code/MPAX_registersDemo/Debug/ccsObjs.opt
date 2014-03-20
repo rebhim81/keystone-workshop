@@ -1,0 +1,1 @@
+-l"./configPkg/linker.cmd" "./ExampleMPAX/custom/vlfft/evmc6670l/core0/package/package_custom.vlfft.evmc6670l.core0.obj" "./ExampleMPAX/custom/vlfft/evmc6678l/core0/package/package_custom.vlfft.evmc6678l.core0.obj" "./ExampleMPAX/package/package_ExampleMPAX.obj" "./testMPAX1.obj" "./MAPX_utilities.obj" -l"libc.a" -lti.csl.ae66 -lti.csl.intc.ae66 "../mpax.cmd" 

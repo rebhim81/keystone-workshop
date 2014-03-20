@@ -1,0 +1,1147 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--  This file conforms to the DTD xdc/cfg/configuration.dtd -->
+<configuration name="configPkg/build.pe66"
+    platformName="ExampleMPAX"
+    globalSection="null"
+    sysStack="4096"
+    stack="4096"
+    heap="4096"
+    argSize="512"
+    execCmd="undefined"
+    endian="little"
+    codeModel="null"
+    dataModel="null">
+<targets>
+    <target name="ti.targets.elf.C66"
+            version="1,0,7.2,0"
+            usedby="ti.targets.rts6000"/>
+    <target name="ti.targets.elf.C66"
+            version="1,0,7.4,0"
+            usedby="configPkg"/>
+</targets>
+<imports>
+    <package name="xdc.services.global" version="1, 0, 0" repository="C:/ti/xdctools_3_24_05_48/packages/">
+        <module name="xdc.services.global.Clock"
+                used="true"
+                uses="">
+            <feature name="enable" type="boolean" value="false"/>
+            <feature name="showMemory" type="boolean" value="false"/>
+        </module>
+        <module name="xdc.services.global.Trace"
+                used="false"
+                uses="">
+        </module>
+    </package>
+    <package name="xdc" version="1, 1, 1" repository="C:/ti/xdctools_3_24_05_48/packages/">
+    </package>
+    <package name="xdc.corevers" version="16, 0, 2, 0" repository="C:/ti/xdctools_3_24_05_48/packages/">
+    </package>
+    <package name="xdc.shelf" version="1, 0, 0" repository="C:/ti/xdctools_3_24_05_48/packages/">
+    </package>
+    <package name="xdc.services.spec" version="1, 0, 0, 0" repository="C:/ti/xdctools_3_24_05_48/packages/">
+    </package>
+    <package name="xdc.services.intern.xsr" version="1, 0, 0" repository="C:/ti/xdctools_3_24_05_48/packages/">
+    </package>
+    <package name="xdc.services.intern.gen" version="1, 0, 0, 0" repository="C:/ti/xdctools_3_24_05_48/packages/">
+    </package>
+    <package name="xdc.services.intern.cmd" version="1, 0, 0, 0" repository="C:/ti/xdctools_3_24_05_48/packages/">
+    </package>
+    <package name="xdc.bld" version="1, 0, 2" repository="C:/ti/xdctools_3_24_05_48/packages/">
+        <module name="xdc.bld.BuildEnvironment"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.bld.PackageContents"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.bld.Release"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.bld.Library"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.bld.Test"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.bld.Object"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.bld.Executable"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.bld.Repository"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.bld.Assembly"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.bld.Configuration"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.bld.Script"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.bld.Manifest"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.bld.Utils"
+                used="false"
+                uses="">
+        </module>
+    </package>
+    <package name="ti.targets" version="1, 0, 3" repository="C:/ti/xdctools_3_24_05_48/packages/">
+        <module name="ti.targets.C62"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C62_big_endian"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C64"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C64_big_endian"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C64P"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C64P_big_endian"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C674"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C674_big_endian"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C67"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C67_big_endian"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C67P"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C64T"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C64T_big_endian"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C66"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C66_big_endian"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C54"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C54_far"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C55"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C55_large"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C55_huge"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C55P_word"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C28"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C28_large"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.C28_float"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.TMS470"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.TMS470_big_endian"
+                used="false"
+                uses="">
+        </module>
+    </package>
+    <package name="ti.targets.elf" version="1, 0, 0" repository="C:/ti/xdctools_3_24_05_48/packages/">
+        <module name="ti.targets.elf.C64P"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.elf.C674"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.elf.C64T"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.elf.C67P"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.elf.C64P_big_endian"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.elf.C674_big_endian"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.elf.C64T_big_endian"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.elf.C66"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.elf.C66_big_endian"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.targets.elf.TMS470"
+                used="false"
+                uses="">
+        </module>
+    </package>
+    <package name="xdc.rov" version="1, 0, 0" repository="C:/ti/xdctools_3_24_05_48/packages/">
+        <module name="xdc.rov.Model"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.rov.Program"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.rov.StructureDecoder"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.rov.StateReader"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.rov.ViewXml"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.rov.ViewInfo"
+                used="false"
+                uses="">
+        </module>
+    </package>
+    <package name="xdc.runtime" version="2, 1, 0" repository="C:/ti/xdctools_3_24_05_48/packages/">
+        <module name="xdc.runtime.Assert"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.Core"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.Defaults"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.Diags"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.Error"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.Gate"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.GateNull"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.Log"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.LoggerBuf"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.LoggerCallback"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.LoggerSys"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.Main"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.Memory"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.HeapMin"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.HeapStd"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.Registry"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.Rta"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.Startup"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.Reset"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.System"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.SysCallback"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.SysMin"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.SysStd"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.Text"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.Timestamp"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.TimestampNull"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.TimestampStd"
+                used="false"
+                uses="">
+        </module>
+        <module name="xdc.runtime.Types"
+                used="false"
+                uses="">
+        </module>
+    </package>
+    <package name="ti.targets.rts6000" version="1, 0, 0, 0" repository="C:/ti/xdctools_3_24_05_48/packages/">
+    </package>
+    <package name="ti.catalog.c6000" version="1, 0, 0, 0" repository="C:/ti/xdctools_3_24_05_48/packages/">
+        <module name="ti.catalog.c6000.TMS320C6452"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM647"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM648"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CTNETV2685"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6428"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6711"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6711B"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6712"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6713"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6211"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6211B"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6410"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6411"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6412"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6413"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6414"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6415"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6416"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6418"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6421"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6424"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM640"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM641"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM642"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDA700"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDA705"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDA707"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDA710"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDA700SIM"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDRA442"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDRA444"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDRA446"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDRA447"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDRA457"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDRA459"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6722"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6726"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6727"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM415"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM420"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM421"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM425"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM426"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM6431"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM6433"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM6435"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM6437"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM6441"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM6443"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM6446"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320DM357"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM6467"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDRI300"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CTCI6482"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CTCI6484"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CTCI6486"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320TCI6485"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CTCI6487"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CTCI6488"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320TCI6489"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CTCI6498"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320TCI6608"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320TCI6614"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320TCI6616"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320TCI6618"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6670"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6671"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6672"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6674"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6678"
+                used="true"
+                uses="">
+            <feature name="cacheSizeL1" type="object"><map id='ti.catalog.c6000.TMS320C6678/cacheSizeL1'  length='5'><entry key='0k'>0x0</entry><entry key='4k'>0x1000</entry><entry key='8k'>0x2000</entry><entry key='16k'>0x4000</entry><entry key='32k'>0x8000</entry></map>
+            </feature>
+            <feature name="cacheSizeL2" type="object"><map id='ti.catalog.c6000.TMS320C6678/cacheSizeL2'  length='6'><entry key='0k'>0x0</entry><entry key='32k'>0x8000</entry><entry key='64k'>0x10000</entry><entry key='128k'>0x20000</entry><entry key='256k'>0x40000</entry><entry key='512k'>0x80000</entry></map>
+            </feature>
+            <feature name="cacheMap" type="object"><map id='ti.catalog.c6000.TMS320C6678/cacheMap'  length='3'><entry key='l1PMode'><struct id="ti.catalog.c6000.TMS320C6678/cacheMap/&quot;l1PMode&quot;">
+  <field name="desc">L1P Cache</field>
+  <field name="base">0xe00000</field>
+  <field name="map">
+    <map id="ti.catalog.c6000.TMS320C6678/cacheMap/&quot;l1PMode&quot;/map" length="5">
+      <entry key="0k">0x0</entry>
+      <entry key="4k">0x1000</entry>
+      <entry key="8k">0x2000</entry>
+      <entry key="16k">0x4000</entry>
+      <entry key="32k">0x8000</entry>
+    </map>
+  </field>
+  <field name="defaultValue">32k</field>
+  <field name="memorySection">L1PSRAM</field>
+</struct></entry><entry key='l1DMode'><struct id="ti.catalog.c6000.TMS320C6678/cacheMap/&quot;l1DMode&quot;">
+  <field name="desc">L1D Cache</field>
+  <field name="base">0xf00000</field>
+  <field name="map">
+    <map id="ti.catalog.c6000.TMS320C6678/cacheMap/&quot;l1DMode&quot;/map" length="5">
+      <entry key="0k">0x0</entry>
+      <entry key="4k">0x1000</entry>
+      <entry key="8k">0x2000</entry>
+      <entry key="16k">0x4000</entry>
+      <entry key="32k">0x8000</entry>
+    </map>
+  </field>
+  <field name="defaultValue">32k</field>
+  <field name="memorySection">L1DSRAM</field>
+</struct></entry><entry key='l2Mode'><struct id="ti.catalog.c6000.TMS320C6678/cacheMap/&quot;l2Mode&quot;">
+  <field name="desc">L2 Cache</field>
+  <field name="base">0x800000</field>
+  <field name="map">
+    <map id="ti.catalog.c6000.TMS320C6678/cacheMap/&quot;l2Mode&quot;/map" length="6">
+      <entry key="0k">0x0</entry>
+      <entry key="32k">0x8000</entry>
+      <entry key="64k">0x10000</entry>
+      <entry key="128k">0x20000</entry>
+      <entry key="256k">0x40000</entry>
+      <entry key="512k">0x80000</entry>
+    </map>
+  </field>
+  <field name="defaultValue">0k</field>
+  <field name="memorySection">L2SRAM</field>
+</struct></entry></map>
+            </feature>
+        </module>
+        <module name="ti.catalog.c6000.Kepler"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6454"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6455"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C2430"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C3430"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6701"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6201"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6202"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6203"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6203B"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6204"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6205"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDRA406"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDRA402"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDRA404"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDRA414"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDRA416"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CF761990"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.OMAP2431"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.OMAP2530"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.OMAP2531"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.OMAP3425"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.OMAP3525"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.OMAP3530"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.OMAP4430"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.OMAP5430"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320DA802"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320DA803"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320DA804"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320DA805"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320DA807"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320DA808"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320DA810"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320DA828"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320DA830"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6472"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6474"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6747"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6745"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6743"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.OMAPL137"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.OMAPL138"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6457"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320DA840"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320DA850"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6742"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6746"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6748"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TNETV107X"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320TI816X"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM740"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320CDM730"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320DM8168"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6A8168"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320TI814X"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320DM8148"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320TI811X"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.Arctic"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6A8149"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6654"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6655"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320C6657"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.Vayu"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320TCI6634"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320TCI6636"
+                used="false"
+                uses="">
+        </module>
+        <module name="ti.catalog.c6000.TMS320TCI6638"
+                used="false"
+                uses="">
+        </module>
+    </package>
+    <package name="ti.catalog" version="1, 0, 0" repository="C:/ti/xdctools_3_24_05_48/packages/">
+    </package>
+    <package name="ti.catalog.peripherals.hdvicp2" version="" repository="C:/ti/xdctools_3_24_05_48/packages/">
+        <module name="ti.catalog.peripherals.hdvicp2.HDVICP2"
+                used="false"
+                uses="">
+        </module>
+    </package>
+    <package name="xdc.platform" version="1, 0, 1, 0" repository="C:/ti/xdctools_3_24_05_48/packages/">
+        <module name="xdc.platform.ExeContext"
+                used="true"
+                uses="">
+        </module>
+        <module name="xdc.platform.Utils"
+                used="true"
+                uses="">
+        </module>
+    </package>
+    <package name="xdc.cfg" version="1, 0, 2, 0" repository="C:/ti/xdctools_3_24_05_48/packages/">
+        <module name="xdc.cfg.Program"
+                used="true"
+                uses="">
+            <feature name="gen" type="xdc.cfg.Program.GenerationOptions"><struct id='xdc.cfg.Program/gen' ><field name='debuggerFiles'>undefined</field></struct>
+            </feature>
+            <feature name="globalSection" type="object" value="null"/>
+            <feature name="sysStack" type="number" value="4096"/>
+            <feature name="stack" type="number" value="4096"/>
+            <feature name="heap" type="number" value="4096"/>
+            <feature name="argSize" type="number" value="512"/>
+            <feature name="execCmd" type="undefined" value="undefined"/>
+            <feature name="linkTemplate" type="object" value="null"/>
+            <feature name="main" type="undefined" value="undefined"/>
+            <feature name="sectMap" type="object"><map id='xdc.cfg.Program/sectMap'  length='0'></map>
+            </feature>
+            <feature name="sectionsExclude" type="object" value="null"/>
+            <feature name="sectionsTemplate" type="object" value="null"/>
+            <feature name="system" type="undefined" value="undefined"/>
+            <feature name="name" type="string" value="build.pe66"/>
+            <feature name="cfgBase" type="string" value="package/cfg/build_pe66"/>
+            <feature name="buildPackage" type="string" value="configPkg"/>
+            <feature name="endian" type="string" value="little"/>
+            <feature name="codeModel" type="object" value="null"/>
+            <feature name="dataModel" type="object" value="null"/>
+            <feature name="build" type="object" value="%5Bobject%20Object%5D"/>
+            <feature name="cpu" type="xdc.platform.IExeContext.Instance"><instance id='xdc.platform.ExeContext.Instance#0' ><field name='id'>0</field><field name='catalogName'>ti.catalog.c6000</field><field name='deviceName'>TMS320C6678</field><field name='revision'></field><field name='clockRate'>0x3e8</field><field name='board'><struct id="xdc.platform.ExeContext.Instance#0/board">
+  <field name="id">0</field>
+  <field name="boardName">generic</field>
+  <field name="boardFamily">null</field>
+  <field name="boardRevision">null</field>
+</struct></field><field name='attrs'>xdc.services.intern.xsr.Value$Obj@dc41c5::(xdc.platform.ICpuDataSheet.Instance)ti.catalog.c6000.TMS320C6678.Instance#0</field><field name='memoryMap'><map id="xdc.platform.ExeContext.Instance#0/memoryMap" length="4">
+  <entry key="L2SRAM">
+    <struct id="xdc.platform.ExeContext.Instance#0/memoryMap/&quot;L2SRAM&quot;">
+      <field name="comment">512KB L2 SRAM/CACHE</field>
+      <field name="name">L2SRAM</field>
+      <field name="space">code/data</field>
+      <field name="page">undefined</field>
+      <field name="base">0x800000</field>
+      <field name="len">0x80000</field>
+      <field name="access">RWX</field>
+    </struct>
+  </entry>
+  <entry key="MSMCSRAM">
+    <struct id="xdc.platform.ExeContext.Instance#0/memoryMap/&quot;MSMCSRAM&quot;">
+      <field name="comment">4MB MSMC SRAM</field>
+      <field name="name">MSMCSRAM</field>
+      <field name="space">code/data</field>
+      <field name="page">undefined</field>
+      <field name="base">0xc000000</field>
+      <field name="len">0x400000</field>
+      <field name="access">RWX</field>
+    </struct>
+  </entry>
+  <entry key="DDR3">
+    <struct id="xdc.platform.ExeContext.Instance#0/memoryMap/&quot;DDR3&quot;">
+      <field name="comment">undefined</field>
+      <field name="name">DDR3</field>
+      <field name="space">code/data</field>
+      <field name="page">undefined</field>
+      <field name="base">0x80000000</field>
+      <field name="len">0x10000000</field>
+      <field name="access">RWX</field>
+    </struct>
+  </entry>
+  <entry key="DDR_PRIVATE">
+    <struct id="xdc.platform.ExeContext.Instance#0/memoryMap/&quot;DDR_PRIVATE&quot;">
+      <field name="comment">undefined</field>
+      <field name="name">DDR_PRIVATE</field>
+      <field name="space">code/data</field>
+      <field name="page">undefined</field>
+      <field name="base">0x90000000</field>
+      <field name="len">0x10000000</field>
+      <field name="access">RWX</field>
+    </struct>
+  </entry>
+</map></field></instance>
+            </feature>
+            <feature name="platformName" type="string" value="ExampleMPAX"/>
+            <feature name="platform" type="xdc.platform.IPlatform.Instance"><instance id='ExampleMPAX.Platform.Instance#0' ><field name='externalMemoryMap'></field><field name='customMemoryMap'></field><field name='renameMap'></field><field name='dataMemory'>L2SRAM</field><field name='codeMemory'>L2SRAM</field><field name='stackMemory'>L2SRAM</field><field name='sectMap'></field></instance>
+            </feature>
+            <feature name="global" type="object"><map id='xdc.cfg.Program/global'  length='0'></map>
+            </feature>
+            <feature name="symbol" type="object"><map id='xdc.cfg.Program/symbol'  length='4'><entry key='xdc_runtime_Startup__RESETFXN__C'>0x0</entry><entry key='xdc_runtime_Startup_reset__I'>0x0</entry><entry key='xdc_runtime_Startup__EXECFXN__C'>0x0</entry><entry key='xdc_runtime_Startup_exec__E'>0x0</entry></map>
+            </feature>
+        </module>
+        <module name="xdc.cfg.Main"
+                used="true"
+                uses="">
+        </module>
+        <module name="xdc.cfg.SourceDir"
+                used="false"
+                uses="">
+        </module>
+    </package>
+    <package name="ti.platforms.generic" version="1, 0, 0, 1" repository="C:/ti/xdctools_3_24_05_48/packages/">
+        <module name="ti.platforms.generic.Platform"
+                used="false"
+                uses="">
+        </module>
+    </package>
+    <package name="ExampleMPAX" version="" repository="C:/projects/developNew/MPAX_registersDemo/">
+        <module name="ExampleMPAX.Platform"
+                used="true"
+                uses="">
+            <feature name="CPU" type="ti.platforms.generic.Platform.Instance"><instance id='ti.platforms.generic.Platform.Instance#0' ><field name='externalMemoryMap'><map id="ti.platforms.generic.Platform.Instance#0/externalMemoryMap" length="2">
+  <entry key="DDR3">
+    <struct id="ti.platforms.generic.Platform.Instance#0/externalMemoryMap/&quot;DDR3&quot;">
+      <field name="comment">undefined</field>
+      <field name="name">DDR3</field>
+      <field name="space">code/data</field>
+      <field name="page">undefined</field>
+      <field name="base">0x80000000</field>
+      <field name="len">0x10000000</field>
+      <field name="access">RWX</field>
+    </struct>
+  </entry>
+  <entry key="DDR_PRIVATE">
+    <struct id="ti.platforms.generic.Platform.Instance#0/externalMemoryMap/&quot;DDR_PRIVATE&quot;">
+      <field name="comment">undefined</field>
+      <field name="name">DDR_PRIVATE</field>
+      <field name="space">code/data</field>
+      <field name="page">undefined</field>
+      <field name="base">0x90000000</field>
+      <field name="len">0x10000000</field>
+      <field name="access">RWX</field>
+    </struct>
+  </entry>
+</map></field><field name='customMemoryMap'></field><field name='renameMap'></field><field name='dataMemory'>DDR3</field><field name='codeMemory'>DDR3</field><field name='stackMemory'>DDR3</field><field name='sectMap'></field><field name='CPU'><struct id="ti.platforms.generic.Platform.Instance#0/CPU">
+  <field name="id">0</field>
+  <field name="catalogName">ti.catalog.c6000</field>
+  <field name="deviceName">TMS320C6678</field>
+  <field name="revision"/>
+  <field name="clockRate">0x3e8</field>
+</struct></field><field name='deviceName'>TMS320C6678</field><field name='catalogName'>ti.catalog.c6000</field><field name='clockRate'>0x3e8</field><field name='l1PMode'>32k</field><field name='l1DMode'>32k</field><field name='l2Mode'>0k</field></instance>
+            </feature>
+        </module>
+    </package>
+    <package name="configPkg" version="" repository="C:/projects/developNew/MPAX_registersDemo/Debug/">
+    </package>
+</imports>
+</configuration>
