@@ -1,0 +1,33 @@
+Instructions for getting access to the workshop repository.  There is a tool called TortoiseSVN that makes this pretty simple.  Instructions are below.
+
+
+Instructions for Configuring Tortoise SVN for the Keystone Workshop Contents:
+
+1.	You need a google account.  A gmail account is fine.  If you don't already have one, create one and let Rob know the username.  Rob will add you as a committer to the repository.
+2.	Download and Install Tortoise SVN (http://tortoisesvn.net/downloads.html).  It's a small install, but may require a reboot.
+
+Setting the Proxy Settings
+1.	From within Windows explorer, right clickanywhere and choose TortoiseSVN->Settings
+2.	In the menu on the left side, choose "Network"
+3.	 In the Right Pane, do the following
+a.	Check "Enable Proxy Server"
+b.	For the server address, use:       wwwgate.ti.com
+c.	For the Port, use:             80
+d.	 For Exceptions, use:      *.ti.com
+e.	Click OK
+                                
+Getting the most recent revision of files (trunk)
+1.	Select a location where you want the repository to be located.
+2.	Go to the parent directory of that location in windows explorer, right click,and choose SVN Checkout
+a.	For the URL of the repository, select       https://keystone-workshop.googlecode.com/svn/trunk
+b.	The checkout directory should be marked as the current directory with a  subdirectory of keystone-workshop.  You can leave it as-is, or change it to the directory of your choice
+c.	 Leave all other items as their defaults, and click OK.  It will take a few moments for all of the repository 
+3.	 At this point, you have a copy of the latest revisions of the files in the repository on your machines.  You will see a green icon next to all of them.  This icon indicates that the file is unchanged since you checked it out.
+                                
+At any point, you can update any local files that have been committed to the repository by right clicking and selecting "SVN Update"
+
+You can make changes to the files directly on your machine.  When you want to commit them back to the repository, you can just right click and choose SVN Commit.  Note that right clicking on a file will just commit that file.  If you right click on a directory, it will commmit any updated files in the entire directory.
+
+When committing the first time, you will need to enter your username and  password.  It will ask you for it.  Your username will be your google name (gmail address).  The password is NOT your gmail password.  In order to get your password, go to code.google.com.  Sign in with your gmail address and password.   Now, click the profile link at the top right and then the settings tab at the  top left.  You will see your password near the top.  Copy it and paste it into the TortoiseSVN dialog.  Click "Save Authentication" so that you don't have to remember this password in the future.  When you are committing, a dialog that lists the files to be committed will come up and there will be a Message dialog.You should enter brief comments about what is being committed here.
+
+Let me know if you have any problems.
